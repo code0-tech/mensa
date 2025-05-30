@@ -1,5 +1,5 @@
 data "docker_registry_image" "postgres" {
-  name = "postgres:17.5" # renovate: docker
+  name = "postgres:17.5"
 }
 
 resource "docker_image" "postgres" {

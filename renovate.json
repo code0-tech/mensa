@@ -31,18 +31,5 @@
       ],
       "additionalBranchPrefix": "{{parentDir}}-"
     }
-  ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": [
-        "modules/docker/.+\\.tf$"
-      ],
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}",
-      "matchStrings": [
-        "\"(?<depName>.*?):(?<currentValue>.*?)\" # renovate: docker( versioning=(?<versioning>.*?))?"
-      ]
-    }
   ]
 }

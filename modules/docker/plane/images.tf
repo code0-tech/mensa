@@ -1,5 +1,5 @@
 data "docker_registry_image" "plane_frontend" {
-  name = "makeplane/plane-frontend:v0.22-dev" # renovate: docker
+  name = "makeplane/plane-frontend:v0.22-dev"
 }
 
 resource "docker_image" "plane_frontend" {
@@ -8,7 +8,7 @@ resource "docker_image" "plane_frontend" {
 }
 
 data "docker_registry_image" "plane_space" {
-  name = "makeplane/plane-space:v0.22-dev" # renovate: docker
+  name = "makeplane/plane-space:v0.22-dev"
 }
 
 resource "docker_image" "plane_space" {
@@ -17,7 +17,7 @@ resource "docker_image" "plane_space" {
 }
 
 data "docker_registry_image" "plane_admin" {
-  name = "makeplane/plane-admin:v0.22-dev" # renovate: docker
+  name = "makeplane/plane-admin:v0.22-dev"
 }
 
 resource "docker_image" "plane_admin" {
@@ -26,7 +26,7 @@ resource "docker_image" "plane_admin" {
 }
 
 data "docker_registry_image" "plane_backend" {
-  name = "makeplane/plane-backend:v0.22-dev" # renovate: docker
+  name = "makeplane/plane-backend:v0.22-dev"
 }
 
 resource "docker_image" "plane_backend" {
@@ -35,7 +35,7 @@ resource "docker_image" "plane_backend" {
 }
 
 data "docker_registry_image" "plane_proxy" {
-  name = "makeplane/plane-proxy:v0.22-dev" # renovate: docker
+  name = "makeplane/plane-proxy:v0.22-dev"
 }
 
 resource "docker_image" "plane_proxy" {
@@ -44,7 +44,7 @@ resource "docker_image" "plane_proxy" {
 }
 
 data "docker_registry_image" "postgres" {
-  name = "postgres:15.7-alpine" # renovate: docker
+  name = "postgres:15.7-alpine"
 }
 
 resource "docker_image" "postgres" {
@@ -53,7 +53,7 @@ resource "docker_image" "postgres" {
 }
 
 data "docker_registry_image" "valkey" {
-  name = "valkey/valkey:7.2.5-alpine" # renovate: docker
+  name = "valkey/valkey:7.2.5-alpine"
 }
 
 resource "docker_image" "valkey" {
