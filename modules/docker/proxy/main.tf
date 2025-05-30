@@ -12,7 +12,7 @@ terraform {
 }
 
 data "docker_registry_image" "proxy" {
-  name = "nginxproxy/nginx-proxy:1.7.1" # renovate: docker
+  name = "nginxproxy/nginx-proxy:1.7.1"
 }
 
 resource "docker_image" "proxy" {
