@@ -13,13 +13,14 @@ data "gitlab_project_variable" "runner_support_token" {
 }
 
 resource "gitlab_project_hook" "runner_support" {
-  for_each = toset([
-    "code0-tech/development/sagittarius",
-    "code0-tech/development/reticulum"
-  ])
+  for_each = {
+    "code0-tech/development/sagittarius": "runner-support",
+    "code0-tech/development/reticulum": "runner-support",
+    "code0-tech/infrastructure/pyxis": "runner-support-infra",
+  }
 
-  project = each.value
-  url     = "https://api.github.com/repos/code0-tech/monoceros/actions/workflows/runner-support.yml/dispatches"
+  project = each.key
+  url     = "https://api.github.com/repos/code0-tech/monoceros/actions/workflows/${each.value}.yml/dispatches"
 
   push_events = false
   pipeline_events = true
