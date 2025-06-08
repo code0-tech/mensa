@@ -30,6 +30,10 @@ module "global_labels" {
   repository = each.value
 }
 
+module "release_tools_configs" {
+  source = "../../modules/github/release_tools_configs"
+}
+
 data "gitlab_project_variable" "github_public_discord_webhook_url" {
   project = "code0-tech/secret-manager"
   key     = "GITHUB_PUBLIC_DISCORD_WEBHOOK_URL"
