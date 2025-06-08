@@ -42,7 +42,7 @@ module "landing_page_pages" {
 
   cloudflare_domain_name  = "code0.tech"
   cloudflare_zone_id      = data.cloudflare_zones.main_domain.result[0].id
-  gitlab_project_path     = "code0-tech/development/landing-page"
+  gitlab_project_path     = "code0-tech/development/cygnus"
   gitlab_unique_pages_url = "landing-page-code0-tech-development-b2dc2848e053fa1893b1dfbb1ba.gitlab.io"
 }
 
