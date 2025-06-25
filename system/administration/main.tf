@@ -22,16 +22,8 @@ module "proxy" {
   source = "../../modules/docker/proxy"
 
   certificate_hostnames = [
-    "plane.code0.tech",
     "outline.code0.tech",
   ]
-}
-
-module "plane" {
-  source = "../../modules/docker/plane"
-
-  web_url                 = "plane.code0.tech"
-  docker_proxy_network_id = module.proxy.docker_proxy_network_id
 }
 
 module "outline" {
@@ -54,7 +46,6 @@ resource "cloudflare_dns_record" "server_ip" {
 
 resource "cloudflare_dns_record" "server_cname" {
   for_each = toset([
-    "plane.code0.tech",
     "outline.code0.tech",
   ])
 
