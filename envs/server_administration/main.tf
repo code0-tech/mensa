@@ -8,7 +8,7 @@ terraform {
     }
     gitlab = {
       source = "gitlabhq/gitlab"
-      version = "18.1.1"
+      version = "18.2.0"
     }
     docker = {
       source  = "kreuzwerker/docker"
