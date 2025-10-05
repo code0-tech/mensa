@@ -1,5 +1,5 @@
 data "docker_registry_image" "redis" {
-  name = "redis:7.4.5"
+  name = "redis:7.4.6"
 }
 
 resource "docker_image" "redis" {
