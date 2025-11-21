@@ -1,5 +1,5 @@
 data "docker_registry_image" "postgres" {
-  name = "postgres:17.6"
+  name = "postgres:17.7"
 }
 
 resource "docker_image" "postgres" {
