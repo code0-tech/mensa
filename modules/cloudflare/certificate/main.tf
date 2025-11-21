@@ -30,6 +30,10 @@ resource "time_rotating" "rotation" {
   rotation_days = 365 - 90 # requested_validity - 90 days for rotation
 }
 
+resource "time_static" "rotation" {
+  rfc3339 = time_rotating.rotation.rfc3339
+}
+
 resource "cloudflare_origin_ca_certificate" "this" {
   csr                  = tls_cert_request.this.cert_request_pem
   hostnames            = [ var.hostname ]
@@ -37,7 +41,7 @@ resource "cloudflare_origin_ca_certificate" "this" {
   requested_validity   = 365
 
   lifecycle {
-    replace_triggered_by = [time_rotating.rotation.id]
+    replace_triggered_by = [time_static.rotation]
   }
 }
 
