@@ -33,6 +33,10 @@ module "outline" {
   docker_proxy_network_id = module.proxy.docker_proxy_network_id
 }
 
+module "pyxis" {
+  source = "../../modules/docker/pyxis"
+}
+
 resource "cloudflare_dns_record" "server_ip" {
   name    = "server_administration.code0.tech"
   type    = "A"
