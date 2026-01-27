@@ -12,7 +12,7 @@ terraform {
 }
 
 data "docker_registry_image" "pyxis" {
-  name = "ghcr.io/code0-tech/pyxis:30"
+  name = "ghcr.io/code0-tech/pyxis:31"
 }
 
 resource "docker_image" "pyxis" {
@@ -73,5 +73,6 @@ resource "docker_container" "pyxis" {
     "PYXIS_GH_RELEASE_TOOLS_APPROVER_PRIVATE_KEY=/pyxis/secrets/github_release_tools_approver_private_key",
     "PYXIS_GL_RELEASE_TOOLS_PRIVATE_TOKEN=/pyxis/secrets/gitlab_release_tools_private_token",
     "PYXIS_DC_RELEASE_TOOLS_TOKEN=/pyxis/secrets/discord_bot_token",
+    "DRY_RUN=false"
   ]
 }
