@@ -30,6 +30,11 @@ data "gitlab_project_variable" "github_release_tools_private_key" {
   key     = "PYXIS_GH_RELEASE_TOOLS_PRIVATE_KEY"
 }
 
+data "gitlab_project_variable" "github_release_tools_approver_private_key" {
+  project = "code0-tech/infrastructure/pyxis"
+  key     = "PYXIS_GH_RELEASE_TOOLS_APPROVER_PRIVATE_KEY"
+}
+
 data "gitlab_project_variable" "gitlab_release_tools_private_token" {
   project = "code0-tech/infrastructure/pyxis"
   key     = "PYXIS_GL_RELEASE_TOOLS_PRIVATE_TOKEN"
@@ -54,12 +59,18 @@ resource "docker_container" "pyxis" {
   }
 
   upload {
+    file = "/pyxis/secrets/gitlab_release_tools_approver_private_key"
+    content = sensitive(data.gitlab_project_variable.github_release_tools_approver_private_key.value)
+  }
+
+  upload {
     file    = "/pyxis/secrets/discord_bot_token"
     content = sensitive(data.gitlab_project_variable.discord_bot_token.value)
   }
 
   env = [
     "PYXIS_GH_RELEASE_TOOLS_PRIVATE_KEY=/pyxis/secrets/github_release_tools_private_key",
+    "PYXIS_GH_RELEASE_TOOLS_APPROVER_PRIVATE_KEY=/pyxis/secrets/github_release_tools_approver_private_key",
     "PYXIS_GL_RELEASE_TOOLS_PRIVATE_TOKEN=/pyxis/secrets/gitlab_release_tools_private_token",
     "PYXIS_DC_RELEASE_TOOLS_TOKEN=/pyxis/secrets/discord_bot_token",
   ]
