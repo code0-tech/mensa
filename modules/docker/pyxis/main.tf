@@ -12,7 +12,7 @@ terraform {
 }
 
 data "docker_registry_image" "pyxis" {
-  name = "ghcr.io/code0-tech/pyxis:33"
+  name = "ghcr.io/code0-tech/pyxis:37"
 }
 
 resource "docker_image" "pyxis" {
@@ -33,6 +33,11 @@ data "gitlab_project_variable" "github_release_tools_private_key" {
 data "gitlab_project_variable" "github_release_tools_approver_private_key" {
   project = "code0-tech/infrastructure/pyxis"
   key     = "PYXIS_GH_RELEASE_TOOLS_APPROVER_PRIVATE_KEY"
+}
+
+data "gitlab_project_variable" "github_reticulum_publish_token" {
+  project = "code0-tech/infrastructure/pyxis"
+  key     = "PYXIS_GH_RETICULUM_PUBLISH_TOKEN"
 }
 
 data "gitlab_project_variable" "gitlab_release_tools_private_token" {
@@ -59,8 +64,13 @@ resource "docker_container" "pyxis" {
   }
 
   upload {
-    file = "/pyxis/secrets/gitlab_release_tools_approver_private_key"
+    file    = "/pyxis/secrets/gitlab_release_tools_approver_private_key"
     content = sensitive(data.gitlab_project_variable.github_release_tools_approver_private_key.value)
+  }
+
+  upload {
+    file    = "/pyxis/secrets/github_reticulum_publish_token"
+    content = sensitive(data.gitlab_project_variable.github_reticulum_publish_token.value)
   }
 
   upload {
@@ -71,6 +81,7 @@ resource "docker_container" "pyxis" {
   env = [
     "PYXIS_GH_RELEASE_TOOLS_PRIVATE_KEY=/pyxis/secrets/github_release_tools_private_key",
     "PYXIS_GH_RELEASE_TOOLS_APPROVER_PRIVATE_KEY=/pyxis/secrets/github_release_tools_approver_private_key",
+    "PYXIS_GH_RETICULUM_PUBLISH_TOKEN=/pyxis/secrets/github_reticulum_publish_token",
     "PYXIS_GL_RELEASE_TOOLS_PRIVATE_TOKEN=/pyxis/secrets/gitlab_release_tools_private_token",
     "PYXIS_DC_RELEASE_TOOLS_TOKEN=/pyxis/secrets/discord_bot_token",
     "DRY_RUN=false"
