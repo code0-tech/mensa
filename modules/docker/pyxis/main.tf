@@ -21,7 +21,7 @@ resource "docker_image" "pyxis" {
 }
 
 data "gitlab_project_variable" "discord_bot_token" {
-  project = "code0-tech/secret-manager"
+  project = "code0-tech/infrastructure/pyxis"
   key     = "PYXIS_DC_RELEASE_TOOLS_TOKEN"
 }
 
