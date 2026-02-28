@@ -64,7 +64,7 @@ resource "docker_container" "pyxis" {
   }
 
   upload {
-    file    = "/pyxis/secrets/gitlab_release_tools_approver_private_key"
+    file    = "/pyxis/secrets/github_release_tools_approver_private_key"
     content = sensitive(data.gitlab_project_variable.github_release_tools_approver_private_key.value)
   }
 
