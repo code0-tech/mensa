@@ -12,7 +12,7 @@ terraform {
 }
 
 data "docker_registry_image" "pyxis" {
-  name = "ghcr.io/code0-tech/pyxis:48"
+  name = "ghcr.io/code0-tech/pyxis:52"
 }
 
 resource "docker_image" "pyxis" {
