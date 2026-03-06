@@ -17,6 +17,10 @@ locals {
       description = "This is blocked by some other work"
       color       = "9e2204"
     }
+    "blocks-releases" = {
+      description = "This issue must be closed before any release can be made"
+      color       = "9e2204"
+    }
     dependencies = {
       description = "This updates dependency files"
       color       = "009966"
