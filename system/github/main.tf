@@ -34,6 +34,10 @@ module "release_tools_configs" {
   source = "../../modules/github/release_tools_configs"
 }
 
+module "licenses" {
+  source = "../../modules/github/license_files"
+}
+
 data "gitlab_project_variable" "github_public_discord_webhook_url" {
   project = "code0-tech/secret-manager"
   key     = "GITHUB_PUBLIC_DISCORD_WEBHOOK_URL"
