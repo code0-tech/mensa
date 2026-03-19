@@ -37,15 +37,6 @@ module "docs_pages" {
   gitlab_unique_pages_url = "docs-code0-tech-c91f18c0d2259c041bf05138b194e6bb082059fe38eff2e.gitlab.io"
 }
 
-module "landing_page_pages" {
-  source = "../../modules/gitlab/pages_domain"
-
-  cloudflare_domain_name  = "code0.tech"
-  cloudflare_zone_id      = data.cloudflare_zones.main_domain.result[0].id
-  gitlab_project_path     = "code0-tech/development/cygnus"
-  gitlab_unique_pages_url = "landing-page-code0-tech-development-b2dc2848e053fa1893b1dfbb1ba.gitlab.io"
-}
-
 resource "cloudflare_dns_record" "github_verification" {
   name    = "_github-challenge-code0-tech-org.code0.tech"
   type    = "TXT"
