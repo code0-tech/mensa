@@ -30,6 +30,13 @@
         "docker"
       ],
       "additionalBranchPrefix": "{{parentDir}}-"
+    },
+    {
+      "matchDepNames": [
+        "ghcr.io/code0-tech/cygnus",
+        "ghcr.io/code0-tech/pyxis"
+      ],
+      "versioning": "regex:^(?<minor>\\d+)$"
     }
   ]
 }
