@@ -9,6 +9,13 @@ resource "docker_image" "postgres" {
 
 resource "docker_volume" "pgdata" {
   name = "cygnus_pgdata"
+
+  lifecycle {
+    replace_triggered_by = [
+      docker_image.cygnus.image_id,
+      docker_image.postgres.image_id
+    ]
+  }
 }
 
 resource "random_password" "db" {
@@ -42,5 +49,11 @@ resource "docker_container" "postgres" {
 
   networks_advanced {
     name = docker_network.cygnus.name
+  }
+
+  lifecycle {
+    replace_triggered_by = [
+      docker_volume.pgdata.id
+    ]
   }
 }
