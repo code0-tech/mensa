@@ -15,6 +15,11 @@ resource "random_password" "payload_user_password" {
   length = 32
 }
 
+data "gitlab_project_variable" "ga_measurement_id" {
+  project = "code0-tech/secret-manager"
+  key     = "SCULPTOR_NEXT_PUBLIC_GA_MEASUREMENT_ID"
+}
+
 locals {
   cygnus_env = [
     # Cygnus
@@ -23,6 +28,7 @@ locals {
     "PAYLOAD_USER_PASS=${random_password.payload_user_password.result}",
     "DATABASE_URL=postgresql://cygnus:${random_password.db.result}@${docker_container.postgres.hostname}:5432/payload",
     "HOSTNAME=0.0.0.0",
+    "NEXT_PUBLIC_GA_MEASUREMENT_ID=${sensitive(data.gitlab_project_variable.ga_measurement_id.value)}",
 
     # Proxy
     "VIRTUAL_HOST=${var.web_url}"
