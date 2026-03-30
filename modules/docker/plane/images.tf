@@ -44,7 +44,7 @@ resource "docker_image" "plane_proxy" {
 }
 
 data "docker_registry_image" "postgres" {
-  name = "postgres:15.7-alpine"
+  name = "postgres:18.3-alpine"
 }
 
 resource "docker_image" "postgres" {
