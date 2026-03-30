@@ -11,19 +11,36 @@ terraform {
   }
 }
 
-data "cloudflare_zones" "main_domain" {
+data "cloudflare_zones" "code0_tech_domain" {
   account = {
     id = var.cloudflare_account_id
   }
   name = "code0.tech"
 }
 
-resource "cloudflare_zone_setting" "zone_settings" {
+data "cloudflare_zones" "codezero_build_domain" {
+  account = {
+    id = var.cloudflare_account_id
+  }
+  name = "codezero.build"
+}
+
+resource "cloudflare_zone_setting" "zone_settings_code0_tech" {
   for_each = {
     ssl = "strict"
   }
 
-  zone_id    = data.cloudflare_zones.main_domain.result[0].id
+  zone_id    = data.cloudflare_zones.code0_tech_domain.result[0].id
+  setting_id = each.key
+  value      = each.value
+}
+
+resource "cloudflare_zone_setting" "zone_settings_codezero_build" {
+  for_each = {
+    ssl = "strict"
+  }
+
+  zone_id    = data.cloudflare_zones.codezero_build_domain.result[0].id
   setting_id = each.key
   value      = each.value
 }
@@ -32,7 +49,7 @@ module "docs_pages" {
   source = "../../modules/gitlab/pages_domain"
 
   cloudflare_domain_name  = "docs.code0.tech"
-  cloudflare_zone_id      = data.cloudflare_zones.main_domain.result[0].id
+  cloudflare_zone_id      = data.cloudflare_zones.code0_tech_domain.result[0].id
   gitlab_project_path     = "code0-tech/development/telescopium"
   gitlab_unique_pages_url = "docs-code0-tech-c91f18c0d2259c041bf05138b194e6bb082059fe38eff2e.gitlab.io"
 }
@@ -41,7 +58,7 @@ resource "cloudflare_dns_record" "github_verification" {
   name    = "_github-challenge-code0-tech-org.code0.tech"
   type    = "TXT"
   ttl     = 1
-  zone_id = data.cloudflare_zones.main_domain.result[0].id
+  zone_id = data.cloudflare_zones.code0_tech_domain.result[0].id
   content = "e3447326f4"
   comment = "Managed by Terraform"
 }
@@ -50,7 +67,7 @@ resource "cloudflare_dns_record" "strato_spf" {
   name    = "code0.tech"
   type    = "TXT"
   ttl     = 1
-  zone_id = data.cloudflare_zones.main_domain.result[0].id
+  zone_id = data.cloudflare_zones.code0_tech_domain.result[0].id
   content = "v=spf1 redirect=smtp.strato.de"
   comment = "Managed by Terraform"
 }
@@ -59,16 +76,21 @@ resource "cloudflare_dns_record" "strato_dkim" {
   name    = "strato-dkim-0002._domainkey.code0.tech"
   type    = "CNAME"
   ttl     = 1
-  zone_id = data.cloudflare_zones.main_domain.result[0].id
+  zone_id = data.cloudflare_zones.code0_tech_domain.result[0].id
   content = "strato-dkim-0002._domainkey.strato.de"
   comment = "Managed by Terraform"
 }
 
 resource "cloudflare_ruleset" "force_https" {
+  for_each = toset([
+    data.cloudflare_zones.code0_tech_domain.result[0].id,
+    data.cloudflare_zones.codezero_build_domain.result[0].id
+  ])
+
   kind    = "zone"
   name    = "force_https"
   phase   = "http_request_dynamic_redirect"
-  zone_id = data.cloudflare_zones.main_domain.result[0].id
+  zone_id = each.value
 
   rules = [
     {

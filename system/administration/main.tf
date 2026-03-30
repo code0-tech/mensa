@@ -11,11 +11,18 @@ terraform {
   }
 }
 
-data "cloudflare_zones" "main_domain" {
+data "cloudflare_zones" "code0_tech_domain" {
   account = {
     id = var.cloudflare_account_id
   }
   name = "code0.tech"
+}
+
+data "cloudflare_zones" "codezero_build_domain" {
+  account = {
+    id = var.cloudflare_account_id
+  }
+  name = "codezero.build"
 }
 
 module "proxy" {
@@ -23,7 +30,8 @@ module "proxy" {
 
   certificate_hostnames = [
     "outline.code0.tech",
-    "code0.tech"
+    "code0.tech",
+    "codezero.build"
   ]
 }
 
@@ -37,7 +45,7 @@ module "outline" {
 module "cygnus" {
   source = "../../modules/docker/cygnus"
 
-  web_url                 = "code0.tech"
+  web_urls                = ["code0.tech", "codezero.build"]
   docker_proxy_network_id = module.proxy.docker_proxy_network_id
 }
 
@@ -49,14 +57,14 @@ resource "cloudflare_dns_record" "server_ip" {
   name    = "server_administration.code0.tech"
   type    = "A"
   ttl     = 1
-  zone_id = data.cloudflare_zones.main_domain.result[0].id
+  zone_id = data.cloudflare_zones.code0_tech_domain.result[0].id
   content = var.server_administration_ip
   proxied = true
 
   comment = "Managed by Terraform"
 }
 
-resource "cloudflare_dns_record" "server_cname" {
+resource "cloudflare_dns_record" "server_cname_code0_tech" {
   for_each = toset([
     "code0.tech",
     "outline.code0.tech",
@@ -65,7 +73,22 @@ resource "cloudflare_dns_record" "server_cname" {
   name    = each.value
   type    = "CNAME"
   ttl     = 1
-  zone_id = data.cloudflare_zones.main_domain.result[0].id
+  zone_id = data.cloudflare_zones.code0_tech_domain.result[0].id
+  content = cloudflare_dns_record.server_ip.name
+  proxied = true
+
+  comment = "Managed by Terraform"
+}
+
+resource "cloudflare_dns_record" "server_cname_codezero_build" {
+  for_each = toset([
+    "codezero.build",
+  ])
+
+  name    = each.value
+  type    = "CNAME"
+  ttl     = 1
+  zone_id = data.cloudflare_zones.codezero_build_domain.result[0].id
   content = cloudflare_dns_record.server_ip.name
   proxied = true
 

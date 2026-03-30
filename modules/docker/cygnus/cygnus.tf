@@ -31,7 +31,7 @@ locals {
     "NEXT_PUBLIC_GA_MEASUREMENT_ID=${sensitive(data.gitlab_project_variable.ga_measurement_id.value)}",
 
     # Proxy
-    "VIRTUAL_HOST=${var.web_url}"
+    "VIRTUAL_HOST=${join(",", var.web_urls)}"
   ]
 }
 
