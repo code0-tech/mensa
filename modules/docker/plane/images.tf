@@ -53,7 +53,7 @@ resource "docker_image" "postgres" {
 }
 
 data "docker_registry_image" "valkey" {
-  name = "valkey/valkey:7.2.5-alpine"
+  name = "valkey/valkey:7.2.12-alpine"
 }
 
 resource "docker_image" "valkey" {
