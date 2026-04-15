@@ -37,6 +37,14 @@
         "ghcr.io/code0-tech/pyxis"
       ],
       "versioning": "regex:^(?<minor>\\d+)$"
+    },
+    {
+      "matchDepNames": [
+        "ghcr.io/code0-tech/cygnus"
+      ],
+      "extends": [
+        ":assignee(nicosammito)"
+      ]
     }
   ]
 }
