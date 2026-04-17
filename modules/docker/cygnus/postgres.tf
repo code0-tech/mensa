@@ -1,5 +1,5 @@
 data "docker_registry_image" "postgres" {
-  name = "postgres:16-alpine"
+  name = "postgres:18-alpine"
 }
 
 resource "docker_image" "postgres" {
