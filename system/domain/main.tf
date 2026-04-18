@@ -54,12 +54,21 @@ module "docs_pages" {
   gitlab_unique_pages_url = "docs-code0-tech-c91f18c0d2259c041bf05138b194e6bb082059fe38eff2e.gitlab.io"
 }
 
-resource "cloudflare_dns_record" "github_verification" {
+resource "cloudflare_dns_record" "github_verification_code0_tech" {
   name    = "_github-challenge-code0-tech-org.code0.tech"
   type    = "TXT"
   ttl     = 1
   zone_id = data.cloudflare_zones.code0_tech_domain.result[0].id
   content = "e3447326f4"
+  comment = "Managed by Terraform"
+}
+
+resource "cloudflare_dns_record" "github_verification_codezero_build" {
+  name    = "_gh-code0-tech-o.codezero.build"
+  type    = "TXT"
+  ttl     = 1
+  zone_id = data.cloudflare_zones.codezero_build_domain.result[0].id
+  content = "5a9b0d31a8"
   comment = "Managed by Terraform"
 }
 
