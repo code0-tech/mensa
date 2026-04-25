@@ -45,11 +45,20 @@ resource "cloudflare_zone_setting" "zone_settings_codezero_build" {
   value      = each.value
 }
 
-module "docs_pages" {
+module "docs_pages_code0_tech" {
   source = "../../modules/gitlab/pages_domain"
 
   cloudflare_domain_name  = "docs.code0.tech"
   cloudflare_zone_id      = data.cloudflare_zones.code0_tech_domain.result[0].id
+  gitlab_project_path     = "code0-tech/development/telescopium"
+  gitlab_unique_pages_url = "docs-code0-tech-c91f18c0d2259c041bf05138b194e6bb082059fe38eff2e.gitlab.io"
+}
+
+module "docs_pages_codezero_build" {
+  source = "../../modules/gitlab/pages_domain"
+
+  cloudflare_domain_name  = "docs.codezero.build"
+  cloudflare_zone_id      = data.cloudflare_zones.codezero_build_domain.result[0].id
   gitlab_project_path     = "code0-tech/development/telescopium"
   gitlab_unique_pages_url = "docs-code0-tech-c91f18c0d2259c041bf05138b194e6bb082059fe38eff2e.gitlab.io"
 }
