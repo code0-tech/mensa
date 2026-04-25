@@ -105,7 +105,7 @@ resource "cloudflare_ruleset" "redirects_code0_tech" {
         from_value = {
           status_code = 301
           target_url = {
-            value = "https://codezero.build"
+            expression = "concat(\"https://codezero.build\", http.request.uri)"
           }
           preserve_query_string = true
         }
