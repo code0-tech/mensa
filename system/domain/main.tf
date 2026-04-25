@@ -90,16 +90,49 @@ resource "cloudflare_dns_record" "strato_dkim" {
   comment = "Managed by Terraform"
 }
 
-resource "cloudflare_ruleset" "force_https" {
-  for_each = toset([
-    data.cloudflare_zones.code0_tech_domain.result[0].id,
-    data.cloudflare_zones.codezero_build_domain.result[0].id
-  ])
-
+resource "cloudflare_ruleset" "redirects_code0_tech" {
   kind    = "zone"
-  name    = "force_https"
+  name    = "redirects"
   phase   = "http_request_dynamic_redirect"
-  zone_id = each.value
+  zone_id = data.cloudflare_zones.code0_tech_domain.result[0].id
+
+  rules = [
+    {
+      ref        = "redirect_to_codezero_build"
+      expression = "(http.host eq \"code0.tech\")"
+      action     = "redirect"
+      action_parameters = {
+        from_value = {
+          status_code = 301
+          target_url = {
+            value = "https://codezero.build"
+          }
+          preserve_query_string = true
+        }
+      }
+    },
+    {
+      ref        = "redirect_http"
+      expression = "(http.request.full_uri wildcard r\"http://*\")"
+      action     = "redirect"
+      action_parameters = {
+        from_value = {
+          status_code = 302
+          target_url = {
+            expression = "wildcard_replace(http.request.full_uri, \"http://*\", \"https://${"$"}{1}\")"
+          }
+          preserve_query_string = true
+        }
+      }
+    },
+  ]
+}
+
+resource "cloudflare_ruleset" "redirects_codezero_build" {
+  kind    = "zone"
+  name    = "redirects"
+  phase   = "http_request_dynamic_redirect"
+  zone_id = data.cloudflare_zones.codezero_build_domain.result[0].id
 
   rules = [
     {
@@ -115,6 +148,6 @@ resource "cloudflare_ruleset" "force_https" {
           preserve_query_string = true
         }
       }
-    }
+    },
   ]
 }
