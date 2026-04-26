@@ -1,5 +1,5 @@
 data "docker_registry_image" "cygnus" {
-  name = "ghcr.io/code0-tech/cygnus:1305"
+  name = "ghcr.io/code0-tech/cygnus:1315"
 }
 
 resource "docker_image" "cygnus" {
@@ -35,6 +35,10 @@ locals {
   ]
 }
 
+resource "docker_volume" "cygnus_media" {
+  name = "cygnus_media"
+}
+
 resource "docker_container" "cygnus" {
   image   = docker_image.cygnus.image_id
   name    = "cygnus_cygnus"
@@ -50,6 +54,11 @@ resource "docker_container" "cygnus" {
 
   networks_advanced {
     name = var.docker_proxy_network_id
+  }
+
+  volumes {
+    volume_name = docker_volume.cygnus_media.name
+    container_path = "/cygnus/.next/standalone/media"
   }
 
   lifecycle {
