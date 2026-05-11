@@ -38,6 +38,10 @@ module "licenses" {
   source = "../../modules/github/license_files"
 }
 
+module "secret_sync" {
+  source = "../../modules/github/secret_sync"
+}
+
 data "gitlab_project_variable" "github_public_discord_webhook_url" {
   project = "code0-tech/secret-manager"
   key     = "GITHUB_PUBLIC_DISCORD_WEBHOOK_URL"
