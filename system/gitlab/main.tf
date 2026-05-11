@@ -11,6 +11,7 @@ module "runner_support_main" {
   source = "../../modules/gitlab/runner_support_webhook"
 
   for_each = toset([
+    "code0-tech/development/crater",
     "code0-tech/development/sagittarius",
     "code0-tech/development/reticulum",
   ])
