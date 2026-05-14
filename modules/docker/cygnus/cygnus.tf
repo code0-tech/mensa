@@ -1,5 +1,5 @@
 data "docker_registry_image" "cygnus" {
-  name = "ghcr.io/code0-tech/cygnus:1394"
+  name = "ghcr.io/code0-tech/cygnus:1403"
 }
 
 resource "docker_image" "cygnus" {
@@ -29,6 +29,7 @@ locals {
     "DATABASE_URL=postgresql://cygnus:${random_password.db.result}@${docker_container.postgres.hostname}:5432/payload",
     "HOSTNAME=0.0.0.0",
     "NEXT_PUBLIC_GA_MEASUREMENT_ID=${sensitive(data.gitlab_project_variable.ga_measurement_id.value)}",
+    "NEXT_PUBLIC_APP_URL=${var.web_urls[0]}",
 
     # Proxy
     "VIRTUAL_HOST=${join(",", var.web_urls)}"
