@@ -66,6 +66,7 @@ resource "cloudflare_dns_record" "server_ip" {
 resource "cloudflare_dns_record" "server_cname_code0_tech" {
   for_each = toset([
     "outline.code0.tech",
+    "code0.tech",
   ])
 
   name    = each.value
