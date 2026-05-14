@@ -30,7 +30,6 @@ module "proxy" {
 
   certificate_hostnames = [
     "outline.code0.tech",
-    "code0.tech",
     "codezero.build"
   ]
 }
@@ -45,7 +44,7 @@ module "outline" {
 module "cygnus" {
   source = "../../modules/docker/cygnus"
 
-  web_urls                = ["code0.tech", "codezero.build"]
+  web_urls                = ["codezero.build"]
   docker_proxy_network_id = module.proxy.docker_proxy_network_id
 }
 
@@ -66,7 +65,6 @@ resource "cloudflare_dns_record" "server_ip" {
 
 resource "cloudflare_dns_record" "server_cname_code0_tech" {
   for_each = toset([
-    "code0.tech",
     "outline.code0.tech",
   ])
 
