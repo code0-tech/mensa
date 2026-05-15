@@ -69,4 +69,12 @@ resource "docker_container" "proxy" {
       content = upload.value["private_key"]
     }
   }
+
+  dynamic "upload" {
+    for_each = var.hostname_config_overrides
+    content {
+      file    = "/etc/nginx/vhost.d/${upload.value["hostname"]}"
+      content = upload.value["config"]
+    }
+  }
 }

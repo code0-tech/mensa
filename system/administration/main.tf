@@ -32,6 +32,17 @@ module "proxy" {
     "outline.code0.tech",
     "codezero.build"
   ]
+
+  hostname_config_overrides = [
+    {
+      hostname = "codezero.build"
+      config   = "client_max_body_size 20m;"
+    },
+    {
+      hostname = "outline.code0.tech"
+      config   = "client_max_body_size 20m;"
+    }
+  ]
 }
 
 module "outline" {
