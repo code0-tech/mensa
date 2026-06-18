@@ -23,6 +23,7 @@ locals {
     "reticulum" = "ee"
     "sagittarius" = "ee-sagittarius"
     "sculptor" = "ee-sculptor"
+    "velorum" = "ee-velorum"
     "taurus" = "ee"
     "telescopium" = "mit"
     "triangulum" = "mit-with-ai-restriction"
