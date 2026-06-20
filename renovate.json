@@ -6,12 +6,6 @@
   ],
   "packageRules": [
     {
-      "matchFileNames": [
-        "modules/docker/plane/**"
-      ],
-      "dependencyDashboardApproval": true
-    },
-    {
       "matchDepNames": [
         "postgres",
         "redis",
