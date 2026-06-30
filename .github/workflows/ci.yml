@@ -35,6 +35,8 @@ jobs:
           GLPA_TF_VAR_github_app_key: ${{ secrets.GH_TF_APP_KEY }}
           GLPA_TF_VAR_server_administration_ip: ${{ secrets.SERVER_ADMINISTRATION_IP }}
           GLPA_TF_VAR_server_administration_ssh_port: ${{ secrets.SERVER_ADMINISTRATION_SSH_PORT }}
+          GLPA_TF_VAR_server_production_ip: ${{ secrets.SERVER_PRODUCTION_IP }}
+          GLPA_TF_VAR_server_production_ssh_port: ${{ secrets.SERVER_PRODUCTION_SSH_PORT }}
 
       - name: Find existing comment
         uses: peter-evans/find-comment@v4
