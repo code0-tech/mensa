@@ -35,3 +35,34 @@ resource "cloudflare_dns_record" "server_ip" {
 
   comment = "Managed by Terraform"
 }
+
+resource "cloudflare_dns_record" "server_cname_codezero_build" {
+  for_each = toset([
+    "demo.codezero.build",
+    "demo-rest.codezero.build"
+  ])
+
+  name    = each.value
+  type    = "CNAME"
+  ttl     = 1
+  zone_id = data.cloudflare_zones.codezero_build_domain.result[0].id
+  content = cloudflare_dns_record.server_ip.name
+  proxied = true
+
+  comment = "Managed by Terraform"
+}
+
+module "proxy" {
+  source = "../../modules/docker/proxy"
+
+  certificate_hostnames = [
+    "demo.codezero.build",
+    "demo-rest.codezero.build"
+  ]
+}
+
+module "codezero" {
+  source = "../../modules/docker/codezero"
+
+  proxy_network = module.proxy.docker_proxy_network_name
+}
