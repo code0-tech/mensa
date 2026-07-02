@@ -1,0 +1,25 @@
+services:
+  config-generator:
+    env_file: !override
+      - .env
+      - override.env
+  nginx:
+    networks:
+      - default
+      - proxy
+    environment:
+      VIRTUAL_HOST: demo.codezero.build
+    ports: !override []
+  draco-rest:
+    networks:
+      - default
+      - proxy
+    environment:
+      VIRTUAL_HOST: demo-rest.codezero.build
+      VIRTUAL_PORT: '8084'
+    ports: !override []
+
+networks:
+  proxy:
+    external: true
+    name: ${PROXY_NETWORK}
