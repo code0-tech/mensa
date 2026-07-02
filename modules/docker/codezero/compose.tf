@@ -16,7 +16,7 @@ TAURUS_AQUILA_TOKEN=${random_password.taurus_aquila_token.result}
 DRACO_REST_AQUILA_TOKEN=${random_password.draco_rest_aquila_token.result}
 DRACO_CRON_AQUILA_TOKEN=${random_password.draco_cron_aquila_token.result}
 
-COMPOSE_PROFILES=ide,runtime
+COMPOSE_PROFILES=ide,runtime,ide_velorum
 
 IMAGE_REGISTRY=ghcr.io/code0-tech/reticulum/ci-builds
 IMAGE_TAG=0.0.0-experimental-2647874412-21af104f6ef55514fe1ee78fe26b6cdb1f9dbf0b
@@ -26,6 +26,13 @@ SAGITTARIUS_DB_ENCRYPTION_PRIMARY_KEY=${random_password.sagittarius_db_encryptio
 SAGITTARIUS_DB_ENCRYPTION_DETERMINISTIC_KEY=${random_password.sagittarius_db_encryption_deterministic_key.result}
 SAGITTARIUS_DB_ENCRYPTION_KEY_DERIVATION_SALT=${random_password.sagittarius_db_encryption_derivation_salt.result}
 SAGITTARIUS_RAILS_SECRET_KEY_BASE=${random_password.sagittarius_rails_secret_key_base.result}
+
+VELORUM_MODEL_GPTOSS120B_IDENTIFIER=gpt-oss-120b
+VELORUM_MODEL_GPTOSS120B_NAME='GPT OSS 120B'
+VELORUM_MODEL_GPTOSS120B_CAPABILITIES=explain,generate
+VELORUM_MODEL_GPTOSS120B_PROVIDER=openrouter/openai/gpt-oss-120b
+VELORUM_MODEL_GPTOSS120B_AUTH=${sensitive(data.gitlab_project_variable.openrouter_api_key.value)}
+VELORUM_MODEL_GPTOSS120B_TOKEN_COST=1
 
 POSTGRES_USER=sagittarius
 POSTGRES_PASSWORD=${random_password.postgres_password.result}
