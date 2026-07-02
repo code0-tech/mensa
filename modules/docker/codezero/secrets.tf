@@ -47,3 +47,8 @@ resource "random_password" "postgres_password" {
   length  = 16
   special = false
 }
+
+data "gitlab_project_variable" "openrouter_api_key" {
+  project = "code0-tech/secret-manager"
+  key     = "MENSA_DEMO_VELORUM_OPENROUTER_KEY"
+}
