@@ -14,6 +14,17 @@ default:
     - echo $C0_SSH_KNOWN_HOSTS >> ~/.ssh/known_hosts
     - eval `ssh-agent -s`
     - echo "$C0_PIPELINE_SSH_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh/sockets
+    - |
+      cat >> ~/.ssh/config <<EOF
+      Host *
+        ConnectionAttempts 3
+        ServerAliveInterval 15
+        ServerAliveCountMax 3
+        ControlMaster auto
+        ControlPath ~/.ssh/sockets/%r@%h-%p
+        ControlPersist 120
+      EOF
 
 .tf:
   image: registry.gitlab.com/gitlab-org/terraform-images/stable:latest
