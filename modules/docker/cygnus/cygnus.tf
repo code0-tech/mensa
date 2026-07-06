@@ -17,7 +17,27 @@ resource "random_password" "payload_user_password" {
 
 data "gitlab_project_variable" "ga_measurement_id" {
   project = "code0-tech/secret-manager"
-  key     = "SCULPTOR_NEXT_PUBLIC_GA_MEASUREMENT_ID"
+  key     = "CYGNUS_NEXT_PUBLIC_GA_MEASUREMENT_ID"
+}
+
+data "gitlab_project_variable" "smtp_host" {
+  project = "code0-tech/secret-manager"
+  key     = "CYGNUS_SMTP_HOST"
+}
+
+data "gitlab_project_variable" "smtp_user" {
+  project = "code0-tech/secret-manager"
+  key     = "CYGNUS_SMTP_USER"
+}
+
+data "gitlab_project_variable" "smtp_pass" {
+  project = "code0-tech/secret-manager"
+  key     = "CYGNUS_SMTP_PASS"
+}
+
+data "gitlab_project_variable" "contact_to_email" {
+  project = "code0-tech/secret-manager"
+  key     = "CYGNUS_CONTACT_TO_EMAIL"
 }
 
 locals {
@@ -30,6 +50,14 @@ locals {
     "HOSTNAME=0.0.0.0",
     "NEXT_PUBLIC_GA_MEASUREMENT_ID=${sensitive(data.gitlab_project_variable.ga_measurement_id.value)}",
     "NEXT_PUBLIC_APP_URL=${var.web_urls[0]}",
+
+    # Cygnus SMTP
+    "SMTP_HOST=${data.gitlab_project_variable.smtp_host.value}",
+    "SMTP_PORT=465",
+    "SMTP_USER=${data.gitlab_project_variable.smtp_user.value}",
+    "SMTP_PASS=${data.gitlab_project_variable.smtp_pass.value}",
+    "CONTACT_FROM_EMAIL=${data.gitlab_project_variable.smtp_user.value}",
+    "CONTACT_TO_EMAIL=${data.gitlab_project_variable.contact_to_email.value}",
 
     # Proxy
     "VIRTUAL_HOST=${join(",", var.web_urls)}"
