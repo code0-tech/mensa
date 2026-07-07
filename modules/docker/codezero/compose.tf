@@ -19,7 +19,7 @@ DRACO_CRON_AQUILA_TOKEN=${random_password.draco_cron_aquila_token.result}
 COMPOSE_PROFILES=ide,runtime,ide_velorum
 
 IMAGE_REGISTRY=ghcr.io/code0-tech/reticulum/ci-builds
-IMAGE_TAG=0.0.0-experimental-2647874412-21af104f6ef55514fe1ee78fe26b6cdb1f9dbf0b
+IMAGE_TAG=0.0.0-experimental-2659432195-272b82f76927a9a440762a6e07308904366644e6
 IMAGE_EDITION=ce
 
 SAGITTARIUS_DB_ENCRYPTION_PRIMARY_KEY=${random_password.sagittarius_db_encryption_primary_key.result}
@@ -39,6 +39,14 @@ POSTGRES_PASSWORD=${random_password.postgres_password.result}
 
 PROXY_NETWORK=${var.proxy_network}
 
+AQUILA_ACTION_GLS_IDENTIFIER=gls-action
+AQUILA_ACTION_GLS_TOKEN=${random_password.action_gls_token.result}
+AQUILA_ACTION_SHOPIFY_IDENTIFIER=shopify
+AQUILA_ACTION_SHOPIFY_TOKEN=${random_password.action_shopify_token.result}
+
+ACTION_IMAGE_REGISTRY=ghcr.io/code0-tech/centaurus/ci-builds
+ACTION_IMAGE_TAG=0.0.0-experimental-2658871458-8568057de31b30d88afc20fc5aece7a9cef985fe
+
 ENV
 }
 
@@ -48,6 +56,7 @@ resource "terraform_data" "env_file" {
     filesha256("${path.module}/.env"),
     filesha256("${path.module}/docker-compose.yml"),
     filesha256("${path.module}/docker-compose.override.yml"),
+    filesha256("${path.module}/docker-compose.actions.yml"),
   ]
 
   provisioner "local-exec" {
@@ -62,8 +71,15 @@ resource "terraform_data" "env_file" {
 
 resource "docker_compose" "codezero" {
   project_name = "codezero"
-  env_files    = ["${path.module}/.env", "${path.module}/override.env"]
-  config_paths = ["${path.module}/docker-compose.yml", "${path.module}/docker-compose.override.yml"]
+  env_files    = [
+    "${path.module}/.env",
+    "${path.module}/override.env",
+  ]
+  config_paths = [
+    "${path.module}/docker-compose.yml",
+    "${path.module}/docker-compose.override.yml",
+    "${path.module}/docker-compose.actions.yml",
+  ]
 
   depends_on = [terraform_data.env_file]
 

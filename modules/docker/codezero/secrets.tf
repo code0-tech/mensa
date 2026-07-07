@@ -52,3 +52,13 @@ data "gitlab_project_variable" "openrouter_api_key" {
   project = "code0-tech/secret-manager"
   key     = "MENSA_DEMO_VELORUM_OPENROUTER_KEY"
 }
+
+resource "random_password" "action_gls_token" {
+  length  = 16
+  special = false
+}
+
+resource "random_password" "action_shopify_token" {
+  length  = 16
+  special = false
+}
