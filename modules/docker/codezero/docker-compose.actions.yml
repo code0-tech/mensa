@@ -1,0 +1,20 @@
+services:
+  action-gls:
+    image: ${ACTION_IMAGE_REGISTRY}/gls-action:${ACTION_IMAGE_TAG}
+    environment:
+      ACTION_ID: ${AQUILA_ACTION_GLS_IDENTIFIER}
+      AUTH_TOKEN: ${AQUILA_ACTION_GLS_TOKEN}
+    depends_on:
+      - aquila
+    networks:
+      - aquila
+
+  action-shopify:
+    image: ${ACTION_IMAGE_REGISTRY}/shopify-action:${ACTION_IMAGE_TAG}
+    environment:
+      ACTION_ID: ${AQUILA_ACTION_SHOPIFY_IDENTIFIER}
+      AUTH_TOKEN: ${AQUILA_ACTION_SHOPIFY_TOKEN}
+    depends_on:
+      - aquila
+    networks:
+      - aquila
