@@ -8,6 +8,7 @@ services:
       - aquila
     networks:
       - aquila
+    restart: unless-stopped
 
   action-shopify:
     image: ${ACTION_IMAGE_REGISTRY}/shopify-action:${ACTION_IMAGE_TAG}
@@ -18,3 +19,4 @@ services:
       - aquila
     networks:
       - aquila
+    restart: unless-stopped
