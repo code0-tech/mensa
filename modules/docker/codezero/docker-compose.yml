@@ -191,6 +191,9 @@ services:
     restart: unless-stopped
     profiles:
       - runtime
+    networks:
+      - default
+      - aquila
 
   taurus:
     depends_on:
@@ -252,3 +255,7 @@ services:
 volumes:
   generated-configs:
   postgres-data:
+
+networks:
+  aquila:
+    name: codezero-aquila
