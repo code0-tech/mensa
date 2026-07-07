@@ -4,6 +4,7 @@ services:
     environment:
       ACTION_ID: ${AQUILA_ACTION_GLS_IDENTIFIER}
       AUTH_TOKEN: ${AQUILA_ACTION_GLS_TOKEN}
+      AQUILA_URL: aquila:8081
     depends_on:
       - aquila
     networks:
@@ -15,6 +16,7 @@ services:
     environment:
       ACTION_ID: ${AQUILA_ACTION_SHOPIFY_IDENTIFIER}
       AUTH_TOKEN: ${AQUILA_ACTION_SHOPIFY_TOKEN}
+      AQUILA_URL: aquila:8081
     depends_on:
       - aquila
     networks:
