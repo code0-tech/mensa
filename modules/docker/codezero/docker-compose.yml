@@ -174,20 +174,10 @@ services:
         condition: service_started
     image: ${IMAGE_REGISTRY}/aquila:${IMAGE_TAG}
     environment:
-      MODE: dynamic
-      NATS_URL: nats://nats:4222
-      NATS_BUCKET: 'flow_store'
-      GRPC_HOST: 0.0.0.0
-      SAGITTARIUS_URL: "${AQUILA_SAGITTARIUS_URL}"
-      RUNTIME_TOKEN: "${AQUILA_SAGITTARIUS_TOKEN}"
-      SAGITTARIUS_UNARY_RPC_TIMEOUT_SECS: "${SAGITTARIUS_UNARY_RPC_TIMEOUT_SECS}"
+      AQUILA_CONFIG_PATH: /tmp/generated-configs/aquila.aquila.yml
+      AQUILA_SERVICE_CONFIG_PATH: /tmp/generated-configs/aquila.service.configuration.json
     volumes:
       - generated-configs:/tmp/generated-configs:ro
-    entrypoint: |
-      sh -c "
-        cp /tmp/generated-configs/aquila.service.configuration.json /service.configuration.json
-        exec /aquila
-      "
     restart: unless-stopped
     profiles:
       - runtime
