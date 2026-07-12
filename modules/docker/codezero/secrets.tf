@@ -62,3 +62,13 @@ resource "random_password" "action_shopify_token" {
   length  = 16
   special = false
 }
+
+resource "random_password" "action_shopware_token" {
+  length  = 16
+  special = false
+}
+
+resource "random_password" "action_woocommerce_token" {
+  length  = 16
+  special = false
+}
