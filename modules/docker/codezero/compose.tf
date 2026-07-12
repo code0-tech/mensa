@@ -7,7 +7,7 @@ INITIAL_ROOT_MAIL=root@code0.tech
 INITIAL_ROOT_PASSWORD=${random_password.initial_root_password.result}
 
 INITIAL_RUNTIME_TOKEN=${random_password.initial_runtime_token.result}
-AQUILA_SAGITTARIUS_TOKEN=${random_password.initial_runtime_token.result}
+AQUILA_BACKEND_TOKEN=${random_password.initial_runtime_token.result}
 
 DRACO_REST_PORT=443
 DRACO_REST_HOST=demo-rest.codezero.build
