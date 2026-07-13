@@ -22,6 +22,12 @@ resource "terraform_data" "env_file" {
     when    = destroy
     command = "rm -f ${path.module}/override.env"
   }
+
+  lifecycle {
+    replace_triggered_by = [
+      docker_container.config_writer,
+    ]
+  }
 }
 
 resource "docker_compose" "signoz" {
@@ -37,7 +43,6 @@ resource "docker_compose" "signoz" {
   lifecycle {
     replace_triggered_by = [
       terraform_data.env_file,
-      docker_container.config_writer,
     ]
   }
 }
