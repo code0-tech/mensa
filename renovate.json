@@ -42,7 +42,8 @@
     },
     {
       "matchFileNames": [
-        "modules/docker/codezero/docker-compose.yml"
+        "modules/docker/codezero/docker-compose.yml",
+        "modules/docker/signoz/pours/deployment/compose.yaml"
       ],
       "enabled": false
     }

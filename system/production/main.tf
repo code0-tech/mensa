@@ -52,12 +52,28 @@ resource "cloudflare_dns_record" "server_cname_codezero_build" {
   comment = "Managed by Terraform"
 }
 
+resource "cloudflare_dns_record" "server_cname_code0_tech" {
+  for_each = toset([
+    "signoz.code0.tech",
+  ])
+
+  name    = each.value
+  type    = "CNAME"
+  ttl     = 1
+  zone_id = data.cloudflare_zones.code0_tech_domain.result[0].id
+  content = cloudflare_dns_record.server_ip.name
+  proxied = true
+
+  comment = "Managed by Terraform"
+}
+
 module "proxy" {
   source = "../../modules/docker/proxy"
 
   certificate_hostnames = [
     "demo.codezero.build",
-    "demo-rest.codezero.build"
+    "demo-rest.codezero.build",
+    "signoz.code0.tech",
   ]
 }
 
@@ -65,4 +81,11 @@ module "codezero" {
   source = "../../modules/docker/codezero"
 
   proxy_network = module.proxy.docker_proxy_network_name
+}
+
+module "signoz" {
+  source = "../../modules/docker/signoz"
+
+  proxy_network = module.proxy.docker_proxy_network_name
+  hostname      = "signoz.code0.tech"
 }
