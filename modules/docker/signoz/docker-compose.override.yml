@@ -18,6 +18,7 @@ services:
       - proxy
     environment:
       VIRTUAL_HOST: ${SIGNOZ_VIRTUAL_HOST}
+      VIRTUAL_PORT: '8080'
       SIGNOZ_TOKENIZER_JWT_SECRET: ${SIGNOZ_TOKENIZER_JWT_SECRET}
       SIGNOZ_SQLSTORE_POSTGRES_DSN: postgres://signoz:${POSTGRES_PASSWORD}@signoz-metastore-postgres-0:5432/signoz?sslmode=disable
 
