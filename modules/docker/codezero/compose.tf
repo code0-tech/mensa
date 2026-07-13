@@ -19,7 +19,7 @@ DRACO_CRON_AQUILA_TOKEN=${random_password.draco_cron_aquila_token.result}
 COMPOSE_PROFILES=ide,runtime,ide_velorum
 
 IMAGE_REGISTRY=ghcr.io/code0-tech/reticulum/ci-builds
-IMAGE_TAG=0.0.0-experimental-2670996161-2eb554dbab8c613033c3f8c87fed781f56889a5e
+IMAGE_TAG=0.0.0-experimental-2672962779-688d140922f18dd3397bb0b8ff96dcbcc367cb28
 IMAGE_EDITION=ce
 
 SAGITTARIUS_DB_ENCRYPTION_PRIMARY_KEY=${random_password.sagittarius_db_encryption_primary_key.result}
@@ -49,7 +49,7 @@ AQUILA_ACTION_WOOCOMMERCE_IDENTIFIER=woocommerce
 AQUILA_ACTION_WOOCOMMERCE_TOKEN=${random_password.action_woocommerce_token.result}
 
 ACTION_IMAGE_REGISTRY=ghcr.io/code0-tech/centaurus/ci-builds
-ACTION_IMAGE_TAG=0.0.0-experimental-2670874026-c3efa38d0214db2eca207cd218732be7c104c3e4
+ACTION_IMAGE_TAG=0.0.0-experimental-2671119213-c64c074cd4fbb09109092220fa4beac39f3e4d3d
 
 ENV
 }
