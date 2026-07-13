@@ -1,0 +1,14 @@
+apiVersion: v1alpha1
+kind: Installation
+metadata:
+  name: signoz
+spec:
+  deployment:
+    flavor: compose
+    mode: docker
+  signoz:
+    spec:
+      image: signoz/signoz:v0.131.1
+  ingester:
+    spec:
+      image: signoz/signoz-otel-collector:v0.144.5

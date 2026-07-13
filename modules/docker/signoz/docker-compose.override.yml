@@ -1,0 +1,62 @@
+services:
+  ingester:
+    ports: !override
+      - '127.0.0.1:4317:4317'
+      - '127.0.0.1:4318:4318'
+    volumes: !override
+      - signoz-configs:/configs:ro
+    command: !override
+      - -c
+      - |
+        /signoz-otel-collector migrate sync check &&
+        /signoz-otel-collector --config=/configs/ingester/ingester.yaml --manager-config=/configs/ingester/opamp.yaml --copy-path=/var/tmp/collector-config.yaml
+
+  signoz-signoz-0:
+    ports: !override []
+    networks:
+      - signoz-network
+      - proxy
+    environment:
+      VIRTUAL_HOST: ${SIGNOZ_VIRTUAL_HOST}
+      SIGNOZ_TOKENIZER_JWT_SECRET: ${SIGNOZ_TOKENIZER_JWT_SECRET}
+      SIGNOZ_SQLSTORE_POSTGRES_DSN: postgres://signoz:${POSTGRES_PASSWORD}@signoz-metastore-postgres-0:5432/signoz?sslmode=disable
+
+  signoz-metastore-postgres-0:
+    environment: !override
+      - POSTGRES_DB=signoz
+      - POSTGRES_USER=signoz
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+
+  signoz-telemetrykeeper-clickhousekeeper-0:
+    volumes: !override
+      - signoz-telemetrykeeper-0-data:/var/lib/clickhouse-keeper
+      - signoz-configs:/configs:ro
+    entrypoint: !override
+      - /usr/bin/clickhouse-keeper
+      - --config-file=/configs/telemetrykeeper/clickhousekeeper/keeper-0.yaml
+
+  signoz-telemetrystore-clickhouse-0-0:
+    volumes: !override
+      - signoz-telemetrystore-0-0-data:/var/lib/clickhouse
+      - signoz-telemetrystore-user-scripts:/var/lib/clickhouse/user_scripts:ro
+      - signoz-configs:/configs:ro
+    environment: !override
+      - CLICKHOUSE_SKIP_USER_SETUP=1
+      - CLICKHOUSE_CONFIG=/etc/clickhouse-server/config.yaml
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        ln -sf /configs/telemetrystore/clickhouse/config-0-0.yaml /etc/clickhouse-server/config.yaml
+        ln -sf /configs/telemetrystore/clickhouse/functions.yaml /etc/clickhouse-server/functions.yaml
+        exec /entrypoint.sh
+
+volumes:
+  signoz-configs:
+    external: true
+    name: signoz-configs
+
+networks:
+  proxy:
+    external: true
+    name: ${PROXY_NETWORK}
