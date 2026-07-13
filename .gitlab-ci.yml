@@ -121,6 +121,7 @@ tf-plan:server_production:
     - .tf-plan
   before_script:
     - echo > modules/docker/codezero/override.env # ensure this file exists for docker_compose resource
+    - echo > modules/docker/signoz/override.env # ensure this file exists for docker_compose resource
     - !reference [.ssh, before_script]
     - !reference [.tf, before_script]
   variables:
