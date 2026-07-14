@@ -19,7 +19,7 @@ DRACO_CRON_AQUILA_TOKEN=${random_password.draco_cron_aquila_token.result}
 COMPOSE_PROFILES=ide,runtime,ide_velorum
 
 IMAGE_REGISTRY=ghcr.io/code0-tech/reticulum/ci-builds
-IMAGE_TAG=0.0.0-experimental-2672962779-688d140922f18dd3397bb0b8ff96dcbcc367cb28
+IMAGE_TAG=0.0.0-experimental-2675315513-d32929710bf631cbba87aded1545f0f58c340119
 IMAGE_EDITION=ce
 
 SAGITTARIUS_DB_ENCRYPTION_PRIMARY_KEY=${random_password.sagittarius_db_encryption_primary_key.result}
