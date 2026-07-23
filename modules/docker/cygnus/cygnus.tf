@@ -15,6 +15,10 @@ resource "random_password" "payload_user_password" {
   length = 32
 }
 
+resource "random_password" "actions_import_secret" {
+  length  = 64
+}
+
 data "gitlab_project_variable" "ga_measurement_id" {
   project = "code0-tech/secret-manager"
   key     = "CYGNUS_NEXT_PUBLIC_GA_MEASUREMENT_ID"
@@ -50,6 +54,7 @@ locals {
     "HOSTNAME=0.0.0.0",
     "NEXT_PUBLIC_GA_MEASUREMENT_ID=${sensitive(data.gitlab_project_variable.ga_measurement_id.value)}",
     "NEXT_PUBLIC_APP_URL=${var.web_urls[0]}",
+    "ACTIONS_IMPORT_SECRET=${random_password.actions_import_secret.result}",
 
     # Cygnus SMTP
     "SMTP_HOST=${data.gitlab_project_variable.smtp_host.value}",
@@ -86,7 +91,7 @@ resource "docker_container" "cygnus" {
   }
 
   volumes {
-    volume_name = docker_volume.cygnus_media.name
+    volume_name    = docker_volume.cygnus_media.name
     container_path = "/cygnus/.next/standalone/media"
   }
 
