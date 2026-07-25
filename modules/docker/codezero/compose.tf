@@ -57,8 +57,8 @@ ENV
 resource "terraform_data" "env_file" {
   triggers_replace = [
     sha256(local.override_env_content),
-    filesha256("${path.module}/.env"),
-    filesha256("${path.module}/docker-compose.yml"),
+    filesha256("${path.module}/vendor/.env"),
+    filesha256("${path.module}/vendor/docker-compose.yml"),
     filesha256("${path.module}/docker-compose.override.yml"),
     filesha256("${path.module}/docker-compose.actions.yml"),
   ]
@@ -76,14 +76,16 @@ resource "terraform_data" "env_file" {
 resource "docker_compose" "codezero" {
   project_name = "codezero"
   env_files    = [
-    "${path.module}/.env",
+    "${path.module}/vendor/.env",
     "${path.module}/override.env",
   ]
   config_paths = [
-    "${path.module}/docker-compose.yml",
+    "${path.module}/vendor/docker-compose.yml",
     "${path.module}/docker-compose.override.yml",
     "${path.module}/docker-compose.actions.yml",
   ]
+
+  project_directory = path.module
 
   depends_on = [terraform_data.env_file]
 

@@ -1,7 +1,7 @@
 services:
   config-generator:
     env_file: !override
-      - .env
+      - vendor/.env
       - override.env
   nginx:
     networks:
