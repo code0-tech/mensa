@@ -1,5 +1,5 @@
 data "docker_registry_image" "outline" {
-  name = "outlinewiki/outline:1.8.1"
+  name = "outlinewiki/outline:1.9.2"
 }
 
 resource "docker_image" "outline" {
