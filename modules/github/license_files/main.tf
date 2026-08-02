@@ -19,7 +19,7 @@ locals {
     "draco" = "ee"
     "hercules" = "mit"
     "lacerta" = "mit"
-    "pictor" = "mit"
+    "pictor" = "mit-pictor"
     "reticulum" = "ee"
     "sagittarius" = "ee-sagittarius"
     "sculptor" = "ee-sculptor"
