@@ -2,8 +2,8 @@ apiVersion: vendir.k14s.io/v1alpha1
 directories:
 - contents:
   - git:
-      commitTitle: 'fix: correct file path for aquila config'
-      sha: 31806fcb5b983282045c3ff32e9b2c1d732b90cd
+      commitTitle: 'Merge pull request #992 from code0-tech/renovate/code0-tech-code0-definition-0.x...'
+      sha: 32f41820ed41a30e5f9f5d25cf5f554065083769
     path: .
   path: modules/docker/codezero/vendor
 kind: LockConfig
