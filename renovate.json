@@ -58,6 +58,14 @@
         "modules/docker/signoz/pours/deployment/compose.yaml"
       ],
       "enabled": false
+    },
+    {
+      "matchDepNames": [
+        "signoz/**",
+        "github:SigNoz/**"
+      ],
+      "groupName": "signoz",
+      "additionalBranchPrefix": ""
     }
   ],
   "customManagers": [
