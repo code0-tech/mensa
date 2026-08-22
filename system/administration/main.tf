@@ -30,7 +30,8 @@ module "proxy" {
 
   certificate_hostnames = [
     "outline.code0.tech",
-    "codezero.build"
+    "codezero.build",
+    "playground.codezero.build",
   ]
 
   hostname_config_overrides = [
@@ -56,6 +57,14 @@ module "cygnus" {
   source = "../../modules/docker/cygnus"
 
   web_urls                = ["codezero.build"]
+  docker_proxy_network_id = module.proxy.docker_proxy_network_id
+}
+
+module "sculptor_playground" {
+  source = "../../modules/docker/sculptor-playground"
+
+  hostname = "playground.codezero.build"
+  playground_frame_ancestors = "'self' https://codezero.build"
   docker_proxy_network_id = module.proxy.docker_proxy_network_id
 }
 
@@ -93,6 +102,7 @@ resource "cloudflare_dns_record" "server_cname_code0_tech" {
 resource "cloudflare_dns_record" "server_cname_codezero_build" {
   for_each = toset([
     "codezero.build",
+    "playground.codezero.build",
   ])
 
   name    = each.value
