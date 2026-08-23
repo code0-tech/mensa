@@ -100,6 +100,12 @@ tf-plan:github:
   variables:
     TF_STATE_NAME: github
     TF_ROOT: 'envs/github'
+    TF_ARGS: '-refresh=false'
+  rules:
+    - if: $C0_GH_REF == "refs/heads/main"
+      variables:
+        TF_ARGS: ''
+    - when: on_success
 
 tf-apply:github:
   extends:
