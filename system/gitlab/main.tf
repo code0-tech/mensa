@@ -35,7 +35,8 @@ module "runner_support_arm" {
   source = "../../modules/gitlab/runner_support_webhook"
 
   for_each = toset([
-    "code0-tech/development/reticulum"
+    "code0-tech/development/reticulum",
+    "code0-tech/development/centaurus",
   ])
 
   project = each.value
