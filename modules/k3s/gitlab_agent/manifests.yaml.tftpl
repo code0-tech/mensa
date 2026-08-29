@@ -13,10 +13,12 @@ metadata:
   name: gitlab-agent
   namespace: flux-system
 spec:
-  interval: 1h
+  interval: 10m
   targetNamespace: ${namespace}
   install:
     createNamespace: true
+  driftDetection:
+    mode: enabled
   chart:
     spec:
       chart: gitlab-agent
