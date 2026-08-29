@@ -1,0 +1,814 @@
+{
+  "identifier": "taurus-date",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Date"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with Dates."
+    }
+  ],
+  "author": "CodeZero",
+  "icon": "tabler:calendar",
+  "version": "0.0.36",
+  "functionDefinitions": [
+    {
+      "runtimeName": "std::date::format",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "date",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Date"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The date that will be formatted."
+            }
+          ],
+          "runtimeDefinitionName": "date"
+        },
+        {
+          "runtimeName": "pattern",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Pattern"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The pattern used to format the date, for example DD:MM:YYYY or YY:MM:DD."
+            }
+          ],
+          "runtimeDefinitionName": "pattern"
+        }
+      ],
+      "signature": "(date: DATE, pattern: TEXT): TEXT",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Format Date"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a date into a formatted text using the given pattern. Throws an error if the pattern is invalid."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Format ${date} as ${pattern}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "format;pattern;stringify;to text;display;date;time;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "DATE",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:calendar-cog",
+      "runtimeDefinitionName": "std::date::format"
+    },
+    {
+      "runtimeName": "std::date::from",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "year",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Year"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The year of the date, for example 2026."
+            }
+          ],
+          "runtimeDefinitionName": "year"
+        },
+        {
+          "runtimeName": "month",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Month"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The month of the date."
+            }
+          ],
+          "runtimeDefinitionName": "month"
+        },
+        {
+          "runtimeName": "day",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Day"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The day of the month, ranging from 1 to 31."
+            }
+          ],
+          "runtimeDefinitionName": "day"
+        },
+        {
+          "runtimeName": "hour",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Hour"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The hour of the day, ranging from 0 to 23."
+            }
+          ],
+          "runtimeDefinitionName": "hour"
+        },
+        {
+          "runtimeName": "minute",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Minute"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The minute of the hour, ranging from 0 to 59."
+            }
+          ],
+          "runtimeDefinitionName": "minute"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second of the minute, ranging from 0 to 59."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "(year: NUMBER, month: MONTH, day: NUMBER, hour: HOUR, minute: MINUTE, second: NUMBER): DATE",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Date from Components"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Creates a date from the given year, month, day, hour, minute and second. Throws an error if the combination does not represent a valid date."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Date ${day} ${month} ${year} at ${hour}:${minute}:${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from;create;build;construct;date;year;month;day;time;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "DATE",
+        "NUMBER",
+        "MONTH",
+        "HOUR",
+        "MINUTE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:calendar-plus",
+      "runtimeDefinitionName": "std::date::from"
+    },
+    {
+      "runtimeName": "std::date::from_text",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The textual representation of the date, for example an ISO 8601 string like 2026-07-28T10:15:30Z."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): DATE",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Date from Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Parses a date from its textual representation. Throws an error if the text cannot be parsed into a valid date."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Date from text ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from text;parse;string;iso;from;date;time;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "DATE",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:calendar-plus",
+      "runtimeDefinitionName": "std::date::from_text"
+    },
+    {
+      "runtimeName": "std::date::from_unix",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Unix Timestamp"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The Unix timestamp in seconds since the Unix epoch (1970-01-01T00:00:00Z)."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): DATE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Date from Unix Timestamp"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Creates a date from a Unix timestamp given in seconds since the Unix epoch."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Date from Unix timestamp ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from unix;unix;timestamp;epoch;from;date;time;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "DATE",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:calendar-plus",
+      "runtimeDefinitionName": "std::date::from_unix"
+    },
+    {
+      "runtimeName": "std::date::now",
+      "signature": "(): DATE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Now"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the current date and time as a date."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Now"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "now;current;today;current date;current time;date;time;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "DATE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:calendar",
+      "runtimeDefinitionName": "std::date::now"
+    }
+  ],
+  "runtimeFunctionDefinitions": [
+    {
+      "runtimeName": "std::date::format",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "date",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Date"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The date that will be formatted."
+            }
+          ]
+        },
+        {
+          "runtimeName": "pattern",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Pattern"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The pattern used to format the date, for example DD:MM:YYYY or YY:MM:DD."
+            }
+          ]
+        }
+      ],
+      "signature": "(date: DATE, pattern: TEXT): TEXT",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Format Date"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a date into a formatted text using the given pattern. Throws an error if the pattern is invalid."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Format ${date} as ${pattern}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "format;pattern;stringify;to text;display;date;time;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "DATE",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:calendar-cog"
+    },
+    {
+      "runtimeName": "std::date::from",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "year",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Year"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The year of the date, for example 2026."
+            }
+          ]
+        },
+        {
+          "runtimeName": "month",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Month"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The month of the date."
+            }
+          ]
+        },
+        {
+          "runtimeName": "day",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Day"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The day of the month, ranging from 1 to 31."
+            }
+          ]
+        },
+        {
+          "runtimeName": "hour",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Hour"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The hour of the day, ranging from 0 to 23."
+            }
+          ]
+        },
+        {
+          "runtimeName": "minute",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Minute"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The minute of the hour, ranging from 0 to 59."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second of the minute, ranging from 0 to 59."
+            }
+          ]
+        }
+      ],
+      "signature": "(year: NUMBER, month: MONTH, day: NUMBER, hour: HOUR, minute: MINUTE, second: NUMBER): DATE",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Date from Components"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Creates a date from the given year, month, day, hour, minute and second. Throws an error if the combination does not represent a valid date."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Date ${day} ${month} ${year} at ${hour}:${minute}:${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from;create;build;construct;date;year;month;day;time;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "DATE",
+        "NUMBER",
+        "MONTH",
+        "HOUR",
+        "MINUTE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:calendar-plus"
+    },
+    {
+      "runtimeName": "std::date::from_text",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The textual representation of the date, for example an ISO 8601 string like 2026-07-28T10:15:30Z."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): DATE",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Date from Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Parses a date from its textual representation. Throws an error if the text cannot be parsed into a valid date."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Date from text ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from text;parse;string;iso;from;date;time;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "DATE",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:calendar-plus"
+    },
+    {
+      "runtimeName": "std::date::from_unix",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Unix Timestamp"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The Unix timestamp in seconds since the Unix epoch (1970-01-01T00:00:00Z)."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): DATE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Date from Unix Timestamp"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Creates a date from a Unix timestamp given in seconds since the Unix epoch."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Date from Unix timestamp ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from unix;unix;timestamp;epoch;from;date;time;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "DATE",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:calendar-plus"
+    },
+    {
+      "runtimeName": "std::date::now",
+      "signature": "(): DATE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Now"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the current date and time as a date."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Now"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "now;current;today;current date;current time;date;time;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "DATE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:calendar"
+    }
+  ],
+  "definitionDataTypes": [
+    {
+      "identifier": "DATE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Date"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Date"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "date;day;day of month;calendar day"
+        }
+      ],
+      "type": "number",
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "HOUR",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Hour"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Hour"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "hour;hours;hr;time"
+        }
+      ],
+      "rules": [
+        {
+          "numberRange": {
+            "to": "23",
+            "steps": "1"
+          }
+        }
+      ],
+      "type": "number",
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "MINUTE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Minute"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Minute"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "minute;minutes;min;time"
+        }
+      ],
+      "rules": [
+        {
+          "numberRange": {
+            "to": "59",
+            "steps": "1"
+          }
+        }
+      ],
+      "type": "number",
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "MONTH",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Month"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Month"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "month;months;month of year;calendar month"
+        }
+      ],
+      "type": "'JAN' | 'FEB' | 'MAR' | 'APR' | 'MAY' | 'JUN' | 'JUL' | 'AUG' | 'SEP' | 'OCT' | 'NOV' | 'DEC'",
+      "version": "0.0.36"
+    }
+  ],
+  "definitionSource": "taurus-date"
+}

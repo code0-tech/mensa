@@ -1,0 +1,725 @@
+{
+  "identifier": "taurus-control",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Control"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Flow control."
+    }
+  ],
+  "author": "CodeZero",
+  "icon": "tabler:arrow-ramp-right-2",
+  "version": "0.0.36",
+  "functionDefinitions": [
+    {
+      "runtimeName": "std::control::if",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "condition",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Condition"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the condition that determines whether the provided runnable should be executed. If this condition evaluates to true, the execution proceeds with the runnable defined in the second parameter."
+            }
+          ],
+          "runtimeDefinitionName": "condition"
+        },
+        {
+          "runtimeName": "runnable",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Runnable"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines the runnable that runs if the condition evaluates to true."
+            }
+          ],
+          "runtimeDefinitionName": "runnable"
+        }
+      ],
+      "signature": "(condition: BOOLEAN, runnable: RUNNABLE): void",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "If"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The 'If' runnable evaluates a boolean condition and, if it is true, executes the provided runnable. If the condition is false, execution continues without running the runnable."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "If ${condition} is True do ${runnable}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "if;control;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN",
+        "RUNNABLE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-ramp-right-2",
+      "runtimeDefinitionName": "std::control::if"
+    },
+    {
+      "runtimeName": "std::control::if_else",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "condition",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Condition"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Boolean that determines which branch to execute. If true the Runnable runs otherwise the Else Runnable runs."
+            }
+          ],
+          "runtimeDefinitionName": "condition"
+        },
+        {
+          "runtimeName": "runnable",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Runnable"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines the runnable that runs if the condition evaluates to true."
+            }
+          ],
+          "runtimeDefinitionName": "runnable"
+        },
+        {
+          "runtimeName": "else_runnable",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Else Runnable"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines the runnable that runs if the condition evaluates to false."
+            }
+          ],
+          "runtimeDefinitionName": "else_runnable"
+        }
+      ],
+      "signature": "(condition: BOOLEAN, runnable: RUNNABLE, else_runnable: RUNNABLE): void",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "If-Else"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Evaluates a condition and executes either the Then Runnable or the Else Runnable."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Evaluates a boolean condition. If true, executes the Runnable. Otherwise executes the Else Runnable."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "If ${condition} is True do ${then_runnable} else ${else_runnable}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "if_else;control;std;if;else"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN",
+        "RUNNABLE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-ramp-right",
+      "runtimeDefinitionName": "std::control::if_else"
+    },
+    {
+      "runtimeName": "std::control::return",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Return Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The value to be returned to the upper context."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "<T>(value: T): T",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Return"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Ends the current context and returns the specified value to the upper scope."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Return ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "return;control;std"
+        }
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-back",
+      "runtimeDefinitionName": "std::control::return"
+    },
+    {
+      "runtimeName": "std::control::stop",
+      "signature": "(): void",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Stop"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Terminates the current execution context entirely, halting all ongoing and future iterations. Once invoked, no additional steps or loops within this context will be executed. This node behaves like a global stop or termination signal within the flow."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Stop"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "stop;control;std"
+        }
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:xbox-x",
+      "runtimeDefinitionName": "std::control::stop"
+    },
+    {
+      "runtimeName": "std::control::value",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The value to save."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "<T>(value: T): T",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Set Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Saves the given value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Save ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "value;save;create;control;std"
+        }
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:new-section",
+      "runtimeDefinitionName": "std::control::value"
+    }
+  ],
+  "runtimeFunctionDefinitions": [
+    {
+      "runtimeName": "std::control::if",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "condition",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Condition"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the condition that determines whether the provided runnable should be executed. If this condition evaluates to true, the execution proceeds with the runnable defined in the second parameter."
+            }
+          ]
+        },
+        {
+          "runtimeName": "runnable",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Runnable"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines the runnable that runs if the condition evaluates to true."
+            }
+          ]
+        }
+      ],
+      "signature": "(condition: BOOLEAN, runnable: RUNNABLE): void",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "If"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The 'If' runnable evaluates a boolean condition and, if it is true, executes the provided runnable. If the condition is false, execution continues without running the runnable."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "If ${condition} is True do ${runnable}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "if;control;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN",
+        "RUNNABLE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-ramp-right-2"
+    },
+    {
+      "runtimeName": "std::control::if_else",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "condition",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Condition"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Boolean that determines which branch to execute. If true the Runnable runs otherwise the Else Runnable runs."
+            }
+          ]
+        },
+        {
+          "runtimeName": "runnable",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Runnable"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines the runnable that runs if the condition evaluates to true."
+            }
+          ]
+        },
+        {
+          "runtimeName": "else_runnable",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Else Runnable"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines the runnable that runs if the condition evaluates to false."
+            }
+          ]
+        }
+      ],
+      "signature": "(condition: BOOLEAN, runnable: RUNNABLE, else_runnable: RUNNABLE): void",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "If-Else"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Evaluates a condition and executes either the Then Runnable or the Else Runnable."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Evaluates a boolean condition. If true, executes the Runnable. Otherwise executes the Else Runnable."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "If ${condition} is True do ${then_runnable} else ${else_runnable}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "if_else;control;std;if;else"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN",
+        "RUNNABLE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-ramp-right"
+    },
+    {
+      "runtimeName": "std::control::return",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Return Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The value to be returned to the upper context."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(value: T): T",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Return"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Ends the current context and returns the specified value to the upper scope."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Return ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "return;control;std"
+        }
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-back"
+    },
+    {
+      "runtimeName": "std::control::stop",
+      "signature": "(): void",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Stop"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Terminates the current execution context entirely, halting all ongoing and future iterations. Once invoked, no additional steps or loops within this context will be executed. This node behaves like a global stop or termination signal within the flow."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Stop"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "stop;control;std"
+        }
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:xbox-x"
+    },
+    {
+      "runtimeName": "std::control::value",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The value to save."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(value: T): T",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Set Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Saves the given value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Save ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "value;save;create;control;std"
+        }
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:new-section"
+    }
+  ],
+  "definitionDataTypes": [
+    {
+      "identifier": "COMPARATOR",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Comparator"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Compare ${I}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "compare;comparator"
+        }
+      ],
+      "genericKeys": [
+        "I"
+      ],
+      "type": "(left: I, right: I) => NUMBER",
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "CONSUMER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Consumer"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Use ${T}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "use;consumer;consume;lambda"
+        }
+      ],
+      "genericKeys": [
+        "T"
+      ],
+      "type": "(item: T) => void",
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "PREDICATE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Predicate"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Predicate of ${T}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "predicate"
+        }
+      ],
+      "genericKeys": [
+        "T"
+      ],
+      "type": "(item: T) => BOOLEAN",
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN"
+      ],
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "RUNNABLE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Node"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Node"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "node;function"
+        }
+      ],
+      "type": "() => void",
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "TRANSFORM",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Transform"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Transform ${I} to ${R}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "transform"
+        }
+      ],
+      "genericKeys": [
+        "I",
+        "R"
+      ],
+      "type": "(item: I) => R",
+      "version": "0.0.36"
+    }
+  ],
+  "definitionSource": "taurus-control"
+}

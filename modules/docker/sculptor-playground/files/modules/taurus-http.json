@@ -1,0 +1,640 @@
+{
+  "identifier": "taurus-http",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with HTTP."
+    }
+  ],
+  "author": "CodeZero",
+  "icon": "tabler:world-www",
+  "version": "0.0.36",
+  "functionDefinitions": [
+    {
+      "runtimeName": "http::request::send",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "http_method",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "HTTP Method"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines the HTTP method to be used, such as GET, POST, PUT, or DELETE."
+            }
+          ],
+          "runtimeDefinitionName": "http_method"
+        },
+        {
+          "runtimeName": "url",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Request URL"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the endpoint address, including protocol, host, path, and query parameters, where the request is directed."
+            }
+          ],
+          "runtimeDefinitionName": "url"
+        },
+        {
+          "runtimeName": "http_auth",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Auth Type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the authentication variant to use, such as Bearer, Basic, X-API-Key, or a custom scheme. Use undefined to send the request without authentication."
+            }
+          ],
+          "runtimeDefinitionName": "http_auth"
+        },
+        {
+          "runtimeName": "http_auth_value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Auth Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Provides the credentials for the selected authentication type. For Basic auth, supply an object with username and password; for all other types, provide a token or key string."
+            }
+          ],
+          "runtimeDefinitionName": "http_auth_value"
+        },
+        {
+          "runtimeName": "http_auth_place",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Auth Placement"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines where the authentication credentials are attached to the request. Bearer and Basic auth always use Header; custom schemes can be placed in the Header or as a URL query parameter."
+            }
+          ],
+          "runtimeDefinitionName": "http_auth_place"
+        },
+        {
+          "runtimeName": "http_schema",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content Type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the MIME type of the request payload, such as application/json, application/xml, or text/plain. This determines the expected format of the payload parameter."
+            }
+          ],
+          "runtimeDefinitionName": "http_schema"
+        },
+        {
+          "runtimeName": "payload",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Request Payload"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Contains the request payload. For application/json the value must be an OBJECT, for all other content types a plain string is expected."
+            }
+          ],
+          "runtimeDefinitionName": "payload"
+        },
+        {
+          "runtimeName": "headers",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "HTTP Headers"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "An optional collection of key-value pairs containing additional request metadata such as custom headers."
+            }
+          ],
+          "runtimeDefinitionName": "headers"
+        }
+      ],
+      "signature": "<A extends HTTP_AUTH_TYPE, S extends HTTP_SCHEMA>(http_method: HTTP_METHOD, url: HTTP_URL, http_auth: A, http_auth_value: HTTP_AUTH_VALUE<A>, http_auth_place: HTTP_AUTH_PLACE<A>, http_schema: S, payload: HTTP_PAYLOAD<S>, headers?: OBJECT<{}>): HTTP_RESPONSE<any>",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Send HTTP request"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Sends a request to the specified url with the given method, headers and payload, and returns the response as an HTTP_RESPONSE object. This function initiates an HTTP request to a specified endpoint, allowing you to interact with web services or APIs by sending data and receiving responses."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Send request to ${url} with ${payload}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "send;sends;execute;request;http"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "HTTP_METHOD",
+        "HTTP_URL",
+        "HTTP_AUTH_TYPE",
+        "HTTP_AUTH_VALUE",
+        "HTTP_AUTH_PLACE",
+        "HTTP_SCHEMA",
+        "HTTP_PAYLOAD",
+        "OBJECT",
+        "HTTP_RESPONSE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:world-www",
+      "runtimeDefinitionName": "http::request::send"
+    }
+  ],
+  "runtimeFunctionDefinitions": [
+    {
+      "runtimeName": "http::request::send",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "http_method",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "HTTP Method"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines the HTTP method to be used, such as GET, POST, PUT, or DELETE."
+            }
+          ]
+        },
+        {
+          "runtimeName": "url",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Request URL"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the endpoint address, including protocol, host, path, and query parameters, where the request is directed."
+            }
+          ]
+        },
+        {
+          "runtimeName": "http_auth",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Auth Type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the authentication variant to use, such as Bearer, Basic, X-API-Key, or a custom scheme. Use undefined to send the request without authentication."
+            }
+          ]
+        },
+        {
+          "runtimeName": "http_auth_value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Auth Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Provides the credentials for the selected authentication type. For Basic auth, supply an object with username and password; for all other types, provide a token or key string."
+            }
+          ]
+        },
+        {
+          "runtimeName": "http_auth_place",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Auth Placement"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines where the authentication credentials are attached to the request. Bearer and Basic auth always use Header; custom schemes can be placed in the Header or as a URL query parameter."
+            }
+          ]
+        },
+        {
+          "runtimeName": "http_schema",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content Type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the MIME type of the request payload, such as application/json, application/xml, or text/plain. This determines the expected format of the payload parameter."
+            }
+          ]
+        },
+        {
+          "runtimeName": "payload",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Request Payload"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Contains the request payload. For application/json the value must be an OBJECT, for all other content types a plain string is expected."
+            }
+          ]
+        },
+        {
+          "runtimeName": "headers",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "HTTP Headers"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "An optional collection of key-value pairs containing additional request metadata such as custom headers."
+            }
+          ]
+        }
+      ],
+      "signature": "<A extends HTTP_AUTH_TYPE, S extends HTTP_SCHEMA>(http_method: HTTP_METHOD, url: HTTP_URL, http_auth: A, http_auth_value: HTTP_AUTH_VALUE<A>, http_auth_place: HTTP_AUTH_PLACE<A>, http_schema: S, payload: HTTP_PAYLOAD<S>, headers?: OBJECT<{}>): HTTP_RESPONSE<any>",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Send HTTP request"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Sends a request to the specified url with the given method, headers and payload, and returns the response as an HTTP_RESPONSE object. This function initiates an HTTP request to a specified endpoint, allowing you to interact with web services or APIs by sending data and receiving responses."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Send request to ${url} with ${payload}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "send;sends;execute;request;http"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "HTTP_METHOD",
+        "HTTP_URL",
+        "HTTP_AUTH_TYPE",
+        "HTTP_AUTH_VALUE",
+        "HTTP_AUTH_PLACE",
+        "HTTP_SCHEMA",
+        "HTTP_PAYLOAD",
+        "OBJECT",
+        "HTTP_RESPONSE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:world-www"
+    }
+  ],
+  "definitionDataTypes": [
+    {
+      "identifier": "HTTP_AUTH_PLACE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP credential placement"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "HTTP credential placement"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "http;auth;credential;place;placement;location;header;url"
+        }
+      ],
+      "genericKeys": [
+        "T"
+      ],
+      "type": "T extends 'Bearer' ? 'Header' : T extends 'Basic' ? 'Header' : T extends undefined ? undefined : T extends null ? null : 'Header' | 'Url'",
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "HTTP_AUTH_TYPE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP credential variant"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "HTTP credential variant"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "http;auth;credential;type;variant;bearer;basic;api-key"
+        }
+      ],
+      "type": "'Bearer' | 'Basic' | 'X-API-Key' | string | undefined | null",
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "HTTP_AUTH_VALUE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP credential value"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "HTTP credential value"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "http;auth;credential;value;bearer;basic;username;password;token"
+        }
+      ],
+      "genericKeys": [
+        "T"
+      ],
+      "type": "T extends 'Basic' ? { username: string, password: string } : T extends undefined ? undefined : T extends null ? null : string",
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "HTTP_METHOD",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Method"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "HTTP Method"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "http;method;get;post;put;delete;path;head"
+        }
+      ],
+      "type": "'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD'",
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "HTTP_PAYLOAD",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP payload"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "HTTP payload"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "http;payload;body;content;data;json"
+        }
+      ],
+      "genericKeys": [
+        "T"
+      ],
+      "type": "T extends 'application/json' ? OBJECT<{}> : T extends undefined ? undefined : T extends null ? null : string",
+      "linkedDataTypeIdentifiers": [
+        "OBJECT"
+      ],
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "HTTP_REQUEST",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Request"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "HTTP Request"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "http;request"
+        }
+      ],
+      "genericKeys": [
+        "T"
+      ],
+      "type": "{ http_method: HTTP_METHOD, url: HTTP_URL, payload: T, headers: OBJECT<{}> }",
+      "linkedDataTypeIdentifiers": [
+        "HTTP_METHOD",
+        "HTTP_URL",
+        "OBJECT"
+      ],
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "HTTP_RESPONSE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Response"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "HTTP Response"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "http;response;object"
+        }
+      ],
+      "genericKeys": [
+        "T"
+      ],
+      "type": "{ payload: T, headers: OBJECT<{}>, http_status_code: HTTP_STATUS_CODE }",
+      "linkedDataTypeIdentifiers": [
+        "HTTP_STATUS_CODE",
+        "OBJECT"
+      ],
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "HTTP_SCHEMA",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP schema"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "HTTP schema"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "http;schema;content-type;mime;media-type;json;xml;text;csv"
+        }
+      ],
+      "type": "'application/json' | 'application/xml' | 'text/plain' | 'text/csv' | string | undefined | null",
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "HTTP_STATUS_CODE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Status Code"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "HTTP Status Code"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "http;status;code"
+        }
+      ],
+      "rules": [
+        {
+          "numberRange": {
+            "from": "100",
+            "to": "599"
+          }
+        }
+      ],
+      "type": "NUMBER",
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "HTTP_URL",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Route"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "HTTP Route"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "http;route;url"
+        }
+      ],
+      "rules": [
+        {
+          "regex": {
+            "pattern": "^/\\w+(?:[.:~-]\\w+)*(?:/\\w+(?:[.:~-]\\w+)*)*$"
+          }
+        }
+      ],
+      "type": "TEXT",
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36"
+    }
+  ],
+  "definitionSource": "taurus-http"
+}
