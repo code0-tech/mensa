@@ -1,0 +1,3858 @@
+{
+  "identifier": "taurus-text",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with Text."
+    }
+  ],
+  "author": "CodeZero",
+  "icon": "tabler:abc",
+  "version": "0.0.36",
+  "functionDefinitions": [
+    {
+      "runtimeName": "std::text::append",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Original Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The base text that will have another text appended to its end."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "suffix",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Suffix"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text that will be appended to the end of the original text."
+            }
+          ],
+          "runtimeDefinitionName": "suffix"
+        }
+      ],
+      "signature": "(value: TEXT, suffix: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Append Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text consisting of the original text followed by the specified suffix."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Append ${suffix} at the End of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "append;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::append"
+    },
+    {
+      "runtimeName": "std::text::as_bytes",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts the input text into a list of byte values."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): LIST<NUMBER>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text As Bytes"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a text into a list of byte values."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} As Bytes"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "as_bytes;text;string;std;as;bytes"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::as_bytes"
+    },
+    {
+      "runtimeName": "std::text::at",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text from which a character will be retrieved by index."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "index",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Index"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The zero-based position of the character to extract."
+            }
+          ],
+          "runtimeDefinitionName": "index"
+        }
+      ],
+      "signature": "(value: TEXT, index: NUMBER): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Character at Index"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Retrieves a single character from the input text based on the provided zero-based index."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get Character of ${value} at ${index}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "at;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::at"
+    },
+    {
+      "runtimeName": "std::text::byte_size",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text whose byte size is to be calculated."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Byte Size"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the size in bytes of the provided text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Byte-Size of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "byte_size;text;string;std;byte;size"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::byte_size"
+    },
+    {
+      "runtimeName": "std::text::capitalize",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Capitalizes the first letter of the input text."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Capitalize"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts the first character of the text to uppercase and leaves the rest unchanged."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Capitalize ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "capitalize;title case;upper first;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::capitalize"
+    },
+    {
+      "runtimeName": "std::text::chars",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Splits the input text into a list of its constituent characters."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): LIST<TEXT>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Characters"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Creates a list where each element is a single character from the original text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Turns ${value} into a List of Characters"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "characters;letters;split;text;string;std;chars"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::chars"
+    },
+    {
+      "runtimeName": "std::text::contains",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The main text to search within."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "substring",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text to search for inside the main text."
+            }
+          ],
+          "runtimeDefinitionName": "substring"
+        }
+      ],
+      "signature": "(value: TEXT, substring: TEXT): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Contains Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the subtext is found anywhere in the main text. Otherwise, returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Check if ${value} contains ${substring}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "contains;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::contains"
+    },
+    {
+      "runtimeName": "std::text::decode",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text to decode."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "encoding",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Encoding Type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The decoding scheme to apply (e.g. Base64)."
+            }
+          ],
+          "runtimeDefinitionName": "encoding"
+        }
+      ],
+      "signature": "(value: TEXT, encoding: TEXT_ENCODING): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Decode Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Decodes the input text from the specified encoding format."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Decode ${value} using ${encoding}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "decode;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "TEXT_ENCODING"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::decode"
+    },
+    {
+      "runtimeName": "std::text::encode",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text to encode."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "encoding",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Encoding Type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The encoding scheme to apply (e.g., UTF-8, Base64)."
+            }
+          ],
+          "runtimeDefinitionName": "encoding"
+        }
+      ],
+      "signature": "(value: TEXT, encoding: TEXT_ENCODING): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Encode Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Transforms the given text into a representation encoded by the specified encoding scheme."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Encode ${value} to ${encoding}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "encode;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "TEXT_ENCODING"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::encode"
+    },
+    {
+      "runtimeName": "std::text::ends_with",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text to check."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "suffix",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Suffix"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The suffix to test against the input text."
+            }
+          ],
+          "runtimeDefinitionName": "suffix"
+        }
+      ],
+      "signature": "(value: TEXT, suffix: TEXT): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Ends With"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the input text ends with the given suffix. Otherwise, returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Check if ${value} Ends With ${suffix}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "ends_with;text;string;std;ends;with"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::ends_with"
+    },
+    {
+      "runtimeName": "std::text::from_ascii",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "ASCII Code"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "List of ASCII numeric codes representing characters."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: LIST<NUMBER>): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text from ASCII"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a list of ASCII codes back into the corresponding text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} to Text"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from_ascii;text;string;std;from;ascii"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "NUMBER",
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::from_ascii"
+    },
+    {
+      "runtimeName": "std::text::hex",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text to be converted to its hexadecimal representation."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text to Hexadecimal"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a text containing the hexadecimal values corresponding to each character of the input text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} to Hexadecimal"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "hex;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::hex"
+    },
+    {
+      "runtimeName": "std::text::index_of",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text to search within."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "substring",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The subtext to find inside the text."
+            }
+          ],
+          "runtimeDefinitionName": "substring"
+        }
+      ],
+      "signature": "(value: TEXT, substring: TEXT): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Index Of"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the zero-based index of the first occurrence of the subtext in the text. Returns -1 if the subtext is not found."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get Position of ${substring} Inside ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "index_of;text;string;std;index;of"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::index_of"
+    },
+    {
+      "runtimeName": "std::text::insert",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Original Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The original text into which another text will be inserted."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "position",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Position"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Zero-based index indicating where the new text should be inserted."
+            }
+          ],
+          "runtimeDefinitionName": "position"
+        },
+        {
+          "runtimeName": "text",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text to Insert"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text that will be inserted into the original text."
+            }
+          ],
+          "documentation": [
+            {
+              "code": "en-US",
+              "content": "The subtext to be inserted at the specified position."
+            }
+          ],
+          "runtimeDefinitionName": "text"
+        }
+      ],
+      "signature": "(value: TEXT, position: NUMBER, text: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Insert Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text where the provided text is inserted at the zero-based position index within the original text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Insert ${value} at ${position} into ${text}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "insert;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::insert"
+    },
+    {
+      "runtimeName": "std::text::is_equal",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first text to compare."
+            }
+          ],
+          "runtimeDefinitionName": "first"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second text to compare."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "(first: TEXT, second: TEXT): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is Equal"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Determines if the two given text inputs are exactly the same, returning true if equal, false otherwise."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Equals ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "equal;equals;same;text;string;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::is_equal"
+    },
+    {
+      "runtimeName": "std::text::length",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Input text to determine the number of characters it contains."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Length"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the number of characters in the given text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Length of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "length;size;characters;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::length"
+    },
+    {
+      "runtimeName": "std::text::lowercase",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts all characters in the input text to lowercase."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text to Lowercase"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text with all characters converted to lowercase."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} to Lowercase"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "lowercase;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::lowercase"
+    },
+    {
+      "runtimeName": "std::text::octal",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text to be converted to its octal representation."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text to Octal"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a text into an octal representation."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} to Octal"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "octal;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::octal"
+    },
+    {
+      "runtimeName": "std::text::prepend",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Original Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The base text that will have another text prepended to its beginning."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "prefix",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Prefix"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text that will be added to the start of the original text."
+            }
+          ],
+          "runtimeDefinitionName": "prefix"
+        }
+      ],
+      "signature": "(value: TEXT, prefix: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Prepend Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text consisting of the specified prefix followed by the original text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Prepend ${value} with ${prefix}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "prepend;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::prepend"
+    },
+    {
+      "runtimeName": "std::text::remove",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text from which a subtext will be removed."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "start",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Start Index"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The starting position for removing characters from the text."
+            }
+          ],
+          "runtimeDefinitionName": "start"
+        },
+        {
+          "runtimeName": "end",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "End Index"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The zero-based index where removal ends (exclusive)."
+            }
+          ],
+          "documentation": [
+            {
+              "code": "en-US",
+              "content": "The position just after the last character to be removed."
+            }
+          ],
+          "runtimeDefinitionName": "end"
+        }
+      ],
+      "signature": "(value: TEXT, start: NUMBER, end: NUMBER): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Remove String"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Removes the subtext between the specified start and end indices from the input text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Remove ${value} from ${start}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "remove;delete;strip;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::remove"
+    },
+    {
+      "runtimeName": "std::text::replace",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Original Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the text in which all occurrences of the old subtext will be replaced."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "oldText",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Old Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "All occurrences of this subtext in the original text will be replaced."
+            }
+          ],
+          "runtimeDefinitionName": "oldText"
+        },
+        {
+          "runtimeName": "newText",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "New Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This subtext will replace each occurrence of the old subtext."
+            }
+          ],
+          "runtimeDefinitionName": "newText"
+        }
+      ],
+      "signature": "(value: TEXT, oldText: TEXT, newText: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Replace Subtext"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text where every instance of the old subtext is replaced by the new subtext."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Replace ${old} with ${new} Inside ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "replace;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::replace"
+    },
+    {
+      "runtimeName": "std::text::replace_first",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Original Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This text contains the subtext that will be replaced only once—the first occurrence."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "oldText",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Old Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Only the first occurrence of this subtext will be replaced in the original text."
+            }
+          ],
+          "runtimeDefinitionName": "oldText"
+        },
+        {
+          "runtimeName": "newText",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "New Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This subtext will replace only the first occurrence of the old subtext."
+            }
+          ],
+          "runtimeDefinitionName": "newText"
+        }
+      ],
+      "signature": "(value: TEXT, oldText: TEXT, newText: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Replace First Subtext"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Replaces the first occurrence of a specified subtext with another subtext in the input text."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text where only the first instance of the old subtext is replaced by the new subtext."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "In ${value} replace first ${old} with ${new}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "replace_first;text;string;std;replace;first"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::replace_first"
+    },
+    {
+      "runtimeName": "std::text::replace_last",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Original Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This text contains the subtext that will be replaced only once—the last occurrence."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "oldText",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Old Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Only the last occurrence of this subtext will be replaced in the original text."
+            }
+          ],
+          "runtimeDefinitionName": "oldText"
+        },
+        {
+          "runtimeName": "newText",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "New Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This subtext will replace only the last occurrence of the old subtext."
+            }
+          ],
+          "runtimeDefinitionName": "newText"
+        }
+      ],
+      "signature": "(value: TEXT, oldText: TEXT, newText: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Replace Last Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Replaces the last occurrence of a specified subtext with another subtext in the input text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "In ${value} replace the last ${old} with ${new}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "replace_last;text;string;std;replace;last"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::replace_last"
+    },
+    {
+      "runtimeName": "std::text::reverse",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text to be reversed."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Reverse Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text with the characters of the input text in reverse order."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Reverse ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "reverse;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::reverse"
+    },
+    {
+      "runtimeName": "std::text::split",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text to be split."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "delimiter",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Delimiter"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The delimiter text to split the text by."
+            }
+          ],
+          "runtimeDefinitionName": "delimiter"
+        }
+      ],
+      "signature": "(value: TEXT, delimiter: TEXT): LIST<TEXT>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Split"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a list of subtext obtained by splitting the input text at each occurrence of the delimiter."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Splits ${value} on '${delimiter}'"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "split;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::split"
+    },
+    {
+      "runtimeName": "std::text::starts_with",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text to check."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "prefix",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Prefix"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The prefix to test against the input text."
+            }
+          ],
+          "runtimeDefinitionName": "prefix"
+        }
+      ],
+      "signature": "(value: TEXT, prefix: TEXT): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Starts With"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the input text begins with the given prefix. Otherwise, returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Check if ${value} starts with ${prefix}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "text;string;std;start;with;starts"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::starts_with"
+    },
+    {
+      "runtimeName": "std::text::swapcase",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Swaps the case of each letter in the input text: uppercase letters become lowercase, and vice versa."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Swap Case"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts uppercase letters to lowercase and lowercase letters to uppercase in the given text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Swapcase of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "swapcase;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::swapcase"
+    },
+    {
+      "runtimeName": "std::text::to_ascii",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Input text to convert to ASCII codes."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): LIST<NUMBER>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text to ASCII"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a list of numbers where each number represents the ASCII code of the corresponding character in the input text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} To Ascii"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to_ascii;text;string;std;to;ascii"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::to_ascii"
+    },
+    {
+      "runtimeName": "std::text::trim",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text from which leading and trailing whitespace characters will be removed."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Trim Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text with all leading and trailing whitespace characters removed from the input text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Trim ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "trim;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::trim"
+    },
+    {
+      "runtimeName": "std::text::uppercase",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts all characters in the input text to uppercase."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Uppercase"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Transforms all letters in the text to their uppercase equivalents."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Uppercase ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "uppercase;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc",
+      "runtimeDefinitionName": "std::text::uppercase"
+    }
+  ],
+  "runtimeFunctionDefinitions": [
+    {
+      "runtimeName": "std::text::append",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Original Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The base text that will have another text appended to its end."
+            }
+          ]
+        },
+        {
+          "runtimeName": "suffix",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Suffix"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text that will be appended to the end of the original text."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, suffix: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Append Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text consisting of the original text followed by the specified suffix."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Append ${suffix} at the End of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "append;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::as_bytes",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts the input text into a list of byte values."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): LIST<NUMBER>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text As Bytes"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a text into a list of byte values."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} As Bytes"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "as_bytes;text;string;std;as;bytes"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::at",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text from which a character will be retrieved by index."
+            }
+          ]
+        },
+        {
+          "runtimeName": "index",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Index"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The zero-based position of the character to extract."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, index: NUMBER): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Character at Index"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Retrieves a single character from the input text based on the provided zero-based index."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get Character of ${value} at ${index}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "at;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::byte_size",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text whose byte size is to be calculated."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Byte Size"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the size in bytes of the provided text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Byte-Size of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "byte_size;text;string;std;byte;size"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::capitalize",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Capitalizes the first letter of the input text."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Capitalize"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts the first character of the text to uppercase and leaves the rest unchanged."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Capitalize ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "capitalize;title case;upper first;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::chars",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Splits the input text into a list of its constituent characters."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): LIST<TEXT>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Characters"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Creates a list where each element is a single character from the original text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Turns ${value} into a List of Characters"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "characters;letters;split;text;string;std;chars"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::contains",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The main text to search within."
+            }
+          ]
+        },
+        {
+          "runtimeName": "substring",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text to search for inside the main text."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, substring: TEXT): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Contains Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the subtext is found anywhere in the main text. Otherwise, returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Check if ${value} contains ${substring}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "contains;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::decode",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text to decode."
+            }
+          ]
+        },
+        {
+          "runtimeName": "encoding",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Encoding Type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The decoding scheme to apply (e.g. Base64)."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, encoding: TEXT_ENCODING): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Decode Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Decodes the input text from the specified encoding format."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Decode ${value} using ${encoding}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "decode;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "TEXT_ENCODING"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::encode",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text to encode."
+            }
+          ]
+        },
+        {
+          "runtimeName": "encoding",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Encoding Type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The encoding scheme to apply (e.g., UTF-8, Base64)."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, encoding: TEXT_ENCODING): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Encode Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Transforms the given text into a representation encoded by the specified encoding scheme."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Encode ${value} to ${encoding}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "encode;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "TEXT_ENCODING"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::ends_with",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text to check."
+            }
+          ]
+        },
+        {
+          "runtimeName": "suffix",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Suffix"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The suffix to test against the input text."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, suffix: TEXT): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Ends With"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the input text ends with the given suffix. Otherwise, returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Check if ${value} Ends With ${suffix}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "ends_with;text;string;std;ends;with"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::from_ascii",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "ASCII Code"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "List of ASCII numeric codes representing characters."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: LIST<NUMBER>): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text from ASCII"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a list of ASCII codes back into the corresponding text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} to Text"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from_ascii;text;string;std;from;ascii"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "NUMBER",
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::hex",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text to be converted to its hexadecimal representation."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text to Hexadecimal"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a text containing the hexadecimal values corresponding to each character of the input text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} to Hexadecimal"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "hex;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::index_of",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text to search within."
+            }
+          ]
+        },
+        {
+          "runtimeName": "substring",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The subtext to find inside the text."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, substring: TEXT): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Index Of"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the zero-based index of the first occurrence of the subtext in the text. Returns -1 if the subtext is not found."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get Position of ${substring} Inside ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "index_of;text;string;std;index;of"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::insert",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Original Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The original text into which another text will be inserted."
+            }
+          ]
+        },
+        {
+          "runtimeName": "position",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Position"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Zero-based index indicating where the new text should be inserted."
+            }
+          ]
+        },
+        {
+          "runtimeName": "text",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text to Insert"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text that will be inserted into the original text."
+            }
+          ],
+          "documentation": [
+            {
+              "code": "en-US",
+              "content": "The subtext to be inserted at the specified position."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, position: NUMBER, text: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Insert Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text where the provided text is inserted at the zero-based position index within the original text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Insert ${value} at ${position} into ${text}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "insert;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::is_equal",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first text to compare."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second text to compare."
+            }
+          ]
+        }
+      ],
+      "signature": "(first: TEXT, second: TEXT): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is Equal"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Determines if the two given text inputs are exactly the same, returning true if equal, false otherwise."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Equals ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "equal;equals;same;text;string;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::length",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Input text to determine the number of characters it contains."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Length"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the number of characters in the given text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Length of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "length;size;characters;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::lowercase",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts all characters in the input text to lowercase."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text to Lowercase"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text with all characters converted to lowercase."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} to Lowercase"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "lowercase;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::octal",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text to be converted to its octal representation."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text to Octal"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a text into an octal representation."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} to Octal"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "octal;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::prepend",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Original Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The base text that will have another text prepended to its beginning."
+            }
+          ]
+        },
+        {
+          "runtimeName": "prefix",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Prefix"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text that will be added to the start of the original text."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, prefix: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Prepend Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text consisting of the specified prefix followed by the original text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Prepend ${value} with ${prefix}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "prepend;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::remove",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text from which a subtext will be removed."
+            }
+          ]
+        },
+        {
+          "runtimeName": "start",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Start Index"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The starting position for removing characters from the text."
+            }
+          ]
+        },
+        {
+          "runtimeName": "end",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "End Index"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The zero-based index where removal ends (exclusive)."
+            }
+          ],
+          "documentation": [
+            {
+              "code": "en-US",
+              "content": "The position just after the last character to be removed."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, start: NUMBER, end: NUMBER): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Remove String"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Removes the subtext between the specified start and end indices from the input text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Remove ${value} from ${start}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "remove;delete;strip;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::replace",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Original Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the text in which all occurrences of the old subtext will be replaced."
+            }
+          ]
+        },
+        {
+          "runtimeName": "oldText",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Old Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "All occurrences of this subtext in the original text will be replaced."
+            }
+          ]
+        },
+        {
+          "runtimeName": "newText",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "New Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This subtext will replace each occurrence of the old subtext."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, oldText: TEXT, newText: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Replace Subtext"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text where every instance of the old subtext is replaced by the new subtext."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Replace ${old} with ${new} Inside ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "replace;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::replace_first",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Original Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This text contains the subtext that will be replaced only once—the first occurrence."
+            }
+          ]
+        },
+        {
+          "runtimeName": "oldText",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Old Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Only the first occurrence of this subtext will be replaced in the original text."
+            }
+          ]
+        },
+        {
+          "runtimeName": "newText",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "New Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This subtext will replace only the first occurrence of the old subtext."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, oldText: TEXT, newText: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Replace First Subtext"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Replaces the first occurrence of a specified subtext with another subtext in the input text."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text where only the first instance of the old subtext is replaced by the new subtext."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "In ${value} replace first ${old} with ${new}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "replace_first;text;string;std;replace;first"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::replace_last",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Original Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This text contains the subtext that will be replaced only once—the last occurrence."
+            }
+          ]
+        },
+        {
+          "runtimeName": "oldText",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Old Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Only the last occurrence of this subtext will be replaced in the original text."
+            }
+          ]
+        },
+        {
+          "runtimeName": "newText",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "New Subtext"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This subtext will replace only the last occurrence of the old subtext."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, oldText: TEXT, newText: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Replace Last Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Replaces the last occurrence of a specified subtext with another subtext in the input text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "In ${value} replace the last ${old} with ${new}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "replace_last;text;string;std;replace;last"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::reverse",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text to be reversed."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Reverse Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text with the characters of the input text in reverse order."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Reverse ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "reverse;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::split",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text to be split."
+            }
+          ]
+        },
+        {
+          "runtimeName": "delimiter",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Delimiter"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The delimiter text to split the text by."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, delimiter: TEXT): LIST<TEXT>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Split"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a list of subtext obtained by splitting the input text at each occurrence of the delimiter."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Splits ${value} on '${delimiter}'"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "split;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::starts_with",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text to check."
+            }
+          ]
+        },
+        {
+          "runtimeName": "prefix",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Prefix"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The prefix to test against the input text."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT, prefix: TEXT): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Starts With"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the input text begins with the given prefix. Otherwise, returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Check if ${value} starts with ${prefix}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "text;string;std;start;with;starts"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::swapcase",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Swaps the case of each letter in the input text: uppercase letters become lowercase, and vice versa."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Swap Case"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts uppercase letters to lowercase and lowercase letters to uppercase in the given text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Swapcase of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "swapcase;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::to_ascii",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Input text to convert to ASCII codes."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): LIST<NUMBER>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text to ASCII"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a list of numbers where each number represents the ASCII code of the corresponding character in the input text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} To Ascii"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to_ascii;text;string;std;to;ascii"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::trim",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input text from which leading and trailing whitespace characters will be removed."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Trim Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new text with all leading and trailing whitespace characters removed from the input text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Trim ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "trim;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    },
+    {
+      "runtimeName": "std::text::uppercase",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts all characters in the input text to uppercase."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Uppercase"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Transforms all letters in the text to their uppercase equivalents."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Uppercase ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "uppercase;text;string;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:abc"
+    }
+  ],
+  "definitionDataTypes": [
+    {
+      "identifier": "TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Text"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "text;char;literal;string"
+        }
+      ],
+      "type": "string",
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "TEXT_ENCODING",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Encoding"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Text Encoding"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "text;encoding;base64"
+        }
+      ],
+      "type": "'BASE64'",
+      "version": "0.0.36"
+    }
+  ],
+  "definitionSource": "taurus-text"
+}

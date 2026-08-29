@@ -1,0 +1,699 @@
+{
+  "identifier": "taurus-boolean",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Boolean"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with Booleans."
+    }
+  ],
+  "author": "CodeZero",
+  "icon": "tabler:toggle-left",
+  "version": "0.0.36",
+  "functionDefinitions": [
+    {
+      "runtimeName": "std::boolean::as_number",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts a boolean to a number."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: BOOLEAN): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Boolean as Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Will convert the boolean to a number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Convert ${value} to number"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to number;numeric;boolean;logic;std;as;number"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:toggle-left",
+      "runtimeDefinitionName": "std::boolean::as_number"
+    },
+    {
+      "runtimeName": "std::boolean::as_text",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts a boolean to a text."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: BOOLEAN): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Boolean as Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Will convert the boolean to text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Convert ${value} to text"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to text;string;format number;boolean;logic;std;as;text"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:toggle-left",
+      "runtimeDefinitionName": "std::boolean::as_text"
+    },
+    {
+      "runtimeName": "std::boolean::from_number",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts a number to a boolean."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Boolean from Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Will convert the number to a boolean."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Convert ${value} to boolean"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from number;to boolean;convert;boolean;logic;std;from;number"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:toggle-left",
+      "runtimeDefinitionName": "std::boolean::from_number"
+    },
+    {
+      "runtimeName": "std::boolean::from_text",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts a text to a boolean."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Boolean from Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Will convert the string to a boolean."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Convert ${value} to boolean"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from text;parse;convert;boolean;logic;std;from;text"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:toggle-left",
+      "runtimeDefinitionName": "std::boolean::from_text"
+    },
+    {
+      "runtimeName": "std::boolean::is_equal",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first boolean value to compare."
+            }
+          ],
+          "runtimeDefinitionName": "first"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second boolean value to compare."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "(first: BOOLEAN, second: BOOLEAN): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is Equal"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Compares two boolean values for equality. Returns true if they are the same, false otherwise."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Equals ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "equal;equals;same;boolean;logic;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:toggle-left",
+      "runtimeDefinitionName": "std::boolean::is_equal"
+    },
+    {
+      "runtimeName": "std::boolean::negate",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The boolean value to negate."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: BOOLEAN): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Negate Boolean"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Negates a boolean value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Negate ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "negate;negative;invert;opposite;boolean;logic;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:toggle-left",
+      "runtimeDefinitionName": "std::boolean::negate"
+    }
+  ],
+  "runtimeFunctionDefinitions": [
+    {
+      "runtimeName": "std::boolean::as_number",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts a boolean to a number."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: BOOLEAN): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Boolean as Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Will convert the boolean to a number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Convert ${value} to number"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to number;numeric;boolean;logic;std;as;number"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:toggle-left"
+    },
+    {
+      "runtimeName": "std::boolean::as_text",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts a boolean to a text."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: BOOLEAN): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Boolean as Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Will convert the boolean to text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Convert ${value} to text"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to text;string;format number;boolean;logic;std;as;text"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:toggle-left"
+    },
+    {
+      "runtimeName": "std::boolean::from_number",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts a number to a boolean."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Boolean from Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Will convert the number to a boolean."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Convert ${value} to boolean"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from number;to boolean;convert;boolean;logic;std;from;number"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:toggle-left"
+    },
+    {
+      "runtimeName": "std::boolean::from_text",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Converts a text to a boolean."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Boolean from Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Will convert the string to a boolean."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Convert ${value} to boolean"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from text;parse;convert;boolean;logic;std;from;text"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:toggle-left"
+    },
+    {
+      "runtimeName": "std::boolean::is_equal",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first boolean value to compare."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second boolean value to compare."
+            }
+          ]
+        }
+      ],
+      "signature": "(first: BOOLEAN, second: BOOLEAN): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is Equal"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Compares two boolean values for equality. Returns true if they are the same, false otherwise."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Equals ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "equal;equals;same;boolean;logic;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:toggle-left"
+    },
+    {
+      "runtimeName": "std::boolean::negate",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The boolean value to negate."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: BOOLEAN): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Negate Boolean"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Negates a boolean value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Negate ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "negate;negative;invert;opposite;boolean;logic;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:toggle-left"
+    }
+  ],
+  "definitionDataTypes": [
+    {
+      "identifier": "BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Boolean"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Boolean"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "bool;boolean;bit"
+        }
+      ],
+      "type": "boolean",
+      "version": "0.0.36"
+    }
+  ],
+  "definitionSource": "taurus-boolean"
+}

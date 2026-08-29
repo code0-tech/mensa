@@ -1,0 +1,719 @@
+{
+  "identifier": "taurus-object",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Object"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with Objects."
+    }
+  ],
+  "author": "CodeZero",
+  "icon": "tabler:cube",
+  "version": "0.0.36",
+  "functionDefinitions": [
+    {
+      "runtimeName": "std::object::contains_key",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "object",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Object"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The object to check for the presence of a key."
+            }
+          ],
+          "runtimeDefinitionName": "object"
+        },
+        {
+          "runtimeName": "key",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Key"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The key to check for existence in the object."
+            }
+          ],
+          "runtimeDefinitionName": "key"
+        }
+      ],
+      "signature": "<T>(object: OBJECT<T>, key: keyof OBJECT<T> | string): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Contains Key"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the given key is a property of the object; otherwise, returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Checks if ${object} Contains ${key}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "contains_key;object;std;contains;key"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "OBJECT",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:cube",
+      "runtimeDefinitionName": "std::object::contains_key"
+    },
+    {
+      "runtimeName": "std::object::get",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "object",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Object"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The object that contains the value referenced by the key."
+            }
+          ],
+          "runtimeDefinitionName": "object"
+        },
+        {
+          "runtimeName": "key",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Key"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The property name under which the value will be referenced."
+            }
+          ],
+          "runtimeDefinitionName": "key"
+        }
+      ],
+      "signature": "<T, K extends keyof T>(object: OBJECT<T>, key: K | string): T[K]",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Get key of object"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the value of a key inside of the object."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get ${key} of ${object}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "get;object;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "OBJECT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:cube",
+      "runtimeDefinitionName": "std::object::get"
+    },
+    {
+      "runtimeName": "std::object::keys",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "object",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Object"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Returns a list of all the keys (property names) of the given object."
+            }
+          ],
+          "runtimeDefinitionName": "object"
+        }
+      ],
+      "signature": "<T>(object: OBJECT<T>): LIST<keyof OBJECT<T>>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Get Object Keys"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a list containing all keys of the specified object."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Keys of ${object}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "keys;object;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "OBJECT",
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:cube",
+      "runtimeDefinitionName": "std::object::keys"
+    },
+    {
+      "runtimeName": "std::object::set",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "object",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Object"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The original object that will be modified with the specified key-value pair."
+            }
+          ],
+          "runtimeDefinitionName": "object"
+        },
+        {
+          "runtimeName": "key",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Key"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The property name under which the value will be stored in the object."
+            }
+          ],
+          "runtimeDefinitionName": "key"
+        },
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The value to assign to the object property identified by the key."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "<T, K extends TEXT, V>(object: OBJECT<T>, key: K, value: V): OBJECT<T & { [P in K]: V }>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Set Object Key"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new object with the specified key set to the given value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Set ${key} to ${value} of ${object}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "set;object;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "OBJECT",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:cube",
+      "runtimeDefinitionName": "std::object::set"
+    },
+    {
+      "runtimeName": "std::object::size",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "object",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Object"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Returns the number of keys present in the given object."
+            }
+          ],
+          "runtimeDefinitionName": "object"
+        }
+      ],
+      "signature": "<T>(object: OBJECT<T>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Get Object Size"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns an integer count of all enumerable property keys in the specified object."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Size of ${object}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "size;object;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "OBJECT",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:cube",
+      "runtimeDefinitionName": "std::object::size"
+    }
+  ],
+  "runtimeFunctionDefinitions": [
+    {
+      "runtimeName": "std::object::contains_key",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "object",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Object"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The object to check for the presence of a key."
+            }
+          ]
+        },
+        {
+          "runtimeName": "key",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Key"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The key to check for existence in the object."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(object: OBJECT<T>, key: keyof OBJECT<T> | string): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Contains Key"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the given key is a property of the object; otherwise, returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Checks if ${object} Contains ${key}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "contains_key;object;std;contains;key"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "OBJECT",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:cube"
+    },
+    {
+      "runtimeName": "std::object::get",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "object",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Object"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The object that contains the value referenced by the key."
+            }
+          ]
+        },
+        {
+          "runtimeName": "key",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Key"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The property name under which the value will be referenced."
+            }
+          ]
+        }
+      ],
+      "signature": "<T, K extends keyof T>(object: OBJECT<T>, key: K | string): T[K]",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Get key of object"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the value of a key inside of the object."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get ${key} of ${object}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "get;object;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "OBJECT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:cube"
+    },
+    {
+      "runtimeName": "std::object::keys",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "object",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Object"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Returns a list of all the keys (property names) of the given object."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(object: OBJECT<T>): LIST<keyof OBJECT<T>>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Get Object Keys"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a list containing all keys of the specified object."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Keys of ${object}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "keys;object;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "OBJECT",
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:cube"
+    },
+    {
+      "runtimeName": "std::object::set",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "object",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Object"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The original object that will be modified with the specified key-value pair."
+            }
+          ]
+        },
+        {
+          "runtimeName": "key",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Key"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The property name under which the value will be stored in the object."
+            }
+          ]
+        },
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The value to assign to the object property identified by the key."
+            }
+          ]
+        }
+      ],
+      "signature": "<T, K extends TEXT, V>(object: OBJECT<T>, key: K, value: V): OBJECT<T & { [P in K]: V }>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Set Object Key"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new object with the specified key set to the given value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Set ${key} to ${value} of ${object}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "set;object;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "OBJECT",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:cube"
+    },
+    {
+      "runtimeName": "std::object::size",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "object",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Object"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Returns the number of keys present in the given object."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(object: OBJECT<T>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Get Object Size"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns an integer count of all enumerable property keys in the specified object."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Size of ${object}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "size;object;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "OBJECT",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:cube"
+    }
+  ],
+  "definitionDataTypes": [
+    {
+      "identifier": "OBJECT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Object"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Object"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "object;struct;data"
+        }
+      ],
+      "genericKeys": [
+        "T"
+      ],
+      "type": "{ [K in keyof T]: T[K] }",
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "TYPE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Type"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Type of ${T}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "type;data type;data-type;datatype;type definition;type-definition;type-def;typedef"
+        }
+      ],
+      "genericKeys": [
+        "T"
+      ],
+      "type": "T",
+      "version": "0.0.36"
+    }
+  ],
+  "definitionSource": "taurus-object"
+}

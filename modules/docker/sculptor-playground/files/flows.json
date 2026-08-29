@@ -1,1 +1,284 @@
-[]
+[
+    {
+        "flowId": 1,
+        "projectId": 1,
+        "type": "REST",
+        "dataTypes": [],
+        "projectSlug": "playground",
+        "signature": "<A extends REST_AUTH_TYPE, T>(http_schema: HTTP_SCHEMA, http_url: HTTP_URL, http_method: HTTP_METHOD, http_auth: A, http_auth_value: REST_AUTH_VALUE<A>, input_schema: TYPE<T>): REST_ADAPTER_INPUT<T>",
+        "name": "Sign up new user",
+        "startingNodeId": 1,
+        "settings": [
+            {
+                "databaseId": 1,
+                "flowSettingId": "http_schema",
+                "value": {"kind": {"oneofKind": "stringValue", "stringValue": "application/json"}}
+            },
+            {
+                "databaseId": 2,
+                "flowSettingId": "http_url",
+                "value": {"kind": {"oneofKind": "stringValue", "stringValue": "/signup"}}
+            },
+            {
+                "databaseId": 3,
+                "flowSettingId": "http_method",
+                "value": {"kind": {"oneofKind": "stringValue", "stringValue": "POST"}}
+            },
+            {
+                "databaseId": 4,
+                "flowSettingId": "http_auth",
+                "value": {"kind": {"oneofKind": "nullValue", "nullValue": 0}}
+            },
+            {
+                "databaseId": 5,
+                "flowSettingId": "http_auth_value",
+                "value": {"kind": {"oneofKind": "nullValue", "nullValue": 0}}
+            },
+            {
+                "databaseId": 6,
+                "flowSettingId": "input_schema",
+                "value": {
+                    "kind": {
+                        "oneofKind": "structValue",
+                        "structValue": {
+                            "fields": {
+                                "email": {"kind": {"oneofKind": "stringValue", "stringValue": "TEXT"}}
+                            }
+                        }
+                    }
+                }
+            }
+        ],
+        "nodeFunctions": [
+            {
+                "databaseId": 1,
+                "runtimeFunctionId": "std::text::trim",
+                "nextNodeId": 2,
+                "parameters": [
+                    {
+                        "databaseId": 101,
+                        "runtimeParameterId": "value",
+                        "value": {
+                            "value": {
+                                "oneofKind": "literalValue",
+                                "literalValue": {
+                                    "value": {"kind": {"oneofKind": "stringValue", "stringValue": "  Ada.Lovelace@Example.COM  "}},
+                                    "references": []
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "databaseId": 2,
+                "runtimeFunctionId": "std::text::lowercase",
+                "nextNodeId": 3,
+                "parameters": [
+                    {
+                        "databaseId": 201,
+                        "runtimeParameterId": "value",
+                        "value": {
+                            "value": {
+                                "oneofKind": "literalValue",
+                                "literalValue": {
+                                    "value": {"kind": {"oneofKind": "stringValue", "stringValue": "Ada.Lovelace@Example.COM"}},
+                                    "references": []
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "databaseId": 3,
+                "runtimeFunctionId": "std::text::contains",
+                "nextNodeId": 4,
+                "parameters": [
+                    {
+                        "databaseId": 301,
+                        "runtimeParameterId": "value",
+                        "value": {
+                            "value": {
+                                "oneofKind": "literalValue",
+                                "literalValue": {
+                                    "value": {"kind": {"oneofKind": "stringValue", "stringValue": "ada.lovelace@example.com"}},
+                                    "references": []
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "databaseId": 302,
+                        "runtimeParameterId": "substring",
+                        "value": {
+                            "value": {
+                                "oneofKind": "literalValue",
+                                "literalValue": {
+                                    "value": {"kind": {"oneofKind": "stringValue", "stringValue": "@"}},
+                                    "references": []
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "databaseId": 4,
+                "runtimeFunctionId": "std::control::if_else",
+                "parameters": [
+                    {
+                        "databaseId": 401,
+                        "runtimeParameterId": "condition",
+                        "value": {
+                            "value": {
+                                "oneofKind": "literalValue",
+                                "literalValue": {
+                                    "value": {"kind": {"oneofKind": "boolValue", "boolValue": true}},
+                                    "references": []
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "databaseId": 402,
+                        "runtimeParameterId": "runnable",
+                        "value": {
+                            "value": {
+                                "oneofKind": "subFlow",
+                                "subFlow": {
+                                    "executionReference": {"oneofKind": "startingNodeId", "startingNodeId": 5},
+                                    "signature": "(): void",
+                                    "settings": []
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "databaseId": 403,
+                        "runtimeParameterId": "else_runnable",
+                        "value": {
+                            "value": {
+                                "oneofKind": "subFlow",
+                                "subFlow": {
+                                    "executionReference": {"oneofKind": "startingNodeId", "startingNodeId": 6},
+                                    "signature": "(): void",
+                                    "settings": []
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "databaseId": 5,
+                "runtimeFunctionId": "rest::control::respond",
+                "parameters": [
+                    {
+                        "databaseId": 501,
+                        "runtimeParameterId": "http_status_code",
+                        "value": {
+                            "value": {
+                                "oneofKind": "literalValue",
+                                "literalValue": {
+                                    "value": {"kind": {"oneofKind": "numberValue", "numberValue": {"number": {"oneofKind": "integer", "integer": 200}}}},
+                                    "references": []
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "databaseId": 502,
+                        "runtimeParameterId": "http_schema",
+                        "value": {
+                            "value": {
+                                "oneofKind": "literalValue",
+                                "literalValue": {
+                                    "value": {"kind": {"oneofKind": "stringValue", "stringValue": "application/json"}},
+                                    "references": []
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "databaseId": 503,
+                        "runtimeParameterId": "payload",
+                        "value": {
+                            "value": {
+                                "oneofKind": "literalValue",
+                                "literalValue": {
+                                    "value": {
+                                        "kind": {
+                                            "oneofKind": "structValue",
+                                            "structValue": {
+                                                "fields": {
+                                                    "message": {"kind": {"oneofKind": "stringValue", "stringValue": "Signup accepted"}},
+                                                    "email": {"kind": {"oneofKind": "stringValue", "stringValue": "ada.lovelace@example.com"}}
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "references": []
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "databaseId": 6,
+                "runtimeFunctionId": "rest::control::respond",
+                "parameters": [
+                    {
+                        "databaseId": 601,
+                        "runtimeParameterId": "http_status_code",
+                        "value": {
+                            "value": {
+                                "oneofKind": "literalValue",
+                                "literalValue": {
+                                    "value": {"kind": {"oneofKind": "numberValue", "numberValue": {"number": {"oneofKind": "integer", "integer": 400}}}},
+                                    "references": []
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "databaseId": 602,
+                        "runtimeParameterId": "http_schema",
+                        "value": {
+                            "value": {
+                                "oneofKind": "literalValue",
+                                "literalValue": {
+                                    "value": {"kind": {"oneofKind": "stringValue", "stringValue": "application/json"}},
+                                    "references": []
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "databaseId": 603,
+                        "runtimeParameterId": "payload",
+                        "value": {
+                            "value": {
+                                "oneofKind": "literalValue",
+                                "literalValue": {
+                                    "value": {
+                                        "kind": {
+                                            "oneofKind": "structValue",
+                                            "structValue": {
+                                                "fields": {
+                                                    "error": {"kind": {"oneofKind": "stringValue", "stringValue": "A valid email address is required"}}
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "references": []
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

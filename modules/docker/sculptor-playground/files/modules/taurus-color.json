@@ -1,0 +1,858 @@
+{
+  "identifier": "taurus-color",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Color"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with Colors."
+    }
+  ],
+  "author": "CodeZero",
+  "icon": "tabler:palette",
+  "version": "0.0.36",
+  "functionDefinitions": [
+    {
+      "runtimeName": "std::color::as_hex",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The color to format as hex."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: COLOR): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Color as Hex"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Formats a color as a `#RRGGBB` hex string, or `#RRGGBBAA` when alpha is not fully opaque."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Hex of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to hex;format;convert;color;colour;std;as"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "COLOR",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:palette",
+      "runtimeDefinitionName": "std::color::as_hex"
+    },
+    {
+      "runtimeName": "std::color::as_hsl",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The color to convert to HSL."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: COLOR): { hue: number; saturation: number; lightness: number; alpha: number }",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Color as HSL"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a color to its hue (0-360), saturation and lightness (0-100) and alpha (0-1) channels."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "HSL of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to hsl;convert;color;colour;std;as"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "COLOR",
+        "OBJECT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:palette",
+      "runtimeDefinitionName": "std::color::as_hsl"
+    },
+    {
+      "runtimeName": "std::color::as_rgb",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The color to convert to RGB."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: COLOR): { red: number; green: number; blue: number; alpha: number }",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Color as RGB"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a color to its red, green, blue (0-255) and alpha (0-1) channels."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "RGB of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to rgb;convert;color;colour;std;as"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "COLOR",
+        "OBJECT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:palette",
+      "runtimeDefinitionName": "std::color::as_rgb"
+    },
+    {
+      "runtimeName": "std::color::from_hex",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The hex text to parse, e.g. `#FF00FF` or `#FF00FFAA`."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: TEXT): COLOR",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Color from Hex"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Parses a `#RRGGBB` or `#RRGGBBAA` hex string into a color."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Color from ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from hex;parse;convert;color;colour;std;from"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "COLOR"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:palette",
+      "runtimeDefinitionName": "std::color::from_hex"
+    },
+    {
+      "runtimeName": "std::color::from_hsl",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "hue",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Hue"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The hue, from 0 to 360."
+            }
+          ],
+          "runtimeDefinitionName": "hue"
+        },
+        {
+          "runtimeName": "saturation",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Saturation"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The saturation, from 0 to 100."
+            }
+          ],
+          "runtimeDefinitionName": "saturation"
+        },
+        {
+          "runtimeName": "lightness",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Lightness"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The lightness, from 0 to 100."
+            }
+          ],
+          "runtimeDefinitionName": "lightness"
+        },
+        {
+          "runtimeName": "alpha",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Alpha"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The opacity, from 0 to 1. Defaults to 1 (fully opaque) when omitted."
+            }
+          ],
+          "runtimeDefinitionName": "alpha"
+        }
+      ],
+      "signature": "(hue: NUMBER, saturation: NUMBER, lightness: NUMBER, alpha?: NUMBER): COLOR",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Color from HSL"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Builds a color from hue (0-360), saturation and lightness (0-100) and an alpha channel (0-1)."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Color from ${hue}, ${saturation}, ${lightness}, ${alpha}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from hsl;build;convert;color;colour;std;from"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "COLOR"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:palette",
+      "runtimeDefinitionName": "std::color::from_hsl"
+    },
+    {
+      "runtimeName": "std::color::from_rgb",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "red",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Red"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The red channel, from 0 to 255."
+            }
+          ],
+          "runtimeDefinitionName": "red"
+        },
+        {
+          "runtimeName": "green",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Green"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The green channel, from 0 to 255."
+            }
+          ],
+          "runtimeDefinitionName": "green"
+        },
+        {
+          "runtimeName": "blue",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Blue"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The blue channel, from 0 to 255."
+            }
+          ],
+          "runtimeDefinitionName": "blue"
+        },
+        {
+          "runtimeName": "alpha",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Alpha"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The opacity, from 0 to 1. Defaults to 1 (fully opaque) when omitted."
+            }
+          ],
+          "runtimeDefinitionName": "alpha"
+        }
+      ],
+      "signature": "(red: NUMBER, green: NUMBER, blue: NUMBER, alpha?: NUMBER): COLOR",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Color from RGB"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Builds a color from red, green and blue channels (0-255) and an alpha channel (0-1)."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Color from ${red}, ${green}, ${blue}, ${alpha}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from rgb;build;convert;color;colour;std;from"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "COLOR"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:palette",
+      "runtimeDefinitionName": "std::color::from_rgb"
+    }
+  ],
+  "runtimeFunctionDefinitions": [
+    {
+      "runtimeName": "std::color::as_hex",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The color to format as hex."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: COLOR): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Color as Hex"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Formats a color as a `#RRGGBB` hex string, or `#RRGGBBAA` when alpha is not fully opaque."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Hex of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to hex;format;convert;color;colour;std;as"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "COLOR",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:palette"
+    },
+    {
+      "runtimeName": "std::color::as_hsl",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The color to convert to HSL."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: COLOR): { hue: number; saturation: number; lightness: number; alpha: number }",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Color as HSL"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a color to its hue (0-360), saturation and lightness (0-100) and alpha (0-1) channels."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "HSL of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to hsl;convert;color;colour;std;as"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "COLOR",
+        "OBJECT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:palette"
+    },
+    {
+      "runtimeName": "std::color::as_rgb",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The color to convert to RGB."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: COLOR): { red: number; green: number; blue: number; alpha: number }",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Color as RGB"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a color to its red, green, blue (0-255) and alpha (0-1) channels."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "RGB of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to rgb;convert;color;colour;std;as"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "COLOR",
+        "OBJECT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:palette"
+    },
+    {
+      "runtimeName": "std::color::from_hex",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The hex text to parse, e.g. `#FF00FF` or `#FF00FFAA`."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: TEXT): COLOR",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Color from Hex"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Parses a `#RRGGBB` or `#RRGGBBAA` hex string into a color."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Color from ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from hex;parse;convert;color;colour;std;from"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "TEXT",
+        "COLOR"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:palette"
+    },
+    {
+      "runtimeName": "std::color::from_hsl",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "hue",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Hue"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The hue, from 0 to 360."
+            }
+          ]
+        },
+        {
+          "runtimeName": "saturation",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Saturation"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The saturation, from 0 to 100."
+            }
+          ]
+        },
+        {
+          "runtimeName": "lightness",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Lightness"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The lightness, from 0 to 100."
+            }
+          ]
+        },
+        {
+          "runtimeName": "alpha",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Alpha"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The opacity, from 0 to 1. Defaults to 1 (fully opaque) when omitted."
+            }
+          ]
+        }
+      ],
+      "signature": "(hue: NUMBER, saturation: NUMBER, lightness: NUMBER, alpha?: NUMBER): COLOR",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Color from HSL"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Builds a color from hue (0-360), saturation and lightness (0-100) and an alpha channel (0-1)."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Color from ${hue}, ${saturation}, ${lightness}, ${alpha}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from hsl;build;convert;color;colour;std;from"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "COLOR"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:palette"
+    },
+    {
+      "runtimeName": "std::color::from_rgb",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "red",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Red"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The red channel, from 0 to 255."
+            }
+          ]
+        },
+        {
+          "runtimeName": "green",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Green"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The green channel, from 0 to 255."
+            }
+          ]
+        },
+        {
+          "runtimeName": "blue",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Blue"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The blue channel, from 0 to 255."
+            }
+          ]
+        },
+        {
+          "runtimeName": "alpha",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Alpha"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The opacity, from 0 to 1. Defaults to 1 (fully opaque) when omitted."
+            }
+          ]
+        }
+      ],
+      "signature": "(red: NUMBER, green: NUMBER, blue: NUMBER, alpha?: NUMBER): COLOR",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Color from RGB"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Builds a color from red, green and blue channels (0-255) and an alpha channel (0-1)."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Color from ${red}, ${green}, ${blue}, ${alpha}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from rgb;build;convert;color;colour;std;from"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "COLOR"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:palette"
+    }
+  ],
+  "definitionDataTypes": [
+    {
+      "identifier": "COLOR",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Color"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Color"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "color;colour;grb;hsv;hsl;hex"
+        }
+      ],
+      "type": "{ hue: number; saturation: number; lightness: number; alpha?: number }",
+      "version": "0.0.36"
+    }
+  ],
+  "definitionSource": "taurus-color"
+}

@@ -1,0 +1,4557 @@
+{
+  "identifier": "taurus-number",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with Numbers."
+    }
+  ],
+  "author": "CodeZero",
+  "icon": "tabler:math-function",
+  "version": "0.0.36",
+  "functionDefinitions": [
+    {
+      "runtimeName": "std::number::abs",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the numeric input. The result will be its absolute (non-negative) value."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Absolute Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Removes the sign from the input number, returning its non-negative value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Absolute Value of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "absolute;abs;magnitude;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::abs"
+    },
+    {
+      "runtimeName": "std::number::add",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first number to add."
+            }
+          ],
+          "runtimeDefinitionName": "first"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second number to add."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Add Numbers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Adds two numbers together."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Plus ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "add;plus;sum;total;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::add"
+    },
+    {
+      "runtimeName": "std::number::arccos",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Calculates the arccosine (inverse cosine) of the input value."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Arccosine"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the angle in radians whose cosine is the given number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Arccosine of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "arccos;acos;inverse cosine;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::arccos"
+    },
+    {
+      "runtimeName": "std::number::arcsin",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Calculates the arcsine (inverse sine) of the input value."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Arcsine"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the angle in radians whose sine is the given number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Arcsine of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "arcsin;asin;inverse sine;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::arcsin"
+    },
+    {
+      "runtimeName": "std::number::arctan",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Calculates the arctangent (inverse tangent) of the input value."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Arctangent"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the angle in radians whose tangent is the given number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Arctangent of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "arctan;atan;inverse tangent;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::arctan"
+    },
+    {
+      "runtimeName": "std::number::as_text",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "number",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to convert to text."
+            }
+          ],
+          "runtimeDefinitionName": "number"
+        }
+      ],
+      "signature": "(number: NUMBER): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number as Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a number into text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Convert ${number} to Text"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to text;string;format number;number;math;std;as;text"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::as_text"
+    },
+    {
+      "runtimeName": "std::number::clamp",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input number that will be limited (clamped) to the specified range."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "min",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Minimum"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The minimum allowed value in the clamping operation."
+            }
+          ],
+          "runtimeDefinitionName": "min"
+        },
+        {
+          "runtimeName": "max",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Maximum"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The maximum allowed value in the clamping operation."
+            }
+          ],
+          "runtimeDefinitionName": "max"
+        }
+      ],
+      "signature": "(value: NUMBER, min: NUMBER, max: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Clamp Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the given number clamped between the minimum and maximum bounds."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Clamp ${value} between ${min} and ${max}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "clamp;limit;bound;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::clamp"
+    },
+    {
+      "runtimeName": "std::number::cos",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "radians",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Radians"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Computes the cosine of the given angle in radians."
+            }
+          ],
+          "runtimeDefinitionName": "radians"
+        }
+      ],
+      "signature": "(radians: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Cosine"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the cosine value of the input angle measured in radians."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Cosine of ${radians}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "cos;cosine;trigonometry;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::cos"
+    },
+    {
+      "runtimeName": "std::number::cosh",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number for which to calculate the hyperbolic cosine."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Hyperbolic Cosine"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the hyperbolic cosine (cosh) of the input value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Hyperbolic Cosine of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "cosh;hyperbolic cosine;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::cosh"
+    },
+    {
+      "runtimeName": "std::number::divide",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Dividend"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the numerator or the number that will be divided by the second value."
+            }
+          ],
+          "runtimeDefinitionName": "first"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Divisor"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the denominator or the value that divides the first number."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Divide Numbers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the result of dividing the first numeric input (dividend) by the second (divisor)."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Divided by ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "divide;division;quotient;div;number;math;std"
+        }
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::divide"
+    },
+    {
+      "runtimeName": "std::number::euler",
+      "signature": "(): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Euler's Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Provides the constant value of Euler's number, approximately 2.71828, which is the base of the natural logarithm."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Euler's Number"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "euler;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::euler"
+    },
+    {
+      "runtimeName": "std::number::exponential",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "base",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Base"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the numeric value that will be raised to the power of the exponent."
+            }
+          ],
+          "runtimeDefinitionName": "base"
+        },
+        {
+          "runtimeName": "exponent",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Exponent"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This numeric value indicates the power to which the base is raised."
+            }
+          ],
+          "runtimeDefinitionName": "exponent"
+        }
+      ],
+      "signature": "(base: NUMBER, exponent: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Exponential"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the result of raising the base to the power specified by the exponent."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${base} to the Exponent of ${exponent}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "exponential;exp;e power;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::exponential"
+    },
+    {
+      "runtimeName": "std::number::from_text",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "text",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text string to convert to a number."
+            }
+          ],
+          "runtimeDefinitionName": "text"
+        }
+      ],
+      "signature": "(text: TEXT): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number from Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Attempts to parse the provided text input and return its numeric equivalent."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Convert ${text} to Number"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from text;parse;convert;number;math;std;from;text"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::from_text"
+    },
+    {
+      "runtimeName": "std::number::has_digits",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "number",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to check for digit characters."
+            }
+          ],
+          "runtimeDefinitionName": "number"
+        }
+      ],
+      "signature": "(number: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Has Digits in Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Checks if the given number contains any digit characters"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Does ${number} have digits"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "has;digits;contains;number;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::has_digits"
+    },
+    {
+      "runtimeName": "std::number::is_equal",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first number to compare."
+            }
+          ],
+          "runtimeDefinitionName": "first"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second number to compare."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is Equal"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the first number is equal to the second number, otherwise false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Equals ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "equal;equals;same;number;math;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::is_equal"
+    },
+    {
+      "runtimeName": "std::number::is_greater",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the number that will be evaluated to determine if it is greater than the second number."
+            }
+          ],
+          "runtimeDefinitionName": "first"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the number that the first number will be compared to."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is Greater"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the first numeric input is greater than the second; otherwise, returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Is Greater than ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "greater;larger;more;number;math;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::is_greater"
+    },
+    {
+      "runtimeName": "std::number::is_less",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the number that will be evaluated to determine if it is less than the second number."
+            }
+          ],
+          "runtimeDefinitionName": "first"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the number that the first number will be compared to."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is Less"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the first numeric input is less than the second; otherwise, returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Less than ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "less;smaller;fewer;number;math;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::is_less"
+    },
+    {
+      "runtimeName": "std::number::is_positive",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to check for positivity."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is Positive Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Evaluates the input number and returns true if it is positive (greater than zero), otherwise false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} Is Greater than 0"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "positive;greater than zero;number;math;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::is_positive"
+    },
+    {
+      "runtimeName": "std::number::is_zero",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the numeric input evaluated to determine whether it equals zero."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number Is Zero"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the input number is zero. Otherwise returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} Equals 0"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "zero;equals zero;number;math;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::is_zero"
+    },
+    {
+      "runtimeName": "std::number::ln",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The numeric input whose natural logarithm (log base e) will be calculated."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Natural Logarithm"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the natural logarithm (log base e) of a number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Natural Logarithm of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "natural log;ln;log e;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::ln"
+    },
+    {
+      "runtimeName": "std::number::log",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The numeric input whose logarithm is to be calculated."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "base",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Base"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the logarithmic base to use (e.g., 10 for common log, e for natural log)."
+            }
+          ],
+          "runtimeDefinitionName": "base"
+        }
+      ],
+      "signature": "(value: NUMBER, base: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Logarithm"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates and returns the logarithm of a number with respect to a specified base."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Logarithm with Base ${base} of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "log;logarithm;log base;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::log"
+    },
+    {
+      "runtimeName": "std::number::max",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first number to compare."
+            }
+          ],
+          "runtimeDefinitionName": "first"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second number to compare."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Maximum Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Compares two numbers and returns the maximum value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Maximum of ${first} and ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "max;maximum;largest;greatest;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::max"
+    },
+    {
+      "runtimeName": "std::number::min",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first number to compare."
+            }
+          ],
+          "runtimeDefinitionName": "first"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second number to compare."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Minimum"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Compares two numbers and returns the minimum value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Minimum of ${first} and ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "min;minimum;smallest;least;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::min"
+    },
+    {
+      "runtimeName": "std::number::modulo",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to apply the modulo operator onto."
+            }
+          ],
+          "runtimeDefinitionName": "first"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Modulo"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The modulo operator."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Modulo"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the modulus (remainder) of dividing the first numeric input by the second."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Modulus ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "modulo;mod;remainder;modulus;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::modulo"
+    },
+    {
+      "runtimeName": "std::number::multiply",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first number to multiply."
+            }
+          ],
+          "runtimeDefinitionName": "first"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second number to multiply."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Multiply"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Takes two numeric inputs and returns their product."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Multiply by ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "multiply;times;product;mul;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::multiply"
+    },
+    {
+      "runtimeName": "std::number::negate",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to negate."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Negate"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the negation of a number (multiplies by -1)."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Negate ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "negate;negative;invert;opposite;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::negate"
+    },
+    {
+      "runtimeName": "std::number::pi",
+      "signature": "(): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Pi"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Provides the constant value of pi, approximately 3.14159, used in many mathematical calculations."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Pi"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "pi;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::pi"
+    },
+    {
+      "runtimeName": "std::number::random_number",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "min",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Minimum Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines the lower bound (inclusive) for the random number generation."
+            }
+          ],
+          "runtimeDefinitionName": "min"
+        },
+        {
+          "runtimeName": "max",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Maximum Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines the upper bound (inclusive) for the random number generation."
+            }
+          ],
+          "runtimeDefinitionName": "max"
+        }
+      ],
+      "signature": "(min: NUMBER, max: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Random Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a randomly generated number within the given range, inclusive of both minimum and maximum."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Random Number Between ${min} and ${max}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "random;rand;random number;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::random_number"
+    },
+    {
+      "runtimeName": "std::number::remove_digits",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "number",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the numeric input. The result will be its value without any digits."
+            }
+          ],
+          "runtimeDefinitionName": "number"
+        }
+      ],
+      "signature": "(number: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Remove Digits from Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Removes all digit characters from the input number, effectively stripping it down to its non-digit components."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Remove Digits from ${number}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "remove:digits;strip;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::remove_digits"
+    },
+    {
+      "runtimeName": "std::number::root",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The numeric input for which the root will be calculated."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "root_exponent",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Root Exponent"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The degree of the root to extract."
+            }
+          ],
+          "runtimeDefinitionName": "root_exponent"
+        }
+      ],
+      "signature": "(value: NUMBER, root_exponent: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Root"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the nth root of the input number, where n is specified by the root exponent."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${root_exponent} Root of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "root;nth root;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::root"
+    },
+    {
+      "runtimeName": "std::number::round",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The numeric input that will be rounded to the nearest value."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "decimals",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Decimal Places"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies how many decimal digits to keep after rounding."
+            }
+          ],
+          "runtimeDefinitionName": "decimals"
+        }
+      ],
+      "signature": "(value: NUMBER, decimals: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Round Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Rounds a number to the nearest value at the specified number of decimal places."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Round ${value} with ${decimals} Decimal Places"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "round;nearest;approximate;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::round"
+    },
+    {
+      "runtimeName": "std::number::round_down",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The numeric input that will be rounded downwards."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "decimals",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Decimal Places"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies how many decimal digits to keep after rounding down."
+            }
+          ],
+          "runtimeDefinitionName": "decimals"
+        }
+      ],
+      "signature": "(value: NUMBER, decimals: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Round Number Down"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Rounds a number downward to the specified number of decimal places."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Round Down ${value} with ${decimals} Decimal Places"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "round down;floor;number;math;std;round;down"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::round_down"
+    },
+    {
+      "runtimeName": "std::number::round_up",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to be rounded up."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        },
+        {
+          "runtimeName": "decimals",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Decimal Places"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number of decimal places to round up to."
+            }
+          ],
+          "runtimeDefinitionName": "decimals"
+        }
+      ],
+      "signature": "(value: NUMBER, decimals: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Round Up"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Performs rounding on the given value, always rounding up to the nearest value at the given decimal precision."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Round Upwards ${value} with ${decimals} Decimal Places"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "round up;ceil;ceiling;number;math;std;round;up"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::round_up"
+    },
+    {
+      "runtimeName": "std::number::sin",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number for which to calculate the sine."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Sine"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the sine of the input value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Sine of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "sin;sine;trigonometry;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::sin"
+    },
+    {
+      "runtimeName": "std::number::sinh",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number for which to calculate the hyperbolic sine."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Hyperbolic Sine"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the hyperbolic sine (sinh) of the input value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Hyperbolic Sine of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "sinh;hyperbolic sine;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::sinh"
+    },
+    {
+      "runtimeName": "std::number::square",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to be squared."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Square"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the square of the given number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} Squared"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "square;squared;power two;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::square"
+    },
+    {
+      "runtimeName": "std::number::square_root",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to find the square root of."
+            }
+          ],
+          "runtimeDefinitionName": "value"
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Square Root"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the positive square root of the input number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Square Root of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "square root;sqrt;root;number;math;std;square"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::square_root"
+    },
+    {
+      "runtimeName": "std::number::subtract",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Minuend"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number from which another number (the subtrahend) is to be subtracted."
+            }
+          ],
+          "runtimeDefinitionName": "first"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Subtrahend"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to subtract from the first number (the minuend)."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Subtract"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Subtracts the second number from the first number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Minus ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "subtract;minus;difference;sub;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::subtract"
+    },
+    {
+      "runtimeName": "std::number::tan",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "radians",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Radians"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Computes the tangent of the given angle in radians."
+            }
+          ],
+          "runtimeDefinitionName": "radians"
+        }
+      ],
+      "signature": "(radians: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Tangent"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the tangent value of the input angle measured in radians."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Tangent of ${radians}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "tan;tangent;trigonometry;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function",
+      "runtimeDefinitionName": "std::number::tan"
+    }
+  ],
+  "runtimeFunctionDefinitions": [
+    {
+      "runtimeName": "std::number::abs",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the numeric input. The result will be its absolute (non-negative) value."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Absolute Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Removes the sign from the input number, returning its non-negative value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Absolute Value of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "absolute;abs;magnitude;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::add",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first number to add."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second number to add."
+            }
+          ]
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Add Numbers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Adds two numbers together."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Plus ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "add;plus;sum;total;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::arccos",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Calculates the arccosine (inverse cosine) of the input value."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Arccosine"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the angle in radians whose cosine is the given number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Arccosine of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "arccos;acos;inverse cosine;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::arcsin",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Calculates the arcsine (inverse sine) of the input value."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Arcsine"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the angle in radians whose sine is the given number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Arcsine of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "arcsin;asin;inverse sine;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::arctan",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Calculates the arctangent (inverse tangent) of the input value."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Arctangent"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the angle in radians whose tangent is the given number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Arctangent of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "arctan;atan;inverse tangent;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::as_text",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "number",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to convert to text."
+            }
+          ]
+        }
+      ],
+      "signature": "(number: NUMBER): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number as Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a number into text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Convert ${number} to Text"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to text;string;format number;number;math;std;as;text"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::clamp",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input number that will be limited (clamped) to the specified range."
+            }
+          ]
+        },
+        {
+          "runtimeName": "min",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Minimum"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The minimum allowed value in the clamping operation."
+            }
+          ]
+        },
+        {
+          "runtimeName": "max",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Maximum"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The maximum allowed value in the clamping operation."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER, min: NUMBER, max: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Clamp Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the given number clamped between the minimum and maximum bounds."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Clamp ${value} between ${min} and ${max}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "clamp;limit;bound;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::cos",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "radians",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Radians"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Computes the cosine of the given angle in radians."
+            }
+          ]
+        }
+      ],
+      "signature": "(radians: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Cosine"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the cosine value of the input angle measured in radians."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Cosine of ${radians}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "cos;cosine;trigonometry;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::cosh",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number for which to calculate the hyperbolic cosine."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Hyperbolic Cosine"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the hyperbolic cosine (cosh) of the input value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Hyperbolic Cosine of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "cosh;hyperbolic cosine;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::divide",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Dividend"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the numerator or the number that will be divided by the second value."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Divisor"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the denominator or the value that divides the first number."
+            }
+          ]
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Divide Numbers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the result of dividing the first numeric input (dividend) by the second (divisor)."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Divided by ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "divide;division;quotient;div;number;math;std"
+        }
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::euler",
+      "signature": "(): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Euler's Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Provides the constant value of Euler's number, approximately 2.71828, which is the base of the natural logarithm."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Euler's Number"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "euler;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::exponential",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "base",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Base"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the numeric value that will be raised to the power of the exponent."
+            }
+          ]
+        },
+        {
+          "runtimeName": "exponent",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Exponent"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This numeric value indicates the power to which the base is raised."
+            }
+          ]
+        }
+      ],
+      "signature": "(base: NUMBER, exponent: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Exponential"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the result of raising the base to the power specified by the exponent."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${base} to the Exponent of ${exponent}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "exponential;exp;e power;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::from_text",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "text",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text string to convert to a number."
+            }
+          ]
+        }
+      ],
+      "signature": "(text: TEXT): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number from Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Attempts to parse the provided text input and return its numeric equivalent."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Convert ${text} to Number"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "from text;parse;convert;number;math;std;from;text"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::has_digits",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "number",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to check for digit characters."
+            }
+          ]
+        }
+      ],
+      "signature": "(number: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Has Digits in Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Checks if the given number contains any digit characters"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Does ${number} have digits"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "has;digits;contains;number;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::is_equal",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first number to compare."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second number to compare."
+            }
+          ]
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is Equal"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the first number is equal to the second number, otherwise false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Equals ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "equal;equals;same;number;math;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::is_greater",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the number that will be evaluated to determine if it is greater than the second number."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the number that the first number will be compared to."
+            }
+          ]
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is Greater"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the first numeric input is greater than the second; otherwise, returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Is Greater than ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "greater;larger;more;number;math;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "BOOLEAN",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::is_less",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the number that will be evaluated to determine if it is less than the second number."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the number that the first number will be compared to."
+            }
+          ]
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is Less"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the first numeric input is less than the second; otherwise, returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Less than ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "less;smaller;fewer;number;math;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::is_positive",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to check for positivity."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is Positive Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Evaluates the input number and returns true if it is positive (greater than zero), otherwise false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} Is Greater than 0"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "positive;greater than zero;number;math;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::is_zero",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the numeric input evaluated to determine whether it equals zero."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number Is Zero"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the input number is zero. Otherwise returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} Equals 0"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "zero;equals zero;number;math;std;is"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::ln",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The numeric input whose natural logarithm (log base e) will be calculated."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Natural Logarithm"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the natural logarithm (log base e) of a number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Natural Logarithm of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "natural log;ln;log e;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::log",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The numeric input whose logarithm is to be calculated."
+            }
+          ]
+        },
+        {
+          "runtimeName": "base",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Base"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the logarithmic base to use (e.g., 10 for common log, e for natural log)."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER, base: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Logarithm"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates and returns the logarithm of a number with respect to a specified base."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Logarithm with Base ${base} of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "log;logarithm;log base;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::max",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first number to compare."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second number to compare."
+            }
+          ]
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Maximum Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Compares two numbers and returns the maximum value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Maximum of ${first} and ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "max;maximum;largest;greatest;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::min",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first number to compare."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second number to compare."
+            }
+          ]
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Minimum"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Compares two numbers and returns the minimum value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Minimum of ${first} and ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "min;minimum;smallest;least;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::modulo",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to apply the modulo operator onto."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Modulo"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The modulo operator."
+            }
+          ]
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Modulo"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the modulus (remainder) of dividing the first numeric input by the second."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Modulus ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "modulo;mod;remainder;modulus;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::multiply",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first number to multiply."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second Number"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second number to multiply."
+            }
+          ]
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Multiply"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Takes two numeric inputs and returns their product."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Multiply by ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "multiply;times;product;mul;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::negate",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to negate."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Negate"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the negation of a number (multiplies by -1)."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Negate ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "negate;negative;invert;opposite;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::pi",
+      "signature": "(): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Pi"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Provides the constant value of pi, approximately 3.14159, used in many mathematical calculations."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Pi"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "pi;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::random_number",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "min",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Minimum Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines the lower bound (inclusive) for the random number generation."
+            }
+          ]
+        },
+        {
+          "runtimeName": "max",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Maximum Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Defines the upper bound (inclusive) for the random number generation."
+            }
+          ]
+        }
+      ],
+      "signature": "(min: NUMBER, max: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Random Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a randomly generated number within the given range, inclusive of both minimum and maximum."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Random Number Between ${min} and ${max}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "random;rand;random number;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::remove_digits",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "number",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This is the numeric input. The result will be its value without any digits."
+            }
+          ]
+        }
+      ],
+      "signature": "(number: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Remove Digits from Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Removes all digit characters from the input number, effectively stripping it down to its non-digit components."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Remove Digits from ${number}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "remove:digits;strip;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::root",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The numeric input for which the root will be calculated."
+            }
+          ]
+        },
+        {
+          "runtimeName": "root_exponent",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Root Exponent"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The degree of the root to extract."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER, root_exponent: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Root"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the nth root of the input number, where n is specified by the root exponent."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${root_exponent} Root of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "root;nth root;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::round",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The numeric input that will be rounded to the nearest value."
+            }
+          ]
+        },
+        {
+          "runtimeName": "decimals",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Decimal Places"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies how many decimal digits to keep after rounding."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER, decimals: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Round Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Rounds a number to the nearest value at the specified number of decimal places."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Round ${value} with ${decimals} Decimal Places"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "round;nearest;approximate;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::round_down",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The numeric input that will be rounded downwards."
+            }
+          ]
+        },
+        {
+          "runtimeName": "decimals",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Decimal Places"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies how many decimal digits to keep after rounding down."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER, decimals: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Round Number Down"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Rounds a number downward to the specified number of decimal places."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Round Down ${value} with ${decimals} Decimal Places"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "round down;floor;number;math;std;round;down"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::round_up",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to be rounded up."
+            }
+          ]
+        },
+        {
+          "runtimeName": "decimals",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Decimal Places"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number of decimal places to round up to."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER, decimals: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Round Up"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Performs rounding on the given value, always rounding up to the nearest value at the given decimal precision."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Round Upwards ${value} with ${decimals} Decimal Places"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "round up;ceil;ceiling;number;math;std;round;up"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::sin",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number for which to calculate the sine."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Sine"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the sine of the input value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Sine of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "sin;sine;trigonometry;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::sinh",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number Input"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number for which to calculate the hyperbolic sine."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Hyperbolic Sine"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the hyperbolic sine (sinh) of the input value."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Hyperbolic Sine of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "sinh;hyperbolic sine;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::square",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to be squared."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Square"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the square of the given number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${value} Squared"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "square;squared;power two;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::square_root",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "value",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to find the square root of."
+            }
+          ]
+        }
+      ],
+      "signature": "(value: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Square Root"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the positive square root of the input number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Square Root of ${value}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "square root;sqrt;root;number;math;std;square"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::subtract",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Minuend"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number from which another number (the subtrahend) is to be subtracted."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Subtrahend"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The number to subtract from the first number (the minuend)."
+            }
+          ]
+        }
+      ],
+      "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Subtract"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Subtracts the second number from the first number."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "${first} Minus ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "subtract;minus;difference;sub;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    },
+    {
+      "runtimeName": "std::number::tan",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "radians",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Radians"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Computes the tangent of the given angle in radians."
+            }
+          ]
+        }
+      ],
+      "signature": "(radians: NUMBER): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Tangent"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the tangent value of the input angle measured in radians."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Tangent of ${radians}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "tan;tangent;trigonometry;number;math;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:math-function"
+    }
+  ],
+  "definitionDataTypes": [
+    {
+      "identifier": "NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Number"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "number;integer;float;double;long"
+        }
+      ],
+      "type": "number",
+      "version": "0.0.36"
+    }
+  ],
+  "definitionSource": "taurus-number"
+}

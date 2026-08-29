@@ -1,0 +1,3073 @@
+{
+  "identifier": "taurus-list",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with Lists"
+    }
+  ],
+  "author": "CodeZero",
+  "icon": "tabler:list",
+  "version": "0.0.36",
+  "functionDefinitions": [
+    {
+      "runtimeName": "std::list::at",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list from which to retrieve an element."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        },
+        {
+          "runtimeName": "index",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Index"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The zero-based index of the element to retrieve."
+            }
+          ],
+          "runtimeDefinitionName": "index"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, index: NUMBER): T",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Get Element of List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Retrieves the element at a specified index from a list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get element at ${index} of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "at;array;list;collection;std;index"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::at"
+    },
+    {
+      "runtimeName": "std::list::concat",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first list to concatenate."
+            }
+          ],
+          "runtimeDefinitionName": "first"
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second list to concatenate."
+            }
+          ],
+          "runtimeDefinitionName": "second"
+        }
+      ],
+      "signature": "<T>(first: LIST<T>, second: LIST<T>): LIST<T>",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Combine Lists"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Concatenates/combine two lists into a single list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Combine ${first} with ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "concat;combine;join;append;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::concat"
+    },
+    {
+      "runtimeName": "std::list::filter",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list to be filtered."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        },
+        {
+          "runtimeName": "predicate",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Filter Predicate"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A function that takes an element of the list and returns a boolean indicating whether the element should be included in the output list."
+            }
+          ],
+          "runtimeDefinitionName": "predicate"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Filter List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new list containing only the elements from the input list for which the predicate returns true."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Filter elements in ${list} matching ${predicate}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "filter;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration",
+      "runtimeDefinitionName": "std::list::filter"
+    },
+    {
+      "runtimeName": "std::list::find",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list in which an element satisfying the predicate will be searched."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        },
+        {
+          "runtimeName": "predicate",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Search Predicate"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A function that takes an element of the list and returns a boolean indicating if the element matches the search criteria."
+            }
+          ],
+          "runtimeDefinitionName": "predicate"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>): T",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Find Element in List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the first element from the input list for which the predicate returns true. If no element matches, returns null."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Find first element in ${list} matching ${predicate}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "find;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "PREDICATE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration",
+      "runtimeDefinitionName": "std::list::find"
+    },
+    {
+      "runtimeName": "std::list::find_index",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list in which to find the index of an element that satisfies the predicate."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        },
+        {
+          "runtimeName": "predicate",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Search Predicate"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A function that takes an element of the list and returns a boolean indicating if the element satisfies the search criteria."
+            }
+          ],
+          "runtimeDefinitionName": "predicate"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Find Index of Element in List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the zero-based index of the first element for which the predicate returns true. If no element matches, returns -1."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Index of Element in ${list} matching ${predicate}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "find index;index of;position;array;list;collection;std;find;index"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER",
+        "PREDICATE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration",
+      "runtimeDefinitionName": "std::list::find_index"
+    },
+    {
+      "runtimeName": "std::list::find_last",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list in which an element satisfying the predicate will be searched."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        },
+        {
+          "runtimeName": "predicate",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Search Predicate"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A function that takes an element of the list and returns a boolean indicating if the element matches the search criteria."
+            }
+          ],
+          "runtimeDefinitionName": "predicate"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>): T",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Find Last Element in List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the last element from the input list for which the predicate returns true. If no element matches, returns null or equivalent."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Last Element of ${list} matching ${predicate}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "find last;last index;last position;array;list;collection;std;find;last"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "PREDICATE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration",
+      "runtimeDefinitionName": "std::list::find_last"
+    },
+    {
+      "runtimeName": "std::list::first",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list from which to retrieve the first element."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): T",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "First Element of List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Retrieves the first element from the list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get First Element in ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "first;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::first"
+    },
+    {
+      "runtimeName": "std::list::flat",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Nested List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A list containing sub-lists that will be flattened into a single-level list."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        }
+      ],
+      "signature": "<T>(list: LIST<LIST<T>>): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Flatten List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Flattens a nested list into a single-level list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Flatten ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "flat;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::flat"
+    },
+    {
+      "runtimeName": "std::list::for_each",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Each element of this list will be passed to the provided consumer function for processing."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        },
+        {
+          "runtimeName": "consumer",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Consumer Function"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This function is invoked once for each element in the list. It is not expected to return a value."
+            }
+          ],
+          "runtimeDefinitionName": "consumer"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, consumer: CONSUMER<T>): void",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "For Each Element"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Executes a consumer function for each element in the list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "For each in ${list} do ${consumer}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "for_each;array;list;collection;std;for;each"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "CONSUMER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration",
+      "runtimeDefinitionName": "std::list::for_each"
+    },
+    {
+      "runtimeName": "std::list::index_of",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A list of elements in which the specified item will be searched for to determine its index."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        },
+        {
+          "runtimeName": "item",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Item"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The item for which the function searches in the list and returns the index of its first occurrence."
+            }
+          ],
+          "runtimeDefinitionName": "item"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, item: T): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Index of Item"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the zero-based index of the first occurrence of a given item in the specified list. If the item is not found, it typically returns -1."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get Index of ${item} in ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "index_of;array;list;collection;std;index;of"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::index_of"
+    },
+    {
+      "runtimeName": "std::list::is_empty",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list to check for emptiness."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is List Empty"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the list contains no elements, otherwise returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Check if ${list} is empty"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "is_empty;array;list;collection;std;is;empty"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::is_empty"
+    },
+    {
+      "runtimeName": "std::list::join",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List of Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A list of text elements to combined into a single word."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        },
+        {
+          "runtimeName": "join_text",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Join Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text that will be used to join the list elements into a single string."
+            }
+          ],
+          "runtimeDefinitionName": "join_text"
+        }
+      ],
+      "signature": "(list: LIST<TEXT>, join_text: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Join Text List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a single concatenated string of text joined by the provided join text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Joins ${list} using '${join_text}'"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "join;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::join"
+    },
+    {
+      "runtimeName": "std::list::last",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list from which to retrieve the last element."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): T",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Last Element of List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Retrieves the last element from the list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get Last Element of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "last;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::last"
+    },
+    {
+      "runtimeName": "std::list::map",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Each element of this list will be passed through the transform function."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        },
+        {
+          "runtimeName": "transform",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Transform Function"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The transform function is applied to every element of the list to produce a new list."
+            }
+          ],
+          "runtimeDefinitionName": "transform"
+        }
+      ],
+      "signature": "<T, R>(list: LIST<T>, transform: TRANSFORM<T, R>): LIST<R>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Map List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Transforms each element in the list using the provided function. This will create a new list of new elements which will be returned."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Apply ${transform} for each in ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "map;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "TRANSFORM"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration",
+      "runtimeDefinitionName": "std::list::map"
+    },
+    {
+      "runtimeName": "std::list::max",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List of Numbers"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A list of numbers to find the maximum value from."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        }
+      ],
+      "signature": "(list: LIST<NUMBER>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Find Maximum Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Finds the maximum value in a numeric list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Maximum of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "max;maximum;largest;greatest;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::max"
+    },
+    {
+      "runtimeName": "std::list::min",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A list of numbers to find the minimum value from."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        }
+      ],
+      "signature": "(list: LIST<NUMBER>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Find Minimum Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Finds the minimum value in a numeric list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Minimum of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "min;minimum;smallest;least;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::min"
+    },
+    {
+      "runtimeName": "std::list::pop",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list to remove the last item from."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): T",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Pop from List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Removes the last element from the specified list and returns it. The list will be modified."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Remove Last Item of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "pop;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::pop"
+    },
+    {
+      "runtimeName": "std::list::push",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list to which an item will be added."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        },
+        {
+          "runtimeName": "item",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Item"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The value to be added at the end of the list."
+            }
+          ],
+          "runtimeDefinitionName": "item"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, item: T): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Push to List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Adds a new element to the end of the list and returns the new length of the list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Push ${item} into ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "push;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::push"
+    },
+    {
+      "runtimeName": "std::list::remove",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list from which the item will be removed."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        },
+        {
+          "runtimeName": "item",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Item"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The item to remove from the list."
+            }
+          ],
+          "runtimeDefinitionName": "item"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, item: T): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Remove from List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Removes the first matching item from the given list and returns the resulting list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Remove ${item} from ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "remove;delete;strip;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::remove"
+    },
+    {
+      "runtimeName": "std::list::reverse",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input list to be reversed."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Reverse List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new list with the elements of the input list in reverse order."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Reverse ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "reverse;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::reverse"
+    },
+    {
+      "runtimeName": "std::list::size",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list whose number of elements is to be returned."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "List Size"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This function returns the count of elements present in the given list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Size of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "size;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::size"
+    },
+    {
+      "runtimeName": "std::list::sort",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input list to be sorted."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        },
+        {
+          "runtimeName": "comparator",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Comparator"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A function that takes two elements and returns a negative, zero, or positive number to indicate their ordering."
+            }
+          ],
+          "runtimeDefinitionName": "comparator"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, comparator: COMPARATOR<T>): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Sort List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new list with the elements sorted according to the comparator function provided."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Sort ${list} using ${comparator}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "sort;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration",
+      "runtimeDefinitionName": "std::list::sort"
+    },
+    {
+      "runtimeName": "std::list::sort_reverse",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input list to be sorted in reverse order."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        },
+        {
+          "runtimeName": "comparator",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Comparator"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A function that takes two elements and returns a negative, zero, or positive number to indicate their ordering."
+            }
+          ],
+          "runtimeDefinitionName": "comparator"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, comparator: COMPARATOR<T>): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Sort List in Reverse"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new list with the elements sorted in descending order according to the comparator function provided."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Reversed-Sort ${list} using ${comparator}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "sort_reverse;array;list;collection;std;sort;reverse"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration",
+      "runtimeDefinitionName": "std::list::sort_reverse"
+    },
+    {
+      "runtimeName": "std::list::sum",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Calculates the sum of all numbers in the given list."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        }
+      ],
+      "signature": "(list: LIST<NUMBER>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Sum of Numbers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the total sum of the elements in the numeric list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Sum of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "sum;total;add all;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::sum"
+    },
+    {
+      "runtimeName": "std::list::to_unique",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input list from which duplicates will be removed."
+            }
+          ],
+          "runtimeDefinitionName": "list"
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "To Unique"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new list containing only the unique elements from the input list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Remove duplicates in ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to_unique;array;list;collection;std;to;unique"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list",
+      "runtimeDefinitionName": "std::list::to_unique"
+    }
+  ],
+  "runtimeFunctionDefinitions": [
+    {
+      "runtimeName": "std::list::at",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list from which to retrieve an element."
+            }
+          ]
+        },
+        {
+          "runtimeName": "index",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Index"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The zero-based index of the element to retrieve."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, index: NUMBER): T",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Get Element of List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Retrieves the element at a specified index from a list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get element at ${index} of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "at;array;list;collection;std;index"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::concat",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "first",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "First List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The first list to concatenate."
+            }
+          ]
+        },
+        {
+          "runtimeName": "second",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Second List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The second list to concatenate."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(first: LIST<T>, second: LIST<T>): LIST<T>",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Combine Lists"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Concatenates/combine two lists into a single list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Combine ${first} with ${second}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "concat;combine;join;append;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::filter",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list to be filtered."
+            }
+          ]
+        },
+        {
+          "runtimeName": "predicate",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Filter Predicate"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A function that takes an element of the list and returns a boolean indicating whether the element should be included in the output list."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Filter List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new list containing only the elements from the input list for which the predicate returns true."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Filter elements in ${list} matching ${predicate}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "filter;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration"
+    },
+    {
+      "runtimeName": "std::list::find",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list in which an element satisfying the predicate will be searched."
+            }
+          ]
+        },
+        {
+          "runtimeName": "predicate",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Search Predicate"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A function that takes an element of the list and returns a boolean indicating if the element matches the search criteria."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>): T",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Find Element in List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the first element from the input list for which the predicate returns true. If no element matches, returns null."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Find first element in ${list} matching ${predicate}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "find;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "PREDICATE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration"
+    },
+    {
+      "runtimeName": "std::list::find_index",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list in which to find the index of an element that satisfies the predicate."
+            }
+          ]
+        },
+        {
+          "runtimeName": "predicate",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Search Predicate"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A function that takes an element of the list and returns a boolean indicating if the element satisfies the search criteria."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Find Index of Element in List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the zero-based index of the first element for which the predicate returns true. If no element matches, returns -1."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Index of Element in ${list} matching ${predicate}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "find index;index of;position;array;list;collection;std;find;index"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER",
+        "PREDICATE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration"
+    },
+    {
+      "runtimeName": "std::list::find_last",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list in which an element satisfying the predicate will be searched."
+            }
+          ]
+        },
+        {
+          "runtimeName": "predicate",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Search Predicate"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A function that takes an element of the list and returns a boolean indicating if the element matches the search criteria."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>): T",
+      "throwsError": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Find Last Element in List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the last element from the input list for which the predicate returns true. If no element matches, returns null or equivalent."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Last Element of ${list} matching ${predicate}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "find last;last index;last position;array;list;collection;std;find;last"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "PREDICATE"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration"
+    },
+    {
+      "runtimeName": "std::list::first",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list from which to retrieve the first element."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): T",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "First Element of List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Retrieves the first element from the list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get First Element in ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "first;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::flat",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Nested List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A list containing sub-lists that will be flattened into a single-level list."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<LIST<T>>): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Flatten List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Flattens a nested list into a single-level list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Flatten ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "flat;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::for_each",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Each element of this list will be passed to the provided consumer function for processing."
+            }
+          ]
+        },
+        {
+          "runtimeName": "consumer",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Consumer Function"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "This function is invoked once for each element in the list. It is not expected to return a value."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, consumer: CONSUMER<T>): void",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "For Each Element"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Executes a consumer function for each element in the list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "For each in ${list} do ${consumer}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "for_each;array;list;collection;std;for;each"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "CONSUMER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration"
+    },
+    {
+      "runtimeName": "std::list::index_of",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A list of elements in which the specified item will be searched for to determine its index."
+            }
+          ]
+        },
+        {
+          "runtimeName": "item",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Item"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The item for which the function searches in the list and returns the index of its first occurrence."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, item: T): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Index of Item"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the zero-based index of the first occurrence of a given item in the specified list. If the item is not found, it typically returns -1."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get Index of ${item} in ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "index_of;array;list;collection;std;index;of"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::is_empty",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list to check for emptiness."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Is List Empty"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns true if the list contains no elements, otherwise returns false."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Check if ${list} is empty"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "is_empty;array;list;collection;std;is;empty"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "BOOLEAN"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::join",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List of Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A list of text elements to combined into a single word."
+            }
+          ]
+        },
+        {
+          "runtimeName": "join_text",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Join Text"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text that will be used to join the list elements into a single string."
+            }
+          ]
+        }
+      ],
+      "signature": "(list: LIST<TEXT>, join_text: TEXT): TEXT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Join Text List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a single concatenated string of text joined by the provided join text."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Joins ${list} using '${join_text}'"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "join;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::last",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list from which to retrieve the last element."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): T",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Last Element of List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Retrieves the last element from the list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Get Last Element of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "last;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::map",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Each element of this list will be passed through the transform function."
+            }
+          ]
+        },
+        {
+          "runtimeName": "transform",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Transform Function"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The transform function is applied to every element of the list to produce a new list."
+            }
+          ]
+        }
+      ],
+      "signature": "<T, R>(list: LIST<T>, transform: TRANSFORM<T, R>): LIST<R>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Map List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Transforms each element in the list using the provided function. This will create a new list of new elements which will be returned."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Apply ${transform} for each in ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "map;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "TRANSFORM"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration"
+    },
+    {
+      "runtimeName": "std::list::max",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List of Numbers"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A list of numbers to find the maximum value from."
+            }
+          ]
+        }
+      ],
+      "signature": "(list: LIST<NUMBER>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Find Maximum Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Finds the maximum value in a numeric list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Maximum of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "max;maximum;largest;greatest;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::min",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A list of numbers to find the minimum value from."
+            }
+          ]
+        }
+      ],
+      "signature": "(list: LIST<NUMBER>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Find Minimum Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Finds the minimum value in a numeric list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Minimum of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "min;minimum;smallest;least;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::pop",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list to remove the last item from."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): T",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Pop from List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Removes the last element from the specified list and returns it. The list will be modified."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Remove Last Item of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "pop;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::push",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list to which an item will be added."
+            }
+          ]
+        },
+        {
+          "runtimeName": "item",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Item"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The value to be added at the end of the list."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, item: T): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Push to List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Adds a new element to the end of the list and returns the new length of the list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Push ${item} into ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "push;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::remove",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list from which the item will be removed."
+            }
+          ]
+        },
+        {
+          "runtimeName": "item",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Item"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The item to remove from the list."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, item: T): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Remove from List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Removes the first matching item from the given list and returns the resulting list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Remove ${item} from ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "remove;delete;strip;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::reverse",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input list to be reversed."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Reverse List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new list with the elements of the input list in reverse order."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Reverse ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "reverse;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::size",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The list whose number of elements is to be returned."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "List Size"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This function returns the count of elements present in the given list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Size of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "size;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "NUMBER",
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::sort",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input list to be sorted."
+            }
+          ]
+        },
+        {
+          "runtimeName": "comparator",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Comparator"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A function that takes two elements and returns a negative, zero, or positive number to indicate their ordering."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, comparator: COMPARATOR<T>): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Sort List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new list with the elements sorted according to the comparator function provided."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Sort ${list} using ${comparator}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "sort;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration"
+    },
+    {
+      "runtimeName": "std::list::sort_reverse",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input list to be sorted in reverse order."
+            }
+          ]
+        },
+        {
+          "runtimeName": "comparator",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Comparator"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A function that takes two elements and returns a negative, zero, or positive number to indicate their ordering."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>, comparator: COMPARATOR<T>): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Sort List in Reverse"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new list with the elements sorted in descending order according to the comparator function provided."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Reversed-Sort ${list} using ${comparator}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "sort_reverse;array;list;collection;std;sort;reverse"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:arrow-iteration"
+    },
+    {
+      "runtimeName": "std::list::sum",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Number List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Calculates the sum of all numbers in the given list."
+            }
+          ]
+        }
+      ],
+      "signature": "(list: LIST<NUMBER>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Sum of Numbers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the total sum of the elements in the numeric list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Sum of ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "sum;total;add all;array;list;collection;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST",
+        "NUMBER"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    },
+    {
+      "runtimeName": "std::list::to_unique",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "list",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "List"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The input list from which duplicates will be removed."
+            }
+          ]
+        }
+      ],
+      "signature": "<T>(list: LIST<T>): LIST<T>",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "To Unique"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns a new list containing only the unique elements from the input list."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Remove duplicates in ${list}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "to_unique;array;list;collection;std;to;unique"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "LIST"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:list"
+    }
+  ],
+  "definitionDataTypes": [
+    {
+      "identifier": "LIST",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Generic List"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "List of ${T}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "list;array;collection"
+        }
+      ],
+      "genericKeys": [
+        "T"
+      ],
+      "type": "T[]",
+      "version": "0.0.36"
+    }
+  ],
+  "definitionSource": "taurus-list"
+}

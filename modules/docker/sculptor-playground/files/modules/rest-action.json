@@ -1,0 +1,586 @@
+{
+  "identifier": "rest-action",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Webhook"
+    }
+  ],
+  "documentation": "Webhook triggered by an incoming HTTP request.",
+  "author": "CodeZero",
+  "icon": "tabler:world-www",
+  "version": "0.0.36",
+  "flowTypes": [
+    {
+      "identifier": "REST",
+      "settings": [
+        {
+          "identifier": "http_schema",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content Type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the MIME type of the incoming request payload, such as application/json, application/xml, or text/plain. This determines the expected format of the payload parameter."
+            }
+          ]
+        },
+        {
+          "identifier": "http_url",
+          "unique": "PROJECT",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "URL"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the HTTP URL endpoint."
+            }
+          ]
+        },
+        {
+          "identifier": "http_method",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Method"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the HTTP request method (e.g., GET, POST, PUT, DELETE)."
+            }
+          ]
+        },
+        {
+          "identifier": "http_auth",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Authentication type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the authentication mechanism used for the incoming Webhook request (e.g., Bearer JWT, Bearer static, Basic)."
+            }
+          ],
+          "optional": true
+        },
+        {
+          "identifier": "http_auth_value",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Authentication value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Provides the credential value matching the selected authentication type (e.g., token string or username/password pair)."
+            }
+          ],
+          "optional": true
+        },
+        {
+          "identifier": "input_schema",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input schema"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Input schema which defines the expected structure of the incoming request data."
+            }
+          ],
+          "optional": true
+        }
+      ],
+      "editable": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Webhook"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A Webhook is an HTTP endpoint that listens for incoming requests from external services or clients, allowing you to react to events in real time using standard HTTP methods like GET, POST, PUT, and DELETE."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Webhook on ${http_method} at ${http_url}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "webhook;http;rest;route;web"
+        }
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:world-www",
+      "linkedDataTypeIdentifiers": [
+        "HTTP_SCHEMA",
+        "HTTP_URL",
+        "HTTP_METHOD",
+        "REST_AUTH_TYPE",
+        "REST_AUTH_VALUE",
+        "REST_ADAPTER_INPUT"
+      ],
+      "signature": "<A extends REST_AUTH_TYPE, T>(http_schema: HTTP_SCHEMA, http_url: HTTP_URL, http_method: HTTP_METHOD, http_auth: A, http_auth_value: REST_AUTH_VALUE<A>, input_schema: TYPE<T>): REST_ADAPTER_INPUT<T>",
+      "runtimeIdentifier": "REST"
+    }
+  ],
+  "runtimeFlowTypes": [
+    {
+      "identifier": "REST",
+      "runtimeSettings": [
+        {
+          "identifier": "http_schema",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content Type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the MIME type of the incoming request payload, such as application/json, application/xml, or text/plain. This determines the expected format of the payload parameter."
+            }
+          ]
+        },
+        {
+          "identifier": "http_url",
+          "unique": "PROJECT",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "URL"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the HTTP URL endpoint."
+            }
+          ]
+        },
+        {
+          "identifier": "http_method",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Method"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the HTTP request method (e.g., GET, POST, PUT, DELETE)."
+            }
+          ]
+        },
+        {
+          "identifier": "http_auth",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Authentication type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the authentication mechanism used for the incoming Webhook request (e.g., Bearer JWT, Bearer static, Basic)."
+            }
+          ],
+          "optional": true
+        },
+        {
+          "identifier": "http_auth_value",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Authentication value"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Provides the credential value matching the selected authentication type (e.g., token string or username/password pair)."
+            }
+          ],
+          "optional": true
+        },
+        {
+          "identifier": "input_schema",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Input schema"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Input schema which defines the expected structure of the incoming request data."
+            }
+          ],
+          "optional": true
+        }
+      ],
+      "editable": true,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Webhook"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A Webhook is an HTTP endpoint that listens for incoming requests from external services or clients, allowing you to react to events in real time using standard HTTP methods like GET, POST, PUT, and DELETE."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Webhook on ${http_method} at ${http_url}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "webhook;http;rest;route;web"
+        }
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:world-www",
+      "linkedDataTypeIdentifiers": [
+        "HTTP_SCHEMA",
+        "HTTP_URL",
+        "HTTP_METHOD",
+        "REST_AUTH_TYPE",
+        "REST_AUTH_VALUE",
+        "REST_ADAPTER_INPUT"
+      ],
+      "signature": "<A extends REST_AUTH_TYPE, T>(http_schema: HTTP_SCHEMA, http_url: HTTP_URL, http_method: HTTP_METHOD, http_auth: A, http_auth_value: REST_AUTH_VALUE<A>, input_schema: TYPE<T>): REST_ADAPTER_INPUT<T>"
+    }
+  ],
+  "functionDefinitions": [
+    {
+      "runtimeName": "rest::control::respond",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "http_status_code",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "HTTP Status Code"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "An HTTP status code is a three-digit number (100–599) indicating the result of a request (e.g., 200, 404, 500)."
+            }
+          ],
+          "runtimeDefinitionName": "http_status_code"
+        },
+        {
+          "runtimeName": "http_schema",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content Type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the MIME type of the response payload, such as application/json, application/xml, or text/plain. This determines the expected format of the payload parameter."
+            }
+          ],
+          "runtimeDefinitionName": "http_schema"
+        },
+        {
+          "runtimeName": "payload",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Response Payload"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Contains the response payload. For application/json the value must be an OBJECT, for all other content types a plain string is expected."
+            }
+          ],
+          "runtimeDefinitionName": "payload"
+        },
+        {
+          "runtimeName": "headers",
+          "optional": true,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "HTTP response headers"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A collection of key-value pairs containing additional response metadata."
+            }
+          ],
+          "runtimeDefinitionName": "headers"
+        }
+      ],
+      "signature": "<S extends HTTP_SCHEMA>(http_status_code: HTTP_STATUS_CODE, http_schema: S, payload: HTTP_PAYLOAD<S>, headers?: OBJECT<{}>): void",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Respond"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Processes an HTTP response and returns it to the requesting client. This function typically completes the HTTP request–response cycle by delivering the server’s final output, such as headers, status codes, and body content, back to the client."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Sends response with status ${http_status_code} and payload ${payload}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "respond;control;http"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "HTTP_STATUS_CODE",
+        "OBJECT",
+        "HTTP_SCHEMA",
+        "HTTP_PAYLOAD"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:cube-send",
+      "runtimeDefinitionName": "rest::control::respond"
+    }
+  ],
+  "runtimeFunctionDefinitions": [
+    {
+      "runtimeName": "rest::control::respond",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "http_status_code",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "HTTP Status Code"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "An HTTP status code is a three-digit number (100–599) indicating the result of a request (e.g., 200, 404, 500)."
+            }
+          ]
+        },
+        {
+          "runtimeName": "http_schema",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content Type"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Specifies the MIME type of the response payload, such as application/json, application/xml, or text/plain. This determines the expected format of the payload parameter."
+            }
+          ]
+        },
+        {
+          "runtimeName": "payload",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Response Payload"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Contains the response payload. For application/json the value must be an OBJECT, for all other content types a plain string is expected."
+            }
+          ]
+        },
+        {
+          "runtimeName": "headers",
+          "optional": true,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "HTTP response headers"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "A collection of key-value pairs containing additional response metadata."
+            }
+          ]
+        }
+      ],
+      "signature": "<S extends HTTP_SCHEMA>(http_status_code: HTTP_STATUS_CODE, http_schema: S, payload: HTTP_PAYLOAD<S>, headers?: OBJECT<{}>): void",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Respond"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Processes an HTTP response and returns it to the requesting client. This function typically completes the HTTP request–response cycle by delivering the server’s final output, such as headers, status codes, and body content, back to the client."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Sends response with status ${http_status_code} and payload ${payload}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "respond;control;http"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "HTTP_STATUS_CODE",
+        "OBJECT",
+        "HTTP_SCHEMA",
+        "HTTP_PAYLOAD"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:cube-send"
+    }
+  ],
+  "definitionDataTypes": [
+    {
+      "identifier": "REST_ADAPTER_INPUT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Rest Adapter Input"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Rest Adapter Input"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "http;rest;adapter;input"
+        }
+      ],
+      "genericKeys": [
+        "T"
+      ],
+      "type": "{ payload: T, headers: OBJECT<{}>, query_params: OBJECT<{}>, path_params: OBJECT<{}> }",
+      "linkedDataTypeIdentifiers": [
+        "OBJECT"
+      ],
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "REST_AUTH_TYPE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Webhook credential variant"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Webhook credential variant"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "webhook;rest;auth;credential;type;variant;bearer;basic;jwt"
+        }
+      ],
+      "type": "'Bearer JWT' | 'Bearer static' | 'Basic' | undefined | null",
+      "version": "0.0.36"
+    },
+    {
+      "identifier": "REST_AUTH_VALUE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Webhook credential value"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Webhook credential value"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "webhook;rest;auth;credential;value;bearer;basic;username;password;token"
+        }
+      ],
+      "genericKeys": [
+        "T"
+      ],
+      "type": "T extends 'Basic' ? { username: string, password: string } : T extends undefined ? undefined : T extends null ? null : string",
+      "version": "0.0.36"
+    }
+  ],
+  "definitionSource": "rest-action"
+}

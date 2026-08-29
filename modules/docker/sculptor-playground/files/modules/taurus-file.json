@@ -1,0 +1,160 @@
+{
+  "identifier": "taurus-file",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "File"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with Files."
+    }
+  ],
+  "author": "CodeZero",
+  "icon": "tabler:file",
+  "version": "0.0.36",
+  "functionDefinitions": [
+    {
+      "runtimeName": "std::file::size",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "file",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "File"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The file whose size in bytes is to be returned."
+            }
+          ],
+          "runtimeDefinitionName": "file"
+        }
+      ],
+      "signature": "<M extends TEXT>(file: FILE<M>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "File Size"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the size of the given file in bytes."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Size of ${file}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "size;file;bytes;length;document;blob;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "FILE",
+        "NUMBER",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:file",
+      "runtimeDefinitionName": "std::file::size"
+    }
+  ],
+  "runtimeFunctionDefinitions": [
+    {
+      "runtimeName": "std::file::size",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "file",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "File"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The file whose size in bytes is to be returned."
+            }
+          ]
+        }
+      ],
+      "signature": "<M extends TEXT>(file: FILE<M>): NUMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "File Size"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the size of the given file in bytes."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Size of ${file}"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "size;file;bytes;length;document;blob;std"
+        }
+      ],
+      "linkedDataTypeIdentifiers": [
+        "FILE",
+        "NUMBER",
+        "TEXT"
+      ],
+      "version": "0.0.36",
+      "displayIcon": "tabler:file"
+    }
+  ],
+  "definitionDataTypes": [
+    {
+      "identifier": "FILE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "File"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "File"
+        }
+      ],
+      "alias": [
+        {
+          "code": "en-US",
+          "content": "file;document;blob;attachment;binary"
+        }
+      ],
+      "genericKeys": [
+        "M extends TEXT"
+      ],
+      "type": "{ contentType: M; fileName: string; valueType: 'base64'; value: string }",
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "version": "0.0.36"
+    }
+  ],
+  "definitionSource": "taurus-file"
+}
