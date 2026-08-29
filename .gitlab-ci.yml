@@ -153,3 +153,22 @@ tf-apply:server_production:
   needs:
     - tf-plan:server_production
   variables: !reference [tf-plan:server_production, variables]
+
+tf-plan:k3s_administration:
+  extends:
+    - .tf-plan
+  before_script:
+    - !reference [.ssh, before_script]
+    - !reference [.tf, before_script]
+  variables:
+    TF_STATE_NAME: k3s_administration
+    TF_ROOT: 'envs/k3s_administration'
+    TF_ARGS: '-parallelism=1'
+
+tf-apply:k3s_administration:
+  extends:
+    - .tf-apply
+  before_script: !reference [tf-plan:k3s_administration, before_script]
+  needs:
+    - tf-plan:k3s_administration
+  variables: !reference [tf-plan:k3s_administration, variables]
