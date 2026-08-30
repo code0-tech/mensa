@@ -30,15 +30,20 @@ resource "null_resource" "k3s_install" {
   }
 
   provisioner "file" {
+    source      = "${path.module}/vendor/install.sh"
+    destination = "/tmp/k3s-install-script.sh"
+  }
+
+  provisioner "file" {
     source      = "${path.module}/install.sh"
     destination = "/tmp/k3s-install.sh"
   }
 
   provisioner "remote-exec" {
     inline = [
-      "chmod +x /tmp/k3s-install.sh",
+      "chmod +x /tmp/k3s-install.sh /tmp/k3s-install-script.sh",
       "/tmp/k3s-install.sh '${var.k3s_version}' '${local.install_flags}'",
-      "rm -f /tmp/k3s-install.sh",
+      "rm -f /tmp/k3s-install.sh /tmp/k3s-install-script.sh",
     ]
   }
 }

@@ -6,4 +6,20 @@ directories:
       sha: 31806fcb5b983282045c3ff32e9b2c1d732b90cd
     path: .
   path: modules/docker/codezero/vendor
+- contents:
+  - git:
+      commitTitle: '[release-1.36] Update to v1.36.4-k3s1 and Go 1.26.7 (#14545)...'
+      sha: 4dedb15be78017a8ddd5b9e81acd44f3481078ed
+      tags:
+      - v1.36.4+k3s1
+    path: .
+  path: modules/k3s/server_node/vendor
+- contents:
+  - git:
+      commitTitle: 'Minimal fix to build failure from #31211....'
+      sha: 3900f434fd3ef2b84065dc04508df48f288dba00
+      tags:
+      - v4.2.4
+    path: .
+  path: modules/k3s/flux/vendor
 kind: LockConfig

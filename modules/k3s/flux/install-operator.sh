@@ -6,7 +6,7 @@ export KUBECONFIG
 
 FLUX_OPERATOR_VERSION="$1"
 
-which helm >/dev/null 2>&1 || (curl -fsSL https://raw.githubusercontent.com/helm/helm/d2de64e64bc64cbef584a0ccb13eb8cb0c96bded/scripts/get-helm-4 | bash)
+which helm >/dev/null 2>&1 || (bash /tmp/get-helm.sh)
 
 sudo -E helm upgrade --install flux-operator \
   oci://ghcr.io/controlplaneio-fluxcd/charts/flux-operator \
