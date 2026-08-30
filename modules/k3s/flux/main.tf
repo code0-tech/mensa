@@ -27,15 +27,20 @@ resource "null_resource" "flux_operator" {
   }
 
   provisioner "file" {
+    source      = "${path.module}/vendor/scripts/get-helm-4"
+    destination = "/tmp/get-helm.sh"
+  }
+
+  provisioner "file" {
     source      = "${path.module}/install-operator.sh"
     destination = "/tmp/flux-install-operator.sh"
   }
 
   provisioner "remote-exec" {
     inline = [
-      "chmod +x /tmp/flux-install-operator.sh",
+      "chmod +x /tmp/flux-install-operator.sh /tmp/get-helm.sh",
       "/tmp/flux-install-operator.sh '${var.flux_operator_version}'",
-      "rm -f /tmp/flux-install-operator.sh",
+      "rm -f /tmp/flux-install-operator.sh /tmp/get-helm.sh",
     ]
   }
 }

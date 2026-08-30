@@ -9,3 +9,21 @@ directories:
           url: https://github.com/code0-tech/reticulum
           ref: origin/main
         newRootPath: docker-compose
+  - path: modules/k3s/server_node/vendor
+    contents:
+      - path: .
+        git:
+          url: https://github.com/k3s-io/k3s
+          ref: v1.36.4+k3s1
+          depth: 1
+        includePaths:
+          - install.sh
+  - path: modules/k3s/flux/vendor
+    contents:
+      - path: .
+        git:
+          url: https://github.com/helm/helm
+          ref: v4.2.4
+          depth: 1
+        includePaths:
+          - scripts/get-helm-4
