@@ -1,0 +1,6 @@
+ci_access:
+  projects:
+    - code0-tech/infrastructure/mensa
+user_access:
+  groups:
+    - code0-tech/infrastructure

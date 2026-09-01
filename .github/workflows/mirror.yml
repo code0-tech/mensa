@@ -1,0 +1,19 @@
+name: Mirror to GitLab
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - run: git clone https://github.com/${{ github.repository }} .
+      - run: git remote add gitlab https://gitlab.com/code0-tech/infrastructure/mensa.git
+      - run: >-
+          git
+          -c credential.helper='!f() { sleep 1; echo "username=${{ secrets.GL_API_USER }}"; echo "password=${{ secrets.GL_API_TOKEN }}"; }; f'
+          push
+          -o ci.skip
+          gitlab HEAD:main
