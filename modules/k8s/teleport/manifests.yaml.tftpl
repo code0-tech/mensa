@@ -1,0 +1,90 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: teleport
+  namespace: flux-system
+spec:
+  interval: 1h
+  url: https://charts.releases.teleport.dev
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: teleport-cluster
+  namespace: flux-system
+spec:
+  interval: 10m
+  targetNamespace: ${namespace}
+  driftDetection:
+    mode: enabled
+  install:
+    createNamespace: false
+  chart:
+    spec:
+      chart: teleport-cluster
+      version: ${chart_version}
+      sourceRef:
+        kind: HelmRepository
+        name: teleport
+  postRenderers:
+    - kustomize:
+        patches:
+          - target:
+              kind: Service
+              name: teleport-teleport-cluster
+            patch: |
+              - op: replace
+                path: /spec/ports/0/port
+                value: ${service_port}
+  values:
+    clusterName: ${cluster_name}
+    proxyListenerMode: multiplex
+    chartMode: standalone
+    authentication:
+      type: github
+      connectorName: github
+      localAuth: false
+    highAvailability:
+      replicaCount: 1
+    operator:
+      enabled: true
+    tls:
+      existingSecretName: ${tls_secret_name}
+      existingCASecretName: ${tls_ca_secret_name}
+      existingCASecretKeyName: ca.pem
+    service:
+      type: LoadBalancer
+    log:
+      level: INFO
+      output: stderr
+      format: json
+    labels:
+      cluster: ${teleport_cluster_label}
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: OCIRepository
+metadata:
+  name: teleport-config
+  namespace: flux-system
+spec:
+  interval: 1h
+  url: ${config_oci_url}
+  ref:
+    tag: ${config_oci_tag}
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: teleport-config
+  namespace: flux-system
+spec:
+  interval: 10m
+  targetNamespace: ${namespace}
+  sourceRef:
+    kind: OCIRepository
+    name: teleport-config
+  postBuild:
+    substituteFrom:
+      - kind: Secret
+        name: teleport-config-vars
+  prune: true

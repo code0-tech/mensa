@@ -2,6 +2,8 @@ stages:
   - preflight
   - terraform-plan
   - terraform-apply
+  - k8s-plan
+  - k8s-apply
 
 default:
   tags:
@@ -79,6 +81,26 @@ regeneration-check:signoz:
     - mise x -- signoz-foundry forge
     - git add .
     - git diff --exit-code --staged
+
+push-artifact:teleport-config:
+  stage: preflight
+  image:
+    name: ghcr.io/code0-tech/build-images/mise:428.1
+    entrypoint: [""]
+  script:
+    - mise install
+    - TAG=$(find manifests/teleport-config -type f | sort | xargs sha256sum | sha256sum | cut -d' ' -f1)
+    - >
+      flux push artifact
+      oci://registry.gitlab.com/code0-tech/infrastructure/mensa/teleport-config:${TAG}
+      --path=manifests/teleport-config
+      --source="${CI_PROJECT_URL}"
+      --revision="${CI_COMMIT_SHA}"
+      --creds="gitlab-ci-token:${CI_JOB_TOKEN}"
+    - echo "TF_VAR_teleport_config_tag=${TAG}" > teleport-config.env
+  artifacts:
+    reports:
+      dotenv: teleport-config.env
 
 tf-plan:main:
   extends:
@@ -172,3 +194,21 @@ tf-apply:k3s_administration:
   needs:
     - tf-plan:k3s_administration
   variables: !reference [tf-plan:k3s_administration, variables]
+
+tf-plan:k8s_administration:
+  extends:
+    - .tf-plan
+  stage: k8s-plan
+  variables:
+    TF_STATE_NAME: k8s_administration
+    TF_ROOT: 'envs/k8s_administration'
+    TF_VAR_kubeconfig_path: $KUBECONFIG
+    TF_VAR_kubeconfig_context: code0-tech/infrastructure/mensa:k3s-administration
+
+tf-apply:k8s_administration:
+  extends:
+    - .tf-apply
+  stage: k8s-apply
+  needs:
+    - tf-plan:k8s_administration
+  variables: !reference ["tf-plan:k8s_administration", variables]

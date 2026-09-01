@@ -1,0 +1,50 @@
+apiVersion: resources.teleport.dev/v1
+kind: TeleportRoleV8
+metadata:
+  name: k8s-administration-admin
+spec:
+  options:
+    require_session_mfa: 1 # SESSION
+  allow:
+    kubernetes_groups:
+      - system:masters
+    kubernetes_labels:
+      "cluster": "administration"
+    kubernetes_resources:
+      - kind: "*"
+        namespace: "*"
+        name: "*"
+        verbs: ["*"]
+        api_group: "*"
+---
+apiVersion: resources.teleport.dev/v1
+kind: TeleportRoleV8
+metadata:
+  name: k8s-administration-readonly
+spec:
+  options:
+    require_session_mfa: 1 # SESSION
+  allow:
+    kubernetes_groups:
+      - view
+    kubernetes_labels:
+      "cluster": "administration"
+    kubernetes_resources:
+      - kind: "*"
+        namespace: "*"
+        name: "*"
+        verbs: ["get", "list", "watch"]
+        api_group: "*"
+---
+apiVersion: resources.teleport.dev/v1
+kind: TeleportRoleV8
+metadata:
+  name: ssh-administration
+spec:
+  options:
+    require_session_mfa: 1 # SESSION
+  allow:
+    logins:
+      - teleport-user
+    node_labels:
+      "server": "administration"
