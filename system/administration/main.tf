@@ -64,7 +64,7 @@ module "sculptor_playground" {
   source = "../../modules/docker/sculptor-playground"
 
   hostname = "playground.codezero.build"
-  playground_frame_ancestors = "'self' https://codezero.build"
+  playground_frame_ancestors = "'self' https://codezero.build http://localhost:3000"
   docker_proxy_network_id = module.proxy.docker_proxy_network_id
 }
 
