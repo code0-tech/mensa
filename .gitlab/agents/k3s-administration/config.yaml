@@ -1,6 +1,8 @@
 ci_access:
   projects:
-    - code0-tech/infrastructure/mensa
+    - id: code0-tech/infrastructure/mensa
 user_access:
+  access_as:
+    agent: {}
   groups:
-    - code0-tech/infrastructure
+    - id: code0-tech/infrastructure
