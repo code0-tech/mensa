@@ -1,0 +1,26 @@
+apiVersion: resources.teleport.dev/v3
+kind: TeleportGithubConnector
+metadata:
+  name: github
+spec:
+  display: GitHub
+  client_id: ${GITHUB_CLIENT_ID}
+  client_secret: ${GITHUB_CLIENT_SECRET}
+  redirect_url: https://tp.code0.tech/v1/webapi/github/callback
+  teams_to_roles:
+    - organization: code0-tech
+      team: tp-editor
+      roles:
+        - editor
+    - organization: code0-tech
+      team: tp-k8s-administration-admin
+      roles:
+        - k8s-administration-admin
+    - organization: code0-tech
+      team: tp-k8s-administration-readonly
+      roles:
+        - k8s-administration-readonly
+    - organization: code0-tech
+      team: tp-ssh-administration
+      roles:
+        - ssh-administration

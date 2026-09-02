@@ -10,6 +10,7 @@ spec:
   components:
     - source-controller
     - helm-controller
+    - kustomize-controller
     - notification-controller
   cluster:
     type: kubernetes
