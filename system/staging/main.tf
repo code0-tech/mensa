@@ -26,11 +26,11 @@ data "cloudflare_zones" "codezero_build_domain" {
 }
 
 resource "cloudflare_dns_record" "server_ip" {
-  name    = "server_production.code0.tech"
+  name    = "server_staging.code0.tech"
   type    = "A"
   ttl     = 1
   zone_id = data.cloudflare_zones.code0_tech_domain.result[0].id
-  content = var.server_production_ip
+  content = var.server_staging_ip
   proxied = true
 
   comment = "Managed by Terraform"

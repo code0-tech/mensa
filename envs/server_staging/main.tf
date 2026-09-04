@@ -27,14 +27,14 @@ provider "gitlab" {
 }
 
 provider "docker" {
-  host = "ssh://pipeline@${var.server_production_ip}:${var.server_production_ssh_port}"
+  host = "ssh://pipeline@${var.server_staging_ip}:${var.server_staging_ssh_port}"
 
   cert_path = ""
 }
 
-module "production" {
-  source = "../../system/production"
+module "staging" {
+  source = "../../system/staging"
 
   cloudflare_account_id = var.cloudflare_account_id
-  server_production_ip  = var.server_production_ip
+  server_staging_ip     = var.server_staging_ip
 }
