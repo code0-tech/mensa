@@ -24,3 +24,7 @@ spec:
       team: tp-ssh-administration
       roles:
         - ssh-administration
+    - organization: code0-tech
+      team: tp-ssh-staging
+      roles:
+        - ssh-staging

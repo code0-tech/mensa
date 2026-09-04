@@ -48,3 +48,16 @@ spec:
       - teleport-user
     node_labels:
       "server": "administration"
+---
+apiVersion: resources.teleport.dev/v1
+kind: TeleportRoleV8
+metadata:
+  name: ssh-staging
+spec:
+  options:
+    require_session_mfa: 1 # SESSION
+  allow:
+    logins:
+      - teleport-user
+    node_labels:
+      "server": "staging"
