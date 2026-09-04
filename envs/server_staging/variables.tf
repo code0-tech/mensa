@@ -13,12 +13,12 @@ variable "gitlab_api_token" {
   sensitive = true
 }
 
-variable "server_production_ip" {
+variable "server_staging_ip" {
   type      = string
   sensitive = true
 }
 
-variable "server_production_ssh_port" {
+variable "server_staging_ssh_port" {
   type      = string
   sensitive = true
 }

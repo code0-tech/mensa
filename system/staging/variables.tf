@@ -3,7 +3,7 @@ variable "cloudflare_account_id" {
   sensitive = true
 }
 
-variable "server_production_ip" {
+variable "server_staging_ip" {
   type      = string
   sensitive = true
 }
