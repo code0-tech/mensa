@@ -40,7 +40,7 @@ resource "time_static" "rotation" {
 
 resource "cloudflare_origin_ca_certificate" "this" {
   csr                  = tls_cert_request.this.cert_request_pem
-  hostnames            = var.hostnames
+  hostnames            = sort(var.hostnames)
   request_type         = "origin-rsa"
   requested_validity   = 365
 
