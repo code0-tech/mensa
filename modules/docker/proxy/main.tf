@@ -26,9 +26,9 @@ resource "docker_network" "proxy" {
 }
 
 module "certificates" {
-  source   = "../../cloudflare/certificate"
-  hostname = each.value
-  for_each = var.certificate_hostnames
+  source    = "../../cloudflare/certificate"
+  hostnames = [each.value]
+  for_each  = var.certificate_hostnames
 }
 
 resource "docker_container" "proxy" {
@@ -57,7 +57,7 @@ resource "docker_container" "proxy" {
   dynamic "upload" {
     for_each = module.certificates
     content {
-      file    = "/etc/nginx/certs/${upload.value["hostname"]}.crt"
+      file    = "/etc/nginx/certs/${upload.value["hostnames"][0]}.crt"
       content = upload.value["certificate"]
     }
   }
@@ -65,7 +65,7 @@ resource "docker_container" "proxy" {
   dynamic "upload" {
     for_each = module.certificates
     content {
-      file    = "/etc/nginx/certs/${upload.value["hostname"]}.key"
+      file    = "/etc/nginx/certs/${upload.value["hostnames"][0]}.key"
       content = upload.value["private_key"]
     }
   }

@@ -29,7 +29,7 @@ resource "cloudflare_dns_record" "gitlab_pages" {
 module "certificate" {
   source = "../../cloudflare/certificate"
 
-  hostname = cloudflare_dns_record.gitlab_pages.name
+  hostnames = [cloudflare_dns_record.gitlab_pages.name]
 }
 
 data "http" "cloudflare_root" {

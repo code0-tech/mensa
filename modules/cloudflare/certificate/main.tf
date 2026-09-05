@@ -7,8 +7,8 @@ terraform {
   }
 }
 
-variable "hostname" {
-  type = string
+variable "hostnames" {
+  type = list(string)
 }
 
 resource "tls_private_key" "this" {
@@ -28,6 +28,10 @@ resource "tls_cert_request" "this" {
 
 resource "time_rotating" "rotation" {
   rotation_days = 365 - 90 # requested_validity - 90 days for rotation
+
+  triggers = {
+    hostnames = join(",", var.hostnames)
+  }
 }
 
 resource "time_static" "rotation" {
@@ -36,7 +40,7 @@ resource "time_static" "rotation" {
 
 resource "cloudflare_origin_ca_certificate" "this" {
   csr                  = tls_cert_request.this.cert_request_pem
-  hostnames            = [ var.hostname ]
+  hostnames            = var.hostnames
   request_type         = "origin-rsa"
   requested_validity   = 365
 
@@ -45,8 +49,8 @@ resource "cloudflare_origin_ca_certificate" "this" {
   }
 }
 
-output "hostname" {
-  value = var.hostname
+output "hostnames" {
+  value = var.hostnames
 }
 
 output "certificate" {

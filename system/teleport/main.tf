@@ -14,6 +14,20 @@ terraform {
   }
 }
 
+locals {
+  application_hostnames = [
+    "staging.codezero.build",
+  ]
+
+  teleport_hostnames = concat([var.hostname], local.application_hostnames)
+
+  hostnames_code0_tech     = [for h in local.teleport_hostnames : h if endswith(h, ".code0.tech") || h == "code0.tech"]
+  hostnames_codezero_build = [for h in local.teleport_hostnames : h if endswith(h, ".codezero.build") || h == "codezero.build"]
+
+  origin_expression_code0_tech     = join(" or ", [for h in local.hostnames_code0_tech : "http.host eq \"${h}\""])
+  origin_expression_codezero_build = join(" or ", [for h in local.hostnames_codezero_build : "http.host eq \"${h}\""])
+}
+
 data "http" "cloudflare_origin_ca_root" {
   url = "https://developers.cloudflare.com/ssl/static/origin_ca_rsa_root.pem"
 
@@ -40,9 +54,16 @@ data "cloudflare_zones" "code0_tech" {
   name = "code0.tech"
 }
 
+data "cloudflare_zones" "codezero_build" {
+  account = {
+    id = var.cloudflare_account_id
+  }
+  name = "codezero.build"
+}
+
 module "certificate" {
-  source   = "../../modules/cloudflare/certificate"
-  hostname = var.hostname
+  source    = "../../modules/cloudflare/certificate"
+  hostnames = concat([var.hostname], local.application_hostnames)
 }
 
 module "teleport" {
@@ -71,7 +92,22 @@ resource "cloudflare_dns_record" "teleport" {
   comment = "Managed by Terraform"
 }
 
-resource "cloudflare_ruleset" "origin_rules" {
+resource "cloudflare_dns_record" "teleport_cname_codezero_build" {
+  for_each = toset([
+    "staging.codezero.build"
+  ])
+
+  name    = each.value
+  type    = "CNAME"
+  ttl     = 1
+  zone_id = data.cloudflare_zones.codezero_build.result[0].id
+  content = cloudflare_dns_record.teleport.name
+  proxied = true
+
+  comment = "Managed by Terraform"
+}
+
+resource "cloudflare_ruleset" "origin_rules_code0_tech" {
   kind    = "zone"
   name    = "Origin rules"
   phase   = "http_request_origin"
@@ -84,7 +120,25 @@ resource "cloudflare_ruleset" "origin_rules" {
         port = var.service_port
       }
     }
-    expression = "(http.host eq \"${var.hostname}\")"
+    expression = "(${local.origin_expression_code0_tech})"
+    enabled    = true
+  }]
+}
+
+resource "cloudflare_ruleset" "origin_rules_codezero_build" {
+  kind    = "zone"
+  name    = "Origin rules"
+  phase   = "http_request_origin"
+  zone_id = data.cloudflare_zones.codezero_build.result[0].id
+
+  rules = [{
+    action = "route"
+    action_parameters = {
+      origin = {
+        port = var.service_port
+      }
+    }
+    expression = "(${local.origin_expression_codezero_build})"
     enabled    = true
   }]
 }
