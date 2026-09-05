@@ -74,7 +74,7 @@ default:
 
 regeneration-check:signoz:
   stage: preflight
-  image: ghcr.io/code0-tech/build-images/mise:428.1
+  image: ghcr.io/code0-tech/build-images/mise:539.1
   script:
     - cd modules/docker/signoz
     - mise install
@@ -85,7 +85,7 @@ regeneration-check:signoz:
 push-artifact:teleport-config:
   stage: preflight
   image:
-    name: ghcr.io/code0-tech/build-images/mise:428.1
+    name: ghcr.io/code0-tech/build-images/mise:539.1
     entrypoint: [""]
   script:
     - mise install
