@@ -9,6 +9,10 @@ spec:
   redirect_url: https://tp.code0.tech/v1/webapi/github/callback
   teams_to_roles:
     - organization: code0-tech
+      team: tp-app-codezero-staging
+      roles:
+        - app-codezero-staging
+    - organization: code0-tech
       team: tp-auditor
       roles:
         - auditor

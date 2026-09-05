@@ -36,20 +36,6 @@ resource "cloudflare_dns_record" "server_ip" {
   comment = "Managed by Terraform"
 }
 
-resource "cloudflare_dns_record" "server_cname_codezero_build" {
-  for_each = toset([
-  ])
-
-  name    = each.value
-  type    = "CNAME"
-  ttl     = 1
-  zone_id = data.cloudflare_zones.codezero_build_domain.result[0].id
-  content = cloudflare_dns_record.server_ip.name
-  proxied = true
-
-  comment = "Managed by Terraform"
-}
-
 resource "cloudflare_dns_record" "server_cname_code0_tech" {
   for_each = toset([
     "signoz.code0.tech",
@@ -71,6 +57,26 @@ module "proxy" {
   certificate_hostnames = [
     "signoz.code0.tech",
   ]
+}
+
+resource "random_password" "codezero_initial_root_password" {
+  length  = 32
+  special = false
+}
+
+module "codezero" {
+  source = "github.com/code0-tech/reticulum//terraform/docker?ref=161d4aba28edbbfd795a7135a004bc43ea59432b"
+
+  hostname              = "staging.codezero.build"
+  initial_root_mail     = "root@code0.tech"
+  initial_root_password = random_password.codezero_initial_root_password.result
+  image_tag             = "0.0.0-canary-2821608682-64f60183ed488c060e58140d9fac1f4f59fa3a74"
+  image_edition         = "cloud"
+  image_registry        = "ghcr.io/code0-tech/reticulum/ci-builds"
+
+  http_port     = 15242
+  https_port    = null
+  nginx_bind_ip = "127.0.0.1"
 }
 
 module "signoz" {

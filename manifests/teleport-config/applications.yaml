@@ -1,0 +1,11 @@
+apiVersion: resources.teleport.dev/v1
+kind: TeleportAppV3
+metadata:
+  name: codezero-staging
+  labels:
+    application: codezero
+    environment: staging
+    server: staging
+spec:
+  uri: http://127.0.0.1:15242
+  public_addr: staging.codezero.build

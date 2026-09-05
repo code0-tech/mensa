@@ -1,6 +1,20 @@
 apiVersion: resources.teleport.dev/v1
 kind: TeleportRoleV8
 metadata:
+  name: app-codezero-staging
+spec:
+  options:
+    require_session_mfa: 1 # SESSION
+  allow:
+    logins:
+      - teleport-user
+    app_labels:
+      "application": "codezero"
+      "environment": "staging"
+---
+apiVersion: resources.teleport.dev/v1
+kind: TeleportRoleV8
+metadata:
   name: k8s-administration-admin
 spec:
   options:
