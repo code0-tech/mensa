@@ -38,8 +38,6 @@ resource "cloudflare_dns_record" "server_ip" {
 
 resource "cloudflare_dns_record" "server_cname_codezero_build" {
   for_each = toset([
-    "demo.codezero.build",
-    "demo-rest.codezero.build"
   ])
 
   name    = each.value
@@ -71,16 +69,8 @@ module "proxy" {
   source = "../../modules/docker/proxy"
 
   certificate_hostnames = [
-    "demo.codezero.build",
-    "demo-rest.codezero.build",
     "signoz.code0.tech",
   ]
-}
-
-module "codezero" {
-  source = "../../modules/docker/codezero"
-
-  proxy_network = module.proxy.docker_proxy_network_name
 }
 
 module "signoz" {
