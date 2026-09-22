@@ -60,6 +60,15 @@
       "enabled": false
     },
     {
+      "matchFileNames": [
+        ".tool-versions"
+      ],
+      "matchPackageNames": [
+        "terraform"
+      ],
+      "enabled": false
+    },
+    {
       "matchDepNames": [
         "signoz/**",
         "github:SigNoz/**"
