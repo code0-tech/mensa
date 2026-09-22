@@ -41,6 +41,7 @@ module "server_node" {
   ssh_port = var.server_administration_ssh_port
   ssh_user = "pipeline"
 
+  # renovate: datasource=github-releases depName=k3s-io/k3s
   k3s_version = "v1.36.4+k3s1"
   datastore   = "sqlite"
   tls_san     = [var.server_administration_ip]
@@ -53,6 +54,7 @@ module "flux" {
   ssh_port = var.server_administration_ssh_port
   ssh_user = "pipeline"
 
+  # renovate: datasource=docker depName=ghcr.io/controlplaneio-fluxcd/charts/flux-operator
   flux_operator_version = "0.58.1"
   flux_instance         = file("${path.module}/flux-instance.yaml")
   discord_webhook_url   = data.gitlab_project_variable.discord_webhook_url.value
@@ -68,6 +70,7 @@ module "gitlab_agent" {
   ssh_port = var.server_administration_ssh_port
   ssh_user = "pipeline"
 
+  # renovate: datasource=helm depName=gitlab-agent registryUrl=https://charts.gitlab.io
   agent_version = "2.30.0"
   agent_token   = gitlab_cluster_agent_token.this.token
 
