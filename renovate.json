@@ -63,7 +63,7 @@
       "matchFileNames": [
         ".tool-versions"
       ],
-      "matchPackageNames": [
+      "matchDepNames": [
         "terraform"
       ],
       "enabled": false
