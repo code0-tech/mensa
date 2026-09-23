@@ -75,6 +75,13 @@
       ],
       "groupName": "signoz",
       "additionalBranchPrefix": ""
+    },
+    {
+      "matchDepNames": [
+        "k3s-io/k3s",
+        "https://github.com/k3s-io/k3s"
+      ],
+      "groupName": "k3s"
     }
   ],
   "customManagers": [
