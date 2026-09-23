@@ -2,12 +2,6 @@ apiVersion: vendir.k14s.io/v1alpha1
 directories:
 - contents:
   - git:
-      commitTitle: 'fix: correct file path for aquila config'
-      sha: 31806fcb5b983282045c3ff32e9b2c1d732b90cd
-    path: .
-  path: modules/docker/codezero/vendor
-- contents:
-  - git:
       commitTitle: '[release-1.36] Update to v1.36.4-k3s1 and Go 1.26.7 (#14545)...'
       sha: 4dedb15be78017a8ddd5b9e81acd44f3481078ed
       tags:
