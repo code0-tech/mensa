@@ -88,6 +88,15 @@
       ],
       "versioningTemplate": "docker",
       "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "**/*.tf"
+      ],
+      "matchStrings": [
+        "# renovate: (?:datasource=(?<datasource>[a-zA-Z0-9-._]+)) (?:depName=(?<depName>[^\\s]+))(?: versioning=(?<versioning>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\s+[A-Za-z0-9_]+?_version = \"(?<currentValue>.+?)\""
+      ]
     }
   ]
 }
