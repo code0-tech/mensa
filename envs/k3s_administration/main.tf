@@ -4,7 +4,7 @@ terraform {
   required_providers {
     null = {
       source  = "hashicorp/null"
-      version = "3.3.1"
+      version = "3.3.2"
     }
     gitlab = {
       source  = "gitlabhq/gitlab"
