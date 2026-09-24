@@ -24,7 +24,7 @@ variable "docker_proxy_network_id" {
 }
 
 data "docker_registry_image" "sculptor" {
-  name = "ghcr.io/code0-tech/reticulum/ci-builds/sculptor:0.0.0-experimental-2801726593-49e710d646257a0a866899cad4a37b1e2391f272-ce"
+  name = "ghcr.io/code0-tech/reticulum/ci-builds/sculptor:0.0.0-experimental-2879206364-76bc6ec48a29bcfc24a1deed02162f006c0dee4a-ce"
 }
 
 resource "docker_image" "sculptor" {
