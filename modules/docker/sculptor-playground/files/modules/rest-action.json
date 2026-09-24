@@ -9,7 +9,7 @@
   "documentation": "Webhook triggered by an incoming HTTP request.",
   "author": "CodeZero",
   "icon": "tabler:world-www",
-  "version": "0.0.36",
+  "version": "0.0.38",
   "flowTypes": [
     {
       "identifier": "REST",
@@ -139,7 +139,7 @@
           "content": "webhook;http;rest;route;web"
         }
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:world-www",
       "linkedDataTypeIdentifiers": [
         "HTTP_SCHEMA",
@@ -149,7 +149,7 @@
         "REST_AUTH_VALUE",
         "REST_ADAPTER_INPUT"
       ],
-      "signature": "<A extends REST_AUTH_TYPE, T>(http_schema: HTTP_SCHEMA, http_url: HTTP_URL, http_method: HTTP_METHOD, http_auth: A, http_auth_value: REST_AUTH_VALUE<A>, input_schema: TYPE<T>): REST_ADAPTER_INPUT<T>",
+      "signature": "<A extends REST_AUTH_TYPE, T extends TYPE>(http_schema: HTTP_SCHEMA, http_url: HTTP_URL, http_method: HTTP_METHOD, http_auth: A, http_auth_value: REST_AUTH_VALUE<A>, input_schema: T): REST_ADAPTER_INPUT<T>",
       "runtimeIdentifier": "REST"
     }
   ],
@@ -282,7 +282,7 @@
           "content": "webhook;http;rest;route;web"
         }
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:world-www",
       "linkedDataTypeIdentifiers": [
         "HTTP_SCHEMA",
@@ -292,7 +292,7 @@
         "REST_AUTH_VALUE",
         "REST_ADAPTER_INPUT"
       ],
-      "signature": "<A extends REST_AUTH_TYPE, T>(http_schema: HTTP_SCHEMA, http_url: HTTP_URL, http_method: HTTP_METHOD, http_auth: A, http_auth_value: REST_AUTH_VALUE<A>, input_schema: TYPE<T>): REST_ADAPTER_INPUT<T>"
+      "signature": "<A extends REST_AUTH_TYPE, T extends TYPE>(http_schema: HTTP_SCHEMA, http_url: HTTP_URL, http_method: HTTP_METHOD, http_auth: A, http_auth_value: REST_AUTH_VALUE<A>, input_schema: T): REST_ADAPTER_INPUT<T>"
     }
   ],
   "functionDefinitions": [
@@ -396,7 +396,7 @@
         "HTTP_SCHEMA",
         "HTTP_PAYLOAD"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:cube-send",
       "runtimeDefinitionName": "rest::control::respond"
     }
@@ -498,7 +498,7 @@
         "HTTP_SCHEMA",
         "HTTP_PAYLOAD"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:cube-send"
     }
   ],
@@ -530,7 +530,7 @@
       "linkedDataTypeIdentifiers": [
         "OBJECT"
       ],
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "REST_AUTH_TYPE",
@@ -553,7 +553,7 @@
         }
       ],
       "type": "'Bearer JWT' | 'Bearer static' | 'Basic' | undefined | null",
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "REST_AUTH_VALUE",
@@ -579,7 +579,7 @@
         "T"
       ],
       "type": "T extends 'Basic' ? { username: string, password: string } : T extends undefined ? undefined : T extends null ? null : string",
-      "version": "0.0.36"
+      "version": "0.0.38"
     }
   ],
   "definitionSource": "rest-action"

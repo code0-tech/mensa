@@ -1,0 +1,2026 @@
+{
+  "identifier": "testing-action",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Discord"
+    }
+  ],
+  "documentation": "Discord bot integration: send and manage messages, reactions, and roles, and react to Discord events.",
+  "author": "code0-tech",
+  "icon": "simple:discord",
+  "version": "1.0.0",
+  "flowTypes": [
+    {
+      "identifier": "DiscordMessageCreated",
+      "settings": [
+        {
+          "identifier": "channelId",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Optional channel ID to filter incoming messages."
+            }
+          ],
+          "optional": true,
+          "hidden": false
+        }
+      ],
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord message created"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Triggered when a message is posted in a channel. Ignores bot messages."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Discord message created"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "signature": "(channelId?: string): DISCORD_MESSAGE",
+      "runtimeIdentifier": "DiscordMessageCreated"
+    },
+    {
+      "identifier": "DiscordReactionAdded",
+      "settings": [
+        {
+          "identifier": "channelId",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Optional channel ID to filter reactions."
+            }
+          ],
+          "optional": true,
+          "hidden": false
+        }
+      ],
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord reaction added"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Triggered when a user adds a reaction to a message."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Discord reaction added"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "signature": "(channelId?: string): DISCORD_REACTION",
+      "runtimeIdentifier": "DiscordReactionAdded"
+    },
+    {
+      "identifier": "DiscordMemberJoined",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord member joined"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Triggered when a new member joins a guild."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Discord member joined"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "signature": "(): DISCORD_GUILD_MEMBER",
+      "runtimeIdentifier": "DiscordMemberJoined"
+    },
+    {
+      "identifier": "DiscordMemberLeft",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord member left"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Triggered when a member leaves a guild."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Discord member left"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "signature": "(): DISCORD_GUILD_MEMBER",
+      "runtimeIdentifier": "DiscordMemberLeft"
+    },
+    {
+      "identifier": "DiscordSlashCommandInvoked",
+      "settings": [
+        {
+          "identifier": "commandName",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Command Name"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The slash command name (e.g. ping)."
+            }
+          ],
+          "optional": false,
+          "hidden": false
+        }
+      ],
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord slash command invoked"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Triggered when a slash command is executed by a user."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Slash command /${commandName} invoked"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "signature": "(commandName: string): DISCORD_COMMAND_INTERACTION",
+      "runtimeIdentifier": "DiscordSlashCommandInvoked"
+    }
+  ],
+  "runtimeFlowTypes": [
+    {
+      "identifier": "DiscordMessageCreated",
+      "runtimeSettings": [
+        {
+          "identifier": "channelId",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Optional channel ID to filter incoming messages."
+            }
+          ],
+          "optional": true,
+          "hidden": false
+        }
+      ],
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord message created"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Triggered when a message is posted in a channel. Ignores bot messages."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Discord message created"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "signature": "(channelId?: string): DISCORD_MESSAGE"
+    },
+    {
+      "identifier": "DiscordReactionAdded",
+      "runtimeSettings": [
+        {
+          "identifier": "channelId",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Optional channel ID to filter reactions."
+            }
+          ],
+          "optional": true,
+          "hidden": false
+        }
+      ],
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord reaction added"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Triggered when a user adds a reaction to a message."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Discord reaction added"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "signature": "(channelId?: string): DISCORD_REACTION"
+    },
+    {
+      "identifier": "DiscordMemberJoined",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord member joined"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Triggered when a new member joins a guild."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Discord member joined"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "signature": "(): DISCORD_GUILD_MEMBER"
+    },
+    {
+      "identifier": "DiscordMemberLeft",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord member left"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Triggered when a member leaves a guild."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Discord member left"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "signature": "(): DISCORD_GUILD_MEMBER"
+    },
+    {
+      "identifier": "DiscordSlashCommandInvoked",
+      "runtimeSettings": [
+        {
+          "identifier": "commandName",
+          "unique": "NONE",
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Command Name"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The slash command name (e.g. ping)."
+            }
+          ],
+          "optional": false,
+          "hidden": false
+        }
+      ],
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord slash command invoked"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Triggered when a slash command is executed by a user."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Slash command /${commandName} invoked"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "signature": "(commandName: string): DISCORD_COMMAND_INTERACTION"
+    }
+  ],
+  "functionDefinitions": [
+    {
+      "runtimeName": "discordSendMessage",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "channelId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the target channel."
+            }
+          ],
+          "runtimeDefinitionName": "channelId"
+        },
+        {
+          "runtimeName": "content",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text content of the message."
+            }
+          ],
+          "runtimeDefinitionName": "content"
+        },
+        {
+          "runtimeName": "embed",
+          "optional": true,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Embed"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Optional DISCORD_EMBED object."
+            }
+          ],
+          "runtimeDefinitionName": "embed"
+        }
+      ],
+      "signature": "(channelId: string, content: string, embed?: DISCORD_EMBED): DISCORD_MESSAGE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Send message"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Send a message to a channel."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Sends a message with optional text content and embed to a Discord channel."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Send message to channel"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "runtimeDefinitionName": "discordSendMessage"
+    },
+    {
+      "runtimeName": "discordSendDirectMessage",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "userId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "User ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the target user."
+            }
+          ],
+          "runtimeDefinitionName": "userId"
+        },
+        {
+          "runtimeName": "content",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text content of the message."
+            }
+          ],
+          "runtimeDefinitionName": "content"
+        },
+        {
+          "runtimeName": "embed",
+          "optional": true,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Embed"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Optional DISCORD_EMBED object."
+            }
+          ],
+          "runtimeDefinitionName": "embed"
+        }
+      ],
+      "signature": "(userId: string, content: string, embed?: DISCORD_EMBED): DISCORD_MESSAGE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Send direct message"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Open a DM channel and send a message."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Opens a DM channel with a user and sends a message."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Send direct message"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "runtimeDefinitionName": "discordSendDirectMessage"
+    },
+    {
+      "runtimeName": "discordReplyToMessage",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "channelId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the target channel."
+            }
+          ],
+          "runtimeDefinitionName": "channelId"
+        },
+        {
+          "runtimeName": "messageId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Message ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the message to reply to."
+            }
+          ],
+          "runtimeDefinitionName": "messageId"
+        },
+        {
+          "runtimeName": "content",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text content of the reply."
+            }
+          ],
+          "runtimeDefinitionName": "content"
+        },
+        {
+          "runtimeName": "embed",
+          "optional": true,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Embed"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Optional DISCORD_EMBED object."
+            }
+          ],
+          "runtimeDefinitionName": "embed"
+        }
+      ],
+      "signature": "(channelId: string, messageId: string, content: string, embed?: DISCORD_EMBED): DISCORD_MESSAGE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Reply to message"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Reply with message reference."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Replies to a specific message in a channel."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Reply to message"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "runtimeDefinitionName": "discordReplyToMessage"
+    },
+    {
+      "runtimeName": "discordEditMessage",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "channelId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the target channel."
+            }
+          ],
+          "runtimeDefinitionName": "channelId"
+        },
+        {
+          "runtimeName": "messageId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Message ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the message to edit."
+            }
+          ],
+          "runtimeDefinitionName": "messageId"
+        },
+        {
+          "runtimeName": "content",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The new content for the message."
+            }
+          ],
+          "runtimeDefinitionName": "content"
+        }
+      ],
+      "signature": "(channelId: string, messageId: string, content: string): DISCORD_MESSAGE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Edit message"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Edit a message previously sent by the bot."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Edits a message previously sent by the bot."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Edit message"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "runtimeDefinitionName": "discordEditMessage"
+    },
+    {
+      "runtimeName": "discordDeleteMessage",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "channelId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the channel."
+            }
+          ],
+          "runtimeDefinitionName": "channelId"
+        },
+        {
+          "runtimeName": "messageId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Message ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the message to delete."
+            }
+          ],
+          "runtimeDefinitionName": "messageId"
+        }
+      ],
+      "signature": "(channelId: string, messageId: string): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Delete message"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Delete a message."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Deletes a message from a channel."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Delete message"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "runtimeDefinitionName": "discordDeleteMessage"
+    },
+    {
+      "runtimeName": "discordAddReaction",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "channelId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the channel."
+            }
+          ],
+          "runtimeDefinitionName": "channelId"
+        },
+        {
+          "runtimeName": "messageId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Message ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the message to react to."
+            }
+          ],
+          "runtimeDefinitionName": "messageId"
+        },
+        {
+          "runtimeName": "emoji",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Emoji"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Unicode emoji or custom emoji (e.g. 👍 or emoji ID)."
+            }
+          ],
+          "runtimeDefinitionName": "emoji"
+        }
+      ],
+      "signature": "(channelId: string, messageId: string, emoji: string): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Add reaction"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "React with a unicode or custom emoji."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Reacts to a message with a unicode or custom emoji."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Add reaction ${emoji}"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "runtimeDefinitionName": "discordAddReaction"
+    },
+    {
+      "runtimeName": "discordAddRoleToMember",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "guildId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Guild ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the server/guild."
+            }
+          ],
+          "runtimeDefinitionName": "guildId"
+        },
+        {
+          "runtimeName": "userId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "User ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the user."
+            }
+          ],
+          "runtimeDefinitionName": "userId"
+        },
+        {
+          "runtimeName": "roleId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Role ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the role to assign."
+            }
+          ],
+          "runtimeDefinitionName": "roleId"
+        }
+      ],
+      "signature": "(guildId: string, userId: string, roleId: string): DISCORD_GUILD_MEMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Add role to member"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Assign a role."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Assigns a role to a guild member."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Add role to member"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "runtimeDefinitionName": "discordAddRoleToMember"
+    },
+    {
+      "runtimeName": "discordRemoveRoleFromMember",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "guildId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Guild ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the server/guild."
+            }
+          ],
+          "runtimeDefinitionName": "guildId"
+        },
+        {
+          "runtimeName": "userId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "User ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the user."
+            }
+          ],
+          "runtimeDefinitionName": "userId"
+        },
+        {
+          "runtimeName": "roleId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Role ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the role to remove."
+            }
+          ],
+          "runtimeDefinitionName": "roleId"
+        }
+      ],
+      "signature": "(guildId: string, userId: string, roleId: string): DISCORD_GUILD_MEMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Remove role from member"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Remove a role."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Removes a role from a guild member."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Remove role from member"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action",
+      "runtimeDefinitionName": "discordRemoveRoleFromMember"
+    }
+  ],
+  "runtimeFunctionDefinitions": [
+    {
+      "runtimeName": "discordSendMessage",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "channelId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the target channel."
+            }
+          ]
+        },
+        {
+          "runtimeName": "content",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text content of the message."
+            }
+          ]
+        },
+        {
+          "runtimeName": "embed",
+          "optional": true,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Embed"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Optional DISCORD_EMBED object."
+            }
+          ]
+        }
+      ],
+      "signature": "(channelId: string, content: string, embed?: DISCORD_EMBED): DISCORD_MESSAGE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Send message"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Send a message to a channel."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Sends a message with optional text content and embed to a Discord channel."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Send message to channel"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action"
+    },
+    {
+      "runtimeName": "discordSendDirectMessage",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "userId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "User ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the target user."
+            }
+          ]
+        },
+        {
+          "runtimeName": "content",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text content of the message."
+            }
+          ]
+        },
+        {
+          "runtimeName": "embed",
+          "optional": true,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Embed"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Optional DISCORD_EMBED object."
+            }
+          ]
+        }
+      ],
+      "signature": "(userId: string, content: string, embed?: DISCORD_EMBED): DISCORD_MESSAGE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Send direct message"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Open a DM channel and send a message."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Opens a DM channel with a user and sends a message."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Send direct message"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action"
+    },
+    {
+      "runtimeName": "discordReplyToMessage",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "channelId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the target channel."
+            }
+          ]
+        },
+        {
+          "runtimeName": "messageId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Message ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the message to reply to."
+            }
+          ]
+        },
+        {
+          "runtimeName": "content",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text content of the reply."
+            }
+          ]
+        },
+        {
+          "runtimeName": "embed",
+          "optional": true,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Embed"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Optional DISCORD_EMBED object."
+            }
+          ]
+        }
+      ],
+      "signature": "(channelId: string, messageId: string, content: string, embed?: DISCORD_EMBED): DISCORD_MESSAGE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Reply to message"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Reply with message reference."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Replies to a specific message in a channel."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Reply to message"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action"
+    },
+    {
+      "runtimeName": "discordEditMessage",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "channelId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the target channel."
+            }
+          ]
+        },
+        {
+          "runtimeName": "messageId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Message ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the message to edit."
+            }
+          ]
+        },
+        {
+          "runtimeName": "content",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Content"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The new content for the message."
+            }
+          ]
+        }
+      ],
+      "signature": "(channelId: string, messageId: string, content: string): DISCORD_MESSAGE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Edit message"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Edit a message previously sent by the bot."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Edits a message previously sent by the bot."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Edit message"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action"
+    },
+    {
+      "runtimeName": "discordDeleteMessage",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "channelId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the channel."
+            }
+          ]
+        },
+        {
+          "runtimeName": "messageId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Message ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the message to delete."
+            }
+          ]
+        }
+      ],
+      "signature": "(channelId: string, messageId: string): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Delete message"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Delete a message."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Deletes a message from a channel."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Delete message"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action"
+    },
+    {
+      "runtimeName": "discordAddReaction",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "channelId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Channel ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the channel."
+            }
+          ]
+        },
+        {
+          "runtimeName": "messageId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Message ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the message to react to."
+            }
+          ]
+        },
+        {
+          "runtimeName": "emoji",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Emoji"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "Unicode emoji or custom emoji (e.g. 👍 or emoji ID)."
+            }
+          ]
+        }
+      ],
+      "signature": "(channelId: string, messageId: string, emoji: string): BOOLEAN",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Add reaction"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "React with a unicode or custom emoji."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Reacts to a message with a unicode or custom emoji."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Add reaction ${emoji}"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action"
+    },
+    {
+      "runtimeName": "discordAddRoleToMember",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "guildId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Guild ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the server/guild."
+            }
+          ]
+        },
+        {
+          "runtimeName": "userId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "User ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the user."
+            }
+          ]
+        },
+        {
+          "runtimeName": "roleId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Role ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the role to assign."
+            }
+          ]
+        }
+      ],
+      "signature": "(guildId: string, userId: string, roleId: string): DISCORD_GUILD_MEMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Add role to member"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Assign a role."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Assigns a role to a guild member."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Add role to member"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action"
+    },
+    {
+      "runtimeName": "discordRemoveRoleFromMember",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "guildId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Guild ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the server/guild."
+            }
+          ]
+        },
+        {
+          "runtimeName": "userId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "User ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the user."
+            }
+          ]
+        },
+        {
+          "runtimeName": "roleId",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Role ID"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The ID of the role to remove."
+            }
+          ]
+        }
+      ],
+      "signature": "(guildId: string, userId: string, roleId: string): DISCORD_GUILD_MEMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Remove role from member"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Remove a role."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Removes a role from a guild member."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Remove role from member"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "simple:discord",
+      "definitionSource": "action"
+    }
+  ],
+  "definitionDataTypes": [
+    {
+      "identifier": "DISCORD_EMBED_FIELD",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord Embed Field"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Embed Field: ${name}"
+        }
+      ],
+      "type": "{ name: string; value: string; inline?: boolean | undefined; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    },
+    {
+      "identifier": "DISCORD_EMBED_FOOTER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord Embed Footer"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Embed Footer: ${text}"
+        }
+      ],
+      "type": "{ text: string; iconUrl?: string | undefined; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    },
+    {
+      "identifier": "DISCORD_EMBED_AUTHOR",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord Embed Author"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Embed Author: ${name}"
+        }
+      ],
+      "type": "{ name: string; url?: string | undefined; iconUrl?: string | undefined; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    },
+    {
+      "identifier": "DISCORD_EMBED",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord Embed"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Discord Embed"
+        }
+      ],
+      "type": "{ title?: string | undefined; description?: string | undefined; url?: string | undefined; color?: (number | string) | undefined; timestamp?: string | undefined; footer?: DISCORD_EMBED_FOOTER | undefined; imageUrl?: string | undefined; thumbnailUrl?: string | undefined; author?: DISCORD_EMBED_AUTHOR | undefined; fields?: DISCORD_EMBED_FIELD[] | undefined; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    },
+    {
+      "identifier": "DISCORD_CHANNEL_TYPE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord Channel Type"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Channel Type: ${type}"
+        }
+      ],
+      "type": "\"text\" | \"voice\" | \"category\" | \"announcement\" | \"thread\" | \"forum\" | \"dm\" | \"unknown\"",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    },
+    {
+      "identifier": "DISCORD_CHANNEL",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord Channel"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Channel: #${name}"
+        }
+      ],
+      "type": "{ id: string; guildId?: string | undefined; name: string; type: DISCORD_CHANNEL_TYPE; topic?: string | undefined; parentId?: string | undefined; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    },
+    {
+      "identifier": "DISCORD_ATTACHMENT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord Attachment"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Attachment: ${filename}"
+        }
+      ],
+      "type": "{ id: string; filename: string; contentType?: string | undefined; size: number; url: string; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    },
+    {
+      "identifier": "DISCORD_COMMAND_INTERACTION",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord Command Interaction"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Slash Command: /${commandName}"
+        }
+      ],
+      "type": "{ id: string; commandName: string; options: { name: string; value: string | number | boolean; }[]; user: DISCORD_USER; channelId: string; guildId?: string | undefined; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    },
+    {
+      "identifier": "DISCORD_MESSAGE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord Message"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Discord Message: ${id}"
+        }
+      ],
+      "type": "{ id: string; channelId: string; guildId?: string | undefined; author: DISCORD_USER; content: string; embeds: DISCORD_EMBED[]; attachments: DISCORD_ATTACHMENT[]; mentions: string[]; referencedMessageId?: string | undefined; createdAt: string; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    },
+    {
+      "identifier": "DISCORD_GUILD",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord Guild"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Server: ${name}"
+        }
+      ],
+      "type": "{ id: string; name: string; icon?: string | undefined; ownerId: string; memberCount: number; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    },
+    {
+      "identifier": "DISCORD_GUILD_MEMBER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord Guild Member"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Discord Member: ${user.username}"
+        }
+      ],
+      "type": "{ user: DISCORD_USER; nickname?: string | undefined; roles: string[]; joinedAt?: string | undefined; guildId: string; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    },
+    {
+      "identifier": "DISCORD_REACTION",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord Reaction"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Reaction: ${emoji}"
+        }
+      ],
+      "type": "{ emoji: string; messageId: string; channelId: string; user: DISCORD_USER; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    },
+    {
+      "identifier": "DISCORD_USER",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord User"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Discord User: ${username}"
+        }
+      ],
+      "type": "{ id: string; username: string; globalName?: string | undefined; avatar?: string | undefined; bot: boolean; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    },
+    {
+      "identifier": "DISCORD_ROLE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Discord Role"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Role: @${name}"
+        }
+      ],
+      "type": "{ id: string; guildId: string; name: string; color: number; position: number; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    }
+  ]
+}

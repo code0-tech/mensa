@@ -14,7 +14,7 @@
   ],
   "author": "CodeZero",
   "icon": "tabler:calendar",
-  "version": "0.0.36",
+  "version": "0.0.38",
   "functionDefinitions": [
     {
       "runtimeName": "std::date::format",
@@ -82,7 +82,7 @@
         "DATE",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:calendar-cog",
       "runtimeDefinitionName": "std::date::format"
     },
@@ -219,7 +219,7 @@
         "HOUR",
         "MINUTE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:calendar-plus",
       "runtimeDefinitionName": "std::date::from"
     },
@@ -273,7 +273,7 @@
         "DATE",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:calendar-plus",
       "runtimeDefinitionName": "std::date::from_text"
     },
@@ -326,7 +326,7 @@
         "DATE",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:calendar-plus",
       "runtimeDefinitionName": "std::date::from_unix"
     },
@@ -360,7 +360,7 @@
       "linkedDataTypeIdentifiers": [
         "DATE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:calendar",
       "runtimeDefinitionName": "std::date::now"
     }
@@ -430,7 +430,7 @@
         "DATE",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:calendar-cog"
     },
     {
@@ -560,7 +560,7 @@
         "HOUR",
         "MINUTE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:calendar-plus"
     },
     {
@@ -612,7 +612,7 @@
         "DATE",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:calendar-plus"
     },
     {
@@ -663,7 +663,7 @@
         "DATE",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:calendar-plus"
     },
     {
@@ -696,7 +696,7 @@
       "linkedDataTypeIdentifiers": [
         "DATE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:calendar"
     }
   ],
@@ -722,7 +722,7 @@
         }
       ],
       "type": "number",
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "HOUR",
@@ -753,7 +753,7 @@
         }
       ],
       "type": "number",
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "MINUTE",
@@ -784,7 +784,7 @@
         }
       ],
       "type": "number",
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "MONTH",
@@ -807,7 +807,7 @@
         }
       ],
       "type": "'JAN' | 'FEB' | 'MAR' | 'APR' | 'MAY' | 'JUN' | 'JUL' | 'AUG' | 'SEP' | 'OCT' | 'NOV' | 'DEC'",
-      "version": "0.0.36"
+      "version": "0.0.38"
     }
   ],
   "definitionSource": "taurus-date"

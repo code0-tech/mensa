@@ -14,7 +14,7 @@
   ],
   "author": "CodeZero",
   "icon": "tabler:math-function",
-  "version": "0.0.36",
+  "version": "0.0.38",
   "functionDefinitions": [
     {
       "runtimeName": "std::number::abs",
@@ -64,7 +64,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::abs"
     },
@@ -132,7 +132,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::add"
     },
@@ -184,7 +184,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::arccos"
     },
@@ -236,7 +236,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::arcsin"
     },
@@ -288,7 +288,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::arctan"
     },
@@ -341,7 +341,7 @@
         "NUMBER",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::as_text"
     },
@@ -425,7 +425,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::clamp"
     },
@@ -477,7 +477,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::cos"
     },
@@ -529,7 +529,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::cosh"
     },
@@ -595,7 +595,7 @@
           "content": "divide;division;quotient;div;number;math;std"
         }
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::divide"
     },
@@ -629,7 +629,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::euler"
     },
@@ -697,7 +697,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::exponential"
     },
@@ -750,7 +750,7 @@
         "NUMBER",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::from_text"
     },
@@ -803,7 +803,7 @@
         "NUMBER",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::has_digits"
     },
@@ -872,7 +872,7 @@
         "NUMBER",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::is_equal"
     },
@@ -941,7 +941,7 @@
         "BOOLEAN",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::is_greater"
     },
@@ -1010,7 +1010,7 @@
         "NUMBER",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::is_less"
     },
@@ -1063,7 +1063,7 @@
         "NUMBER",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::is_positive"
     },
@@ -1116,7 +1116,7 @@
         "NUMBER",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::is_zero"
     },
@@ -1168,7 +1168,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::ln"
     },
@@ -1236,7 +1236,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::log"
     },
@@ -1304,7 +1304,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::max"
     },
@@ -1372,7 +1372,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::min"
     },
@@ -1440,7 +1440,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::modulo"
     },
@@ -1508,7 +1508,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::multiply"
     },
@@ -1560,7 +1560,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::negate"
     },
@@ -1594,7 +1594,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::pi"
     },
@@ -1662,7 +1662,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::random_number"
     },
@@ -1714,7 +1714,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::remove_digits"
     },
@@ -1782,7 +1782,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::root"
     },
@@ -1850,7 +1850,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::round"
     },
@@ -1918,7 +1918,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::round_down"
     },
@@ -1986,7 +1986,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::round_up"
     },
@@ -2038,7 +2038,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::sin"
     },
@@ -2090,7 +2090,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::sinh"
     },
@@ -2142,7 +2142,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::square"
     },
@@ -2194,7 +2194,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::square_root"
     },
@@ -2262,7 +2262,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::subtract"
     },
@@ -2314,7 +2314,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function",
       "runtimeDefinitionName": "std::number::tan"
     }
@@ -2367,7 +2367,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -2432,7 +2432,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -2482,7 +2482,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -2532,7 +2532,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -2582,7 +2582,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -2633,7 +2633,7 @@
         "NUMBER",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -2713,7 +2713,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -2763,7 +2763,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -2813,7 +2813,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -2876,7 +2876,7 @@
           "content": "divide;division;quotient;div;number;math;std"
         }
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -2909,7 +2909,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -2974,7 +2974,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3025,7 +3025,7 @@
         "NUMBER",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3076,7 +3076,7 @@
         "NUMBER",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3142,7 +3142,7 @@
         "NUMBER",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3208,7 +3208,7 @@
         "BOOLEAN",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3274,7 +3274,7 @@
         "NUMBER",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3325,7 +3325,7 @@
         "NUMBER",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3376,7 +3376,7 @@
         "NUMBER",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3426,7 +3426,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3491,7 +3491,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3556,7 +3556,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3621,7 +3621,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3686,7 +3686,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3751,7 +3751,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3801,7 +3801,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3834,7 +3834,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3899,7 +3899,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -3949,7 +3949,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -4014,7 +4014,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -4079,7 +4079,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -4144,7 +4144,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -4209,7 +4209,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -4259,7 +4259,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -4309,7 +4309,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -4359,7 +4359,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -4409,7 +4409,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -4474,7 +4474,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     },
     {
@@ -4524,7 +4524,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:math-function"
     }
   ],
@@ -4550,7 +4550,7 @@
         }
       ],
       "type": "number",
-      "version": "0.0.36"
+      "version": "0.0.38"
     }
   ],
   "definitionSource": "taurus-number"
