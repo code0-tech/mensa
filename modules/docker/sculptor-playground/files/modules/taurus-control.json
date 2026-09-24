@@ -14,7 +14,7 @@
   ],
   "author": "CodeZero",
   "icon": "tabler:arrow-ramp-right-2",
-  "version": "0.0.36",
+  "version": "0.0.38",
   "functionDefinitions": [
     {
       "runtimeName": "std::control::if",
@@ -81,7 +81,7 @@
         "BOOLEAN",
         "RUNNABLE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-ramp-right-2",
       "runtimeDefinitionName": "std::control::if"
     },
@@ -159,7 +159,7 @@
       "displayMessage": [
         {
           "code": "en-US",
-          "content": "If ${condition} is True do ${then_runnable} else ${else_runnable}"
+          "content": "If ${condition} is True do ${runnable} else ${else_runnable}"
         }
       ],
       "alias": [
@@ -172,7 +172,7 @@
         "BOOLEAN",
         "RUNNABLE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-ramp-right",
       "runtimeDefinitionName": "std::control::if_else"
     },
@@ -221,7 +221,7 @@
           "content": "return;control;std"
         }
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-back",
       "runtimeDefinitionName": "std::control::return"
     },
@@ -252,7 +252,7 @@
           "content": "stop;control;std"
         }
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:xbox-x",
       "runtimeDefinitionName": "std::control::stop"
     },
@@ -301,7 +301,7 @@
           "content": "value;save;create;control;std"
         }
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:new-section",
       "runtimeDefinitionName": "std::control::value"
     }
@@ -370,7 +370,7 @@
         "BOOLEAN",
         "RUNNABLE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-ramp-right-2"
     },
     {
@@ -444,7 +444,7 @@
       "displayMessage": [
         {
           "code": "en-US",
-          "content": "If ${condition} is True do ${then_runnable} else ${else_runnable}"
+          "content": "If ${condition} is True do ${runnable} else ${else_runnable}"
         }
       ],
       "alias": [
@@ -457,7 +457,7 @@
         "BOOLEAN",
         "RUNNABLE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-ramp-right"
     },
     {
@@ -504,7 +504,7 @@
           "content": "return;control;std"
         }
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-back"
     },
     {
@@ -534,7 +534,7 @@
           "content": "stop;control;std"
         }
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:xbox-x"
     },
     {
@@ -581,7 +581,7 @@
           "content": "value;save;create;control;std"
         }
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:new-section"
     }
   ],
@@ -613,7 +613,7 @@
       "linkedDataTypeIdentifiers": [
         "NUMBER"
       ],
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "CONSUMER",
@@ -639,7 +639,7 @@
         "T"
       ],
       "type": "(item: T) => void",
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "PREDICATE",
@@ -668,7 +668,7 @@
       "linkedDataTypeIdentifiers": [
         "BOOLEAN"
       ],
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "RUNNABLE",
@@ -691,7 +691,7 @@
         }
       ],
       "type": "() => void",
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "TRANSFORM",
@@ -718,7 +718,7 @@
         "R"
       ],
       "type": "(item: I) => R",
-      "version": "0.0.36"
+      "version": "0.0.38"
     }
   ],
   "definitionSource": "taurus-control"

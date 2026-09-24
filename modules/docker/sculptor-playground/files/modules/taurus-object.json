@@ -14,7 +14,7 @@
   ],
   "author": "CodeZero",
   "icon": "tabler:cube",
-  "version": "0.0.36",
+  "version": "0.0.38",
   "functionDefinitions": [
     {
       "runtimeName": "std::object::contains_key",
@@ -81,7 +81,7 @@
         "OBJECT",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:cube",
       "runtimeDefinitionName": "std::object::contains_key"
     },
@@ -149,7 +149,7 @@
       "linkedDataTypeIdentifiers": [
         "OBJECT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:cube",
       "runtimeDefinitionName": "std::object::get"
     },
@@ -202,7 +202,7 @@
         "OBJECT",
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:cube",
       "runtimeDefinitionName": "std::object::keys"
     },
@@ -287,7 +287,7 @@
         "OBJECT",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:cube",
       "runtimeDefinitionName": "std::object::set"
     },
@@ -340,7 +340,7 @@
         "OBJECT",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:cube",
       "runtimeDefinitionName": "std::object::size"
     }
@@ -409,7 +409,7 @@
         "OBJECT",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:cube"
     },
     {
@@ -474,7 +474,7 @@
       "linkedDataTypeIdentifiers": [
         "OBJECT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:cube"
     },
     {
@@ -525,7 +525,7 @@
         "OBJECT",
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:cube"
     },
     {
@@ -606,7 +606,7 @@
         "OBJECT",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:cube"
     },
     {
@@ -657,7 +657,7 @@
         "OBJECT",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:cube"
     }
   ],
@@ -686,7 +686,7 @@
         "T"
       ],
       "type": "{ [K in keyof T]: T[K] }",
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "TYPE",
@@ -699,7 +699,7 @@
       "displayMessage": [
         {
           "code": "en-US",
-          "content": "Type of ${T}"
+          "content": "Type"
         }
       ],
       "alias": [
@@ -708,11 +708,8 @@
           "content": "type;data type;data-type;datatype;type definition;type-definition;type-def;typedef"
         }
       ],
-      "genericKeys": [
-        "T"
-      ],
-      "type": "T",
-      "version": "0.0.36"
+      "type": "any",
+      "version": "0.0.38"
     }
   ],
   "definitionSource": "taurus-object"

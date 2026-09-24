@@ -9,7 +9,7 @@
   "documentation": "Scheduled Flow using Cron-Jobs.",
   "author": "CodeZero",
   "icon": "tabler:file-time",
-  "version": "0.0.36",
+  "version": "0.0.38",
   "flowTypes": [
     {
       "identifier": "CRON",
@@ -119,7 +119,7 @@
           "content": "cron;code;schedule;timer;clock;flow"
         }
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:file-time",
       "linkedDataTypeIdentifiers": [
         "CRON_MINUTE",
@@ -241,7 +241,7 @@
           "content": "cron;code;schedule;timer;clock;flow"
         }
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:file-time",
       "linkedDataTypeIdentifiers": [
         "CRON_MINUTE",
@@ -282,7 +282,7 @@
         }
       ],
       "type": "string",
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "CRON_DAY_OF_WEEK",
@@ -312,7 +312,7 @@
         }
       ],
       "type": "string | 'MON' | 'TUE' | 'WED' | 'THU' | 'FRI' | 'SAT' | 'SUN'",
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "CRON_HOUR",
@@ -342,7 +342,7 @@
         }
       ],
       "type": "string",
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "CRON_MINUTE",
@@ -372,7 +372,7 @@
         }
       ],
       "type": "string",
-      "version": "0.0.36"
+      "version": "0.0.38"
     },
     {
       "identifier": "CRON_MONTH",
@@ -402,7 +402,7 @@
         }
       ],
       "type": "string | 'JAN' | 'FEB' | 'MAR' | 'APR' | 'MAY' | 'JUN' | 'JUL' | 'AUG' | 'SEP' | 'OCT' | 'NOV' | 'DEC' ",
-      "version": "0.0.36"
+      "version": "0.0.38"
     }
   ],
   "definitionSource": "cron-action"

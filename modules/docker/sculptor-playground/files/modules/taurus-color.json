@@ -14,7 +14,7 @@
   ],
   "author": "CodeZero",
   "icon": "tabler:palette",
-  "version": "0.0.36",
+  "version": "0.0.38",
   "functionDefinitions": [
     {
       "runtimeName": "std::color::as_hex",
@@ -65,7 +65,7 @@
         "COLOR",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:palette",
       "runtimeDefinitionName": "std::color::as_hex"
     },
@@ -118,7 +118,7 @@
         "COLOR",
         "OBJECT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:palette",
       "runtimeDefinitionName": "std::color::as_hsl"
     },
@@ -171,7 +171,7 @@
         "COLOR",
         "OBJECT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:palette",
       "runtimeDefinitionName": "std::color::as_rgb"
     },
@@ -224,7 +224,7 @@
         "TEXT",
         "COLOR"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:palette",
       "runtimeDefinitionName": "std::color::from_hex"
     },
@@ -325,7 +325,7 @@
         "NUMBER",
         "COLOR"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:palette",
       "runtimeDefinitionName": "std::color::from_hsl"
     },
@@ -426,7 +426,7 @@
         "NUMBER",
         "COLOR"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:palette",
       "runtimeDefinitionName": "std::color::from_rgb"
     }
@@ -480,7 +480,7 @@
         "COLOR",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:palette"
     },
     {
@@ -531,7 +531,7 @@
         "COLOR",
         "OBJECT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:palette"
     },
     {
@@ -582,7 +582,7 @@
         "COLOR",
         "OBJECT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:palette"
     },
     {
@@ -633,7 +633,7 @@
         "TEXT",
         "COLOR"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:palette"
     },
     {
@@ -729,7 +729,7 @@
         "NUMBER",
         "COLOR"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:palette"
     },
     {
@@ -825,7 +825,7 @@
         "NUMBER",
         "COLOR"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:palette"
     }
   ],
@@ -851,7 +851,7 @@
         }
       ],
       "type": "{ hue: number; saturation: number; lightness: number; alpha?: number }",
-      "version": "0.0.36"
+      "version": "0.0.38"
     }
   ],
   "definitionSource": "taurus-color"

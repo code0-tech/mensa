@@ -14,7 +14,7 @@
   ],
   "author": "CodeZero",
   "icon": "tabler:toggle-left",
-  "version": "0.0.36",
+  "version": "0.0.38",
   "functionDefinitions": [
     {
       "runtimeName": "std::boolean::as_number",
@@ -65,7 +65,7 @@
         "BOOLEAN",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:toggle-left",
       "runtimeDefinitionName": "std::boolean::as_number"
     },
@@ -118,7 +118,7 @@
         "BOOLEAN",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:toggle-left",
       "runtimeDefinitionName": "std::boolean::as_text"
     },
@@ -171,7 +171,7 @@
         "BOOLEAN",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:toggle-left",
       "runtimeDefinitionName": "std::boolean::from_number"
     },
@@ -224,7 +224,7 @@
         "TEXT",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:toggle-left",
       "runtimeDefinitionName": "std::boolean::from_text"
     },
@@ -292,7 +292,7 @@
       "linkedDataTypeIdentifiers": [
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:toggle-left",
       "runtimeDefinitionName": "std::boolean::is_equal"
     },
@@ -344,7 +344,7 @@
       "linkedDataTypeIdentifiers": [
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:toggle-left",
       "runtimeDefinitionName": "std::boolean::negate"
     }
@@ -398,7 +398,7 @@
         "BOOLEAN",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:toggle-left"
     },
     {
@@ -449,7 +449,7 @@
         "BOOLEAN",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:toggle-left"
     },
     {
@@ -500,7 +500,7 @@
         "BOOLEAN",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:toggle-left"
     },
     {
@@ -551,7 +551,7 @@
         "TEXT",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:toggle-left"
     },
     {
@@ -616,7 +616,7 @@
       "linkedDataTypeIdentifiers": [
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:toggle-left"
     },
     {
@@ -666,7 +666,7 @@
       "linkedDataTypeIdentifiers": [
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:toggle-left"
     }
   ],
@@ -692,7 +692,7 @@
         }
       ],
       "type": "boolean",
-      "version": "0.0.36"
+      "version": "0.0.38"
     }
   ],
   "definitionSource": "taurus-boolean"

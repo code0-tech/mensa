@@ -1,0 +1,312 @@
+{
+  "identifier": "twilio-action",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Twilio"
+    }
+  ],
+  "documentation": "Twilio integration: send SMS, MMS, and channel messages (e.g. WhatsApp) via the Twilio Messages API.",
+  "author": "CodeZero",
+  "icon": "tabler:message",
+  "version": "1.0.0",
+  "functionDefinitions": [
+    {
+      "runtimeName": "sendMessage",
+      "parameterDefinitions": [
+        {
+          "runtimeName": "ToPhoneNumber",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "To"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The destination phone number in E.164 format or channel address (e.g. whatsapp:+1...)."
+            }
+          ],
+          "runtimeDefinitionName": "ToPhoneNumber"
+        },
+        {
+          "runtimeName": "Body",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Body"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text of the message to send. Up to 1600 characters."
+            }
+          ],
+          "runtimeDefinitionName": "Body"
+        },
+        {
+          "runtimeName": "FromPhoneNumber",
+          "optional": true,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "From"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The Twilio sender (phone number, short code, or channel address). Falls back to the configured default sender when omitted."
+            }
+          ],
+          "runtimeDefinitionName": "FromPhoneNumber"
+        },
+        {
+          "runtimeName": "MediaUrl",
+          "optional": true,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Media URL"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The URL of a media file to attach to the message (MMS)."
+            }
+          ],
+          "runtimeDefinitionName": "MediaUrl"
+        }
+      ],
+      "signature": "(ToPhoneNumber: string, Body: string, FromPhoneNumber?: string, MediaUrl?: string): TWILIO_MESSAGE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Send message"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Sends an SMS, MMS, or channel message through the Twilio Messages API."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Sends an SMS, MMS, or channel message (e.g. WhatsApp) through the Twilio Messages API.\nProvide `From` to override the action's default sender, and `MediaUrl` to send an MMS."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Send message to ${ToPhoneNumber}"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "tabler:message",
+      "definitionSource": "action",
+      "runtimeDefinitionName": "sendMessage"
+    }
+  ],
+  "runtimeFunctionDefinitions": [
+    {
+      "runtimeName": "sendMessage",
+      "runtimeParameterDefinitions": [
+        {
+          "runtimeName": "ToPhoneNumber",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "To"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The destination phone number in E.164 format or channel address (e.g. whatsapp:+1...)."
+            }
+          ]
+        },
+        {
+          "runtimeName": "Body",
+          "optional": false,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Body"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The text of the message to send. Up to 1600 characters."
+            }
+          ]
+        },
+        {
+          "runtimeName": "FromPhoneNumber",
+          "optional": true,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "From"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The Twilio sender (phone number, short code, or channel address). Falls back to the configured default sender when omitted."
+            }
+          ]
+        },
+        {
+          "runtimeName": "MediaUrl",
+          "optional": true,
+          "hidden": false,
+          "name": [
+            {
+              "code": "en-US",
+              "content": "Media URL"
+            }
+          ],
+          "description": [
+            {
+              "code": "en-US",
+              "content": "The URL of a media file to attach to the message (MMS)."
+            }
+          ]
+        }
+      ],
+      "signature": "(ToPhoneNumber: string, Body: string, FromPhoneNumber?: string, MediaUrl?: string): TWILIO_MESSAGE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Send message"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Sends an SMS, MMS, or channel message through the Twilio Messages API."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Sends an SMS, MMS, or channel message (e.g. WhatsApp) through the Twilio Messages API.\nProvide `From` to override the action's default sender, and `MediaUrl` to send an MMS."
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Send message to ${ToPhoneNumber}"
+        }
+      ],
+      "version": "1.0.0",
+      "displayIcon": "tabler:message",
+      "definitionSource": "action"
+    }
+  ],
+  "definitionDataTypes": [
+    {
+      "identifier": "TWILIO_MESSAGE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Twilio message"
+        }
+      ],
+      "displayMessage": [
+        {
+          "code": "en-US",
+          "content": "Twilio message"
+        }
+      ],
+      "type": "{ body?: (string | null) | undefined; num_segments?: (string | null) | undefined; direction?: (\"inbound\" | \"outbound-api\" | \"outbound-call\" | \"outbound-reply\") | undefined; from?: (string | null) | undefined; to?: (string | null) | undefined; date_updated?: (string | null) | undefined; price?: (string | null) | undefined; error_message?: (string | null) | undefined; uri?: (string | null) | undefined; account_sid?: (string | null) | undefined; num_media?: (string | null) | undefined; status?: (\"queued\" | \"sending\" | \"sent\" | \"failed\" | \"delivered\" | \"undelivered\" | \"receiving\" | \"received\" | \"accepted\" | \"scheduled\" | \"read\" | \"partially_delivered\" | \"canceled\") | undefined; messaging_service_sid?: (string | null) | undefined; sid?: (string | null) | undefined; date_sent?: (string | null) | undefined; date_created?: (string | null) | undefined; error_code?: (number | null) | undefined; price_unit?: (string | null) | undefined; api_version?: (string | null) | undefined; subresource_uris?: ({ [x: string]: unknown; } | null) | undefined; [x: string]: unknown; }",
+      "version": "1.0.0",
+      "definitionSource": "action"
+    }
+  ],
+  "configurations": [
+    {
+      "identifier": "account_sid",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Account SID"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The Twilio Account SID used to authenticate with the Twilio API."
+        }
+      ],
+      "type": "TEXT",
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "optional": false,
+      "hidden": false
+    },
+    {
+      "identifier": "auth_token",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Auth token"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The Twilio Auth Token used to authenticate with the Twilio API."
+        }
+      ],
+      "type": "TEXT",
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "optional": false,
+      "hidden": false
+    },
+    {
+      "identifier": "from_number",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Default sender"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The default sender (phone number, short code, or channel address) used when a message does not specify a From value."
+        }
+      ],
+      "type": "TEXT",
+      "linkedDataTypeIdentifiers": [
+        "TEXT"
+      ],
+      "defaultValue": {
+        "stringValue": ""
+      },
+      "optional": false,
+      "hidden": false
+    }
+  ]
+}

@@ -14,7 +14,7 @@
   ],
   "author": "CodeZero",
   "icon": "tabler:list",
-  "version": "0.0.36",
+  "version": "0.0.38",
   "functionDefinitions": [
     {
       "runtimeName": "std::list::at",
@@ -82,7 +82,7 @@
         "LIST",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::at"
     },
@@ -151,7 +151,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::concat"
     },
@@ -219,7 +219,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration",
       "runtimeDefinitionName": "std::list::filter"
     },
@@ -289,7 +289,7 @@
         "LIST",
         "PREDICATE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration",
       "runtimeDefinitionName": "std::list::find"
     },
@@ -359,7 +359,7 @@
         "NUMBER",
         "PREDICATE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration",
       "runtimeDefinitionName": "std::list::find_index"
     },
@@ -429,7 +429,7 @@
         "LIST",
         "PREDICATE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration",
       "runtimeDefinitionName": "std::list::find_last"
     },
@@ -481,7 +481,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::first"
     },
@@ -533,7 +533,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::flat"
     },
@@ -602,7 +602,7 @@
         "LIST",
         "CONSUMER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration",
       "runtimeDefinitionName": "std::list::for_each"
     },
@@ -671,7 +671,7 @@
         "LIST",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::index_of"
     },
@@ -724,7 +724,7 @@
         "LIST",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::is_empty"
     },
@@ -793,7 +793,7 @@
         "LIST",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::join"
     },
@@ -845,7 +845,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::last"
     },
@@ -914,7 +914,7 @@
         "LIST",
         "TRANSFORM"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration",
       "runtimeDefinitionName": "std::list::map"
     },
@@ -967,7 +967,7 @@
         "LIST",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::max"
     },
@@ -1020,7 +1020,7 @@
         "LIST",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::min"
     },
@@ -1072,7 +1072,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::pop"
     },
@@ -1141,7 +1141,7 @@
         "LIST",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::push"
     },
@@ -1209,7 +1209,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::remove"
     },
@@ -1261,7 +1261,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::reverse"
     },
@@ -1314,7 +1314,7 @@
         "NUMBER",
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::size"
     },
@@ -1382,7 +1382,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration",
       "runtimeDefinitionName": "std::list::sort"
     },
@@ -1450,7 +1450,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration",
       "runtimeDefinitionName": "std::list::sort_reverse"
     },
@@ -1503,7 +1503,7 @@
         "LIST",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::sum"
     },
@@ -1555,7 +1555,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list",
       "runtimeDefinitionName": "std::list::to_unique"
     }
@@ -1625,7 +1625,7 @@
         "LIST",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -1691,7 +1691,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -1756,7 +1756,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration"
     },
     {
@@ -1823,7 +1823,7 @@
         "LIST",
         "PREDICATE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration"
     },
     {
@@ -1890,7 +1890,7 @@
         "NUMBER",
         "PREDICATE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration"
     },
     {
@@ -1957,7 +1957,7 @@
         "LIST",
         "PREDICATE"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration"
     },
     {
@@ -2007,7 +2007,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -2057,7 +2057,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -2123,7 +2123,7 @@
         "LIST",
         "CONSUMER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration"
     },
     {
@@ -2189,7 +2189,7 @@
         "LIST",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -2240,7 +2240,7 @@
         "LIST",
         "BOOLEAN"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -2306,7 +2306,7 @@
         "LIST",
         "TEXT"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -2356,7 +2356,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -2422,7 +2422,7 @@
         "LIST",
         "TRANSFORM"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration"
     },
     {
@@ -2473,7 +2473,7 @@
         "LIST",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -2524,7 +2524,7 @@
         "LIST",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -2574,7 +2574,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -2640,7 +2640,7 @@
         "LIST",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -2705,7 +2705,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -2755,7 +2755,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -2806,7 +2806,7 @@
         "NUMBER",
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -2871,7 +2871,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration"
     },
     {
@@ -2936,7 +2936,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:arrow-iteration"
     },
     {
@@ -2987,7 +2987,7 @@
         "LIST",
         "NUMBER"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     },
     {
@@ -3037,7 +3037,7 @@
       "linkedDataTypeIdentifiers": [
         "LIST"
       ],
-      "version": "0.0.36",
+      "version": "0.0.38",
       "displayIcon": "tabler:list"
     }
   ],
@@ -3066,7 +3066,7 @@
         "T"
       ],
       "type": "T[]",
-      "version": "0.0.36"
+      "version": "0.0.38"
     }
   ],
   "definitionSource": "taurus-list"
