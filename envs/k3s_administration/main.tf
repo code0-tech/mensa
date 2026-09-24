@@ -55,7 +55,7 @@ module "flux" {
   ssh_user = "pipeline"
 
   # renovate: datasource=docker depName=ghcr.io/controlplaneio-fluxcd/charts/flux-operator
-  flux_operator_version = "0.58.1"
+  flux_operator_version = "0.60.0"
   flux_instance         = file("${path.module}/flux-instance.yaml")
   discord_webhook_url   = data.gitlab_project_variable.discord_webhook_url.value
   cluster_name          = "administration"
