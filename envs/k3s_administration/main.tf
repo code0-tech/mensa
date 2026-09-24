@@ -71,7 +71,7 @@ module "gitlab_agent" {
   ssh_user = "pipeline"
 
   # renovate: datasource=helm depName=gitlab-agent registryUrl=https://charts.gitlab.io
-  agent_version = "2.30.0"
+  agent_version = "2.31.0"
   agent_token   = gitlab_cluster_agent_token.this.token
 
   depends_on = [module.flux]
