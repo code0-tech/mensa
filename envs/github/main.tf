@@ -4,7 +4,7 @@ terraform {
   required_providers {
     gitlab = {
       source = "gitlabhq/gitlab"
-      version = "19.3.0"
+      version = "19.4.0"
     }
     github = {
       source  = "integrations/github"
