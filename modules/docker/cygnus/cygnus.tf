@@ -1,5 +1,5 @@
 data "docker_registry_image" "cygnus" {
-  name = "ghcr.io/code0-tech/cygnus:2118"
+  name = "ghcr.io/code0-tech/cygnus:2141"
 }
 
 resource "docker_image" "cygnus" {
