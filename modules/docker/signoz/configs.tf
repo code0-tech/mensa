@@ -3,7 +3,7 @@ resource "docker_volume" "signoz_configs" {
 }
 
 resource "docker_image" "alpine" {
-  name = "alpine:3.23"
+  name = "alpine:3.24"
 }
 
 resource "docker_container" "config_writer" {
