@@ -42,7 +42,7 @@ module "server_node" {
   ssh_user = "pipeline"
 
   # renovate: datasource=github-releases depName=k3s-io/k3s
-  k3s_version = "v1.36.4+k3s1"
+  k3s_version = "v1.37.0+k3s1"
   datastore   = "sqlite"
   tls_san     = [var.server_administration_ip]
 }
