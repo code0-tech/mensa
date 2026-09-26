@@ -2,10 +2,10 @@ apiVersion: vendir.k14s.io/v1alpha1
 directories:
 - contents:
   - git:
-      commitTitle: '[release-1.36] Update to v1.36.4-k3s1 and Go 1.26.7 (#14545)...'
-      sha: 4dedb15be78017a8ddd5b9e81acd44f3481078ed
+      commitTitle: Update hashicorp gpg fingerprint...
+      sha: bb7cf0657bafdfbb4349d1740810442d09c2248a
       tags:
-      - v1.36.4+k3s1
+      - v1.37.0+k3s1
     path: .
   path: modules/k3s/server_node/vendor
 - contents:
