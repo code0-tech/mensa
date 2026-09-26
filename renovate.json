@@ -4,10 +4,6 @@
     "github>code0-tech/monoceros//renovate/global.json5",
     ":assignee(Taucher2003)"
   ],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["at any time"]
-  },
   "packageRules": [
     {
       "matchDepNames": [
@@ -43,15 +39,6 @@
       "extends": [
         ":assignee(nicosammito)"
       ]
-    },
-    {
-      "matchUpdateTypes": [
-        "lockFileMaintenance"
-      ],
-      "matchManagers": [
-        "!vendir"
-      ],
-      "enabled": false
     },
     {
       "matchFileNames": [
