@@ -16,7 +16,7 @@ directories:
       - path: .
         git:
           url: https://github.com/helm/helm
-          ref: v4.2.4
+          ref: v4.3.0
           depth: 1
         includePaths:
           - scripts/get-helm-4
