@@ -53,19 +53,27 @@ module "outline" {
   docker_proxy_network_id = module.proxy.docker_proxy_network_id
 }
 
+data "docker_registry_image" "cygnus" {
+  name = "ghcr.io/code0-tech/cygnus:2141"
+}
+
 module "cygnus" {
   source = "../../modules/docker/cygnus"
 
   web_urls                = ["codezero.build"]
   docker_proxy_network_id = module.proxy.docker_proxy_network_id
+  cygnus_image = {
+    name          = data.docker_registry_image.cygnus.name
+    sha256_digest = data.docker_registry_image.cygnus.sha256_digest
+  }
 }
 
 module "sculptor_playground" {
   source = "../../modules/docker/sculptor-playground"
 
-  hostname = "playground.codezero.build"
+  hostname                   = "playground.codezero.build"
   playground_frame_ancestors = "'self' https://codezero.build http://localhost:3000"
-  docker_proxy_network_id = module.proxy.docker_proxy_network_id
+  docker_proxy_network_id    = module.proxy.docker_proxy_network_id
 }
 
 module "pyxis" {
