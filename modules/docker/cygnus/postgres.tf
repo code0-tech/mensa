@@ -8,7 +8,7 @@ resource "docker_image" "postgres" {
 }
 
 resource "docker_volume" "pgdata" {
-  name = "cygnus_pgdata"
+  name = "${var.docker_name_prefix}cygnus_pgdata"
 }
 
 resource "random_password" "db" {
@@ -28,7 +28,7 @@ locals {
 //noinspection HILUnresolvedReference
 resource "docker_container" "postgres" {
   image   = docker_image.postgres.image_id
-  name    = "cygnus_postgres"
+  name    = "${var.docker_name_prefix}cygnus_postgres"
   restart = "always"
 
   env = local.postgres_env
