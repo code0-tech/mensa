@@ -1,10 +1,6 @@
-data "docker_registry_image" "cygnus" {
-  name = "ghcr.io/code0-tech/cygnus:2141"
-}
-
 resource "docker_image" "cygnus" {
-  name          = data.docker_registry_image.cygnus.name
-  pull_triggers = [data.docker_registry_image.cygnus.sha256_digest]
+  name          = var.cygnus_image.name
+  pull_triggers = [var.cygnus_image.sha256_digest]
 }
 
 resource "random_password" "payload_secret" {

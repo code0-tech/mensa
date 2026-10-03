@@ -14,6 +14,10 @@ terraform {
       source  = "kreuzwerker/docker"
       version = "4.6.0"
     }
+    stripe = {
+      source = "stripe/stripe"
+      version = "0.3.0"
+    }
   }
 }
 
@@ -30,6 +34,16 @@ provider "docker" {
   host = "ssh://pipeline@${var.server_staging_ip}:${var.server_staging_ssh_port}"
 
   cert_path = ""
+
+  registry_auth {
+    address = "registry.gitlab.com"
+    username = "gitlab-ci-token"
+    password = var.gitlab_api_token
+  }
+}
+
+provider "stripe" {
+  api_key = var.stripe_staging_api_key
 }
 
 module "staging" {
