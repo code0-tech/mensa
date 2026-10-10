@@ -37,6 +37,7 @@ jobs:
           GLPA_TF_VAR_server_administration_ssh_port: ${{ secrets.SERVER_ADMINISTRATION_SSH_PORT }}
           GLPA_TF_VAR_server_staging_ip: ${{ secrets.SERVER_STAGING_IP }}
           GLPA_TF_VAR_server_staging_ssh_port: ${{ secrets.SERVER_STAGING_SSH_PORT }}
+          GLPA_TF_VAR_stripe_staging_api_key: ${{ secrets.STRIPE_STAGING_API_KEY }}
 
       - name: Find existing comment
         uses: peter-evans/find-comment@v4

@@ -9,7 +9,7 @@ spec:
     logins:
       - teleport-user
     app_labels:
-      "application": "codezero"
+      "application": ["codezero", "cygnus"]
       "environment": "staging"
 ---
 apiVersion: resources.teleport.dev/v1

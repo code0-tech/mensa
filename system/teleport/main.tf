@@ -17,6 +17,7 @@ terraform {
 locals {
   application_hostnames = [
     "staging.codezero.build",
+    "staging-cygnus.codezero.build",
   ]
 
   teleport_hostnames = concat([var.hostname], local.application_hostnames)
@@ -94,7 +95,8 @@ resource "cloudflare_dns_record" "teleport" {
 
 resource "cloudflare_dns_record" "teleport_cname_codezero_build" {
   for_each = toset([
-    "staging.codezero.build"
+    "staging.codezero.build",
+    "staging-cygnus.codezero.build",
   ])
 
   name    = each.value
