@@ -9,3 +9,17 @@ metadata:
 spec:
   uri: http://127.0.0.1:15242
   public_addr: staging.codezero.build
+---
+apiVersion: resources.teleport.dev/v1
+kind: TeleportAppV3
+metadata:
+  name: cygnus-staging
+  labels:
+    application: cygnus
+    environment: staging
+    server: staging
+spec:
+  uri: http://127.0.0.1:15243
+  public_addr: staging-cygnus.codezero.build
+  required_app_names:
+    - codezero-staging

@@ -18,7 +18,8 @@
     },
     {
       "matchFileNames": [
-        "modules/docker/**"
+        "modules/docker/**",
+        "system/**"
       ],
       "matchDatasources": [
         "docker"

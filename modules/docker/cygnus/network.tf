@@ -1,3 +1,3 @@
 resource "docker_network" "cygnus" {
-  name = "cygnus"
+  name = "${var.docker_name_prefix}cygnus"
 }
