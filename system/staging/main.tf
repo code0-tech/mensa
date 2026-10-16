@@ -62,6 +62,7 @@ resource "cloudflare_dns_record" "server_cname_code0_tech" {
 resource "cloudflare_dns_record" "server_cname_codezero_build" {
   for_each = toset([
     "crater-staging.codezero.build",
+    "rest-staging.codezero.build",
   ])
 
   name    = each.value
@@ -80,6 +81,7 @@ module "proxy" {
   certificate_hostnames = [
     "signoz.code0.tech",
     "crater-staging.codezero.build",
+    "rest-staging.codezero.build",
   ]
 }
 
@@ -112,7 +114,7 @@ module "codezero_rest_action" {
   }
 
   additional_envs = [
-    "VIRTUAL_HOST=staging-rest.codezero.build"
+    "VIRTUAL_HOST=rest-staging.codezero.build"
   ]
   docker_networks = [
     module.proxy.docker_proxy_network_name,
