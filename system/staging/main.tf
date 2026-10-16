@@ -97,8 +97,50 @@ resource "docker_network" "codezero_staging" {
   name = "codezero_staging"
 }
 
+data "docker_registry_image" "codezero_rest_action" {
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/rest-action:0.0.0-experimental-2857072085-c3191ef79a875c3330e67f2bb21f9691671cba65"
+}
+
+module "codezero_rest_action" {
+  source = "../../modules/docker/codezero-action"
+
+  identifier = "rest"
+  aquila_url = "codezero-aquila:8081"
+  image = {
+    name          = data.docker_registry_image.codezero_rest_action.name
+    sha256_digest = data.docker_registry_image.codezero_rest_action.sha256_digest
+  }
+
+  additional_envs = [
+    "VIRTUAL_HOST=staging-rest.codezero.build"
+  ]
+  docker_networks = [
+    module.proxy.docker_proxy_network_name,
+    module.codezero.aquila_network.name,
+  ]
+}
+
+data "docker_registry_image" "codezero_cron_action" {
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/cron-action:0.0.0-experimental-2857072085-c3191ef79a875c3330e67f2bb21f9691671cba65"
+}
+
+module "codezero_cron_action" {
+  source = "../../modules/docker/codezero-action"
+
+  identifier = "cron"
+  aquila_url = "codezero-aquila:8081"
+  image = {
+    name          = data.docker_registry_image.codezero_cron_action.name
+    sha256_digest = data.docker_registry_image.codezero_cron_action.sha256_digest
+  }
+
+  docker_networks = [
+    module.codezero.aquila_network.name,
+  ]
+}
+
 module "codezero" {
-  source = "github.com/code0-tech/reticulum//terraform/docker?ref=87ff1393bd5d00355a27aae110d5b44c4aa7dfb0"
+  source = "github.com/code0-tech/reticulum//terraform/docker?ref=11ff43eb871a23ec3ddeed0b207dffe9f414384e"
 
   hostname              = "staging.codezero.build"
   initial_root_mail     = "root@code0.tech"
@@ -111,6 +153,17 @@ module "codezero" {
   https_port               = null
   nginx_bind_ip            = "127.0.0.1"
   nginx_additional_network = docker_network.codezero_staging.name
+
+  aquila_actions = {
+    rest = {
+      identifier = "rest"
+      token      = module.codezero_rest_action.action_token
+    }
+    cron = {
+      identifier = "cron"
+      token      = module.codezero_cron_action.action_token
+    }
+  }
 
   additional_sagittarius_config = yamlencode({
     crater = {
