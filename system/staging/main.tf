@@ -145,7 +145,7 @@ module "codezero" {
   hostname              = "staging.codezero.build"
   initial_root_mail     = "root@code0.tech"
   initial_root_password = random_password.codezero_initial_root_password.result
-  image_tag             = "0.0.0-experimental-2953217810-2404fde325655d9968c28ab213a6973f7a92679f"
+  image_tag             = "0.0.0-experimental-2953556227-3c06422ab389456fa58d8d0bf84f11f0099a6fa5"
   image_edition         = "cloud"
   image_registry        = "ghcr.io/code0-tech/reticulum/ci-builds"
 
