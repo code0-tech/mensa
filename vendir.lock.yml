@@ -10,10 +10,10 @@ directories:
   path: modules/k3s/server_node/vendor
 - contents:
   - git:
-      commitTitle: 'chore(deps): bump google.golang.org/grpc from 1.82.1 to 1.83.1...'
-      sha: bec5b06ed841fe5269972d864d5177944fd5970f
+      commitTitle: 'chore(deps): bump otlploghttp and stdoutlog to v0.21.0...'
+      sha: c0d08d0d6d9424d4a14febb5e8a3e51b0dd00dff
       tags:
-      - v4.3.0
+      - v4.3.1
     path: .
   path: modules/k3s/flux/vendor
 kind: LockConfig
