@@ -252,7 +252,7 @@ module "crater" {
 }
 
 data "docker_registry_image" "cygnus" {
-  name = "ghcr.io/code0-tech/cygnus:2282-crater-test"
+  name = "ghcr.io/code0-tech/cygnus:2314-crater-test"
 }
 
 data "gitlab_project_variable" "stripe_public_key" {
