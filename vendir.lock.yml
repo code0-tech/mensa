@@ -2,10 +2,10 @@ apiVersion: vendir.k14s.io/v1alpha1
 directories:
 - contents:
   - git:
-      commitTitle: Update hashicorp gpg fingerprint...
-      sha: bb7cf0657bafdfbb4349d1740810442d09c2248a
+      commitTitle: Improve CA hash validation...
+      sha: 356c025475bbefaa09cf0d7e48e8e2adbbde57db
       tags:
-      - v1.37.0+k3s1
+      - v1.37.1+k3s1
     path: .
   path: modules/k3s/server_node/vendor
 - contents:
