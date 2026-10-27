@@ -142,13 +142,28 @@ module "codezero_cron_action" {
   ]
 }
 
+data "gitlab_project_variable" "staging_smtp_host" {
+  project = "code0-tech/secret-manager"
+  key     = "STAGING_SMTP_HOST"
+}
+
+data "gitlab_project_variable" "staging_smtp_user" {
+  project = "code0-tech/secret-manager"
+  key     = "STAGING_SMTP_USERNAME"
+}
+
+data "gitlab_project_variable" "staging_smtp_password" {
+  project = "code0-tech/secret-manager"
+  key     = "STAGING_SMTP_PASSWORD"
+}
+
 module "codezero" {
   source = "github.com/code0-tech/reticulum//terraform/docker?ref=11ff43eb871a23ec3ddeed0b207dffe9f414384e"
 
   hostname              = "staging.codezero.build"
   initial_root_mail     = "root@code0.tech"
   initial_root_password = random_password.codezero_initial_root_password.result
-  image_tag             = "0.0.0-experimental-2953217810-2404fde325655d9968c28ab213a6973f7a92679f"
+  image_tag             = "0.0.0-experimental-2994918138-b0b65e844980f099aafcafd3f34e72fef9e54256"
   image_edition         = "cloud"
   image_registry        = "ghcr.io/code0-tech/reticulum/ci-builds"
 
@@ -169,6 +184,24 @@ module "codezero" {
   }
 
   additional_sagittarius_config = yamlencode({
+    rails = {
+      web = {
+        external = {
+          host     = "staging.codezero.build"
+          port     = 443
+          protocol = "https"
+        }
+      }
+      mailer = {
+        from = "CodeZero <${data.gitlab_project_variable.staging_smtp_user.value}>"
+        smtp_settings = {
+          address   = data.gitlab_project_variable.staging_smtp_host.value
+          domain    = split("@", data.gitlab_project_variable.staging_smtp_user.value)[1]
+          user_name = data.gitlab_project_variable.staging_smtp_user.value
+          password  = data.gitlab_project_variable.staging_smtp_password.value
+        }
+      }
+    }
     crater = {
       jwt_secret = random_password.crater_jwt_secret.result
     }
@@ -209,7 +242,7 @@ data "gitlab_project_variable" "stripe_webhook_secret" {
 }
 
 data "docker_registry_image" "crater" {
-  name = "registry.gitlab.com/code0-tech/development/crater:2952222669"
+  name = "registry.gitlab.com/code0-tech/development/crater:2996180181"
 }
 
 data "gitlab_project_secure_file" "license_encryption_key" {
@@ -235,6 +268,20 @@ module "crater" {
     rails = {
       web = {
         force_ssl = false
+        external = {
+          host     = "staging-cygnus.codezero.build"
+          port     = 443
+          protocol = "https"
+        }
+      }
+      mailer = {
+        from = "CodeZero <${data.gitlab_project_variable.staging_smtp_user.value}>"
+        smtp_settings = {
+          address   = data.gitlab_project_variable.staging_smtp_host.value
+          domain    = split("@", data.gitlab_project_variable.staging_smtp_user.value)[1]
+          user_name = data.gitlab_project_variable.staging_smtp_user.value
+          password  = data.gitlab_project_variable.staging_smtp_password.value
+        }
       }
     }
     sagittarius = {
@@ -252,7 +299,7 @@ module "crater" {
 }
 
 data "docker_registry_image" "cygnus" {
-  name = "ghcr.io/code0-tech/cygnus:2323-crater-test"
+  name = "ghcr.io/code0-tech/cygnus:2336-crater-test"
 }
 
 data "gitlab_project_variable" "stripe_public_key" {
