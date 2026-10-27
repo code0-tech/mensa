@@ -195,10 +195,11 @@ module "codezero" {
       mailer = {
         from = "CodeZero <${data.gitlab_project_variable.staging_smtp_user.value}>"
         smtp_settings = {
-          address   = data.gitlab_project_variable.staging_smtp_host.value
-          domain    = split("@", data.gitlab_project_variable.staging_smtp_user.value)[1]
-          user_name = data.gitlab_project_variable.staging_smtp_user.value
-          password  = data.gitlab_project_variable.staging_smtp_password.value
+          address         = data.gitlab_project_variable.staging_smtp_host.value
+          domain          = split("@", data.gitlab_project_variable.staging_smtp_user.value)[1]
+          user_name       = data.gitlab_project_variable.staging_smtp_user.value
+          password        = data.gitlab_project_variable.staging_smtp_password.value
+          enable_starttls = true
         }
       }
     }
@@ -277,10 +278,11 @@ module "crater" {
       mailer = {
         from = "CodeZero <${data.gitlab_project_variable.staging_smtp_user.value}>"
         smtp_settings = {
-          address   = data.gitlab_project_variable.staging_smtp_host.value
-          domain    = split("@", data.gitlab_project_variable.staging_smtp_user.value)[1]
-          user_name = data.gitlab_project_variable.staging_smtp_user.value
-          password  = data.gitlab_project_variable.staging_smtp_password.value
+          address         = data.gitlab_project_variable.staging_smtp_host.value
+          domain          = split("@", data.gitlab_project_variable.staging_smtp_user.value)[1]
+          user_name       = data.gitlab_project_variable.staging_smtp_user.value
+          password        = data.gitlab_project_variable.staging_smtp_password.value
+          enable_starttls = true
         }
       }
     }
