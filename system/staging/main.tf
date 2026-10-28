@@ -222,7 +222,7 @@ module "signoz" {
 }
 
 module "stripe_config" {
-  source = "git::ssh://git@github.com/code0-tech/mensa-private//modules/stripe/config?ref=2226b662225224bd1cbe47ec91693661ce12aeac"
+  source = "git::ssh://git@github.com/code0-tech/mensa-private//modules/stripe/config?ref=77cc96eae8f300a1f9c861a272cf07e599b507ff"
 
   webhook_url = "https://crater-staging.codezero.build/webhooks/stripe"
 }
@@ -252,7 +252,7 @@ data "gitlab_project_secure_file" "license_encryption_key" {
 }
 
 module "crater" {
-  source = "git::ssh://git@github.com/code0-tech/mensa-private//modules/docker/crater?ref=2226b662225224bd1cbe47ec91693661ce12aeac"
+  source = "git::ssh://git@github.com/code0-tech/mensa-private//modules/docker/crater?ref=77cc96eae8f300a1f9c861a272cf07e599b507ff"
 
   docker_name_prefix            = "staging-"
   docker_additional_network_ids = [docker_network.codezero_staging.name, module.proxy.docker_proxy_network_name]
