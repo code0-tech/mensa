@@ -217,7 +217,7 @@ module "codezero" {
     "SUBSCRIPTION_URL=https://staging-cygnus.codezero.build/licenses",
     "CHECKOUT_URL=https://staging-cygnus.codezero.build/subscription",
     "LIBREDESK_URL=https://support-widget.codezero.build",
-    "LIBREDESK_INBOX_ID=1",
+    "LIBREDESK_INBOX_ID=79069078-2940-4c21-9bdb-ab81a70af08f",
     "LIBREDESK_SECRET=${sensitive(data.gitlab_project_variable.libredesk_inbox_secret_staging.value)}",
     "LIBREDESK_TOKEN_TTL_MINUTES=720",
   ]
