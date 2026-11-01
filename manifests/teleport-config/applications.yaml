@@ -23,3 +23,15 @@ spec:
   public_addr: staging-cygnus.codezero.build
   required_app_names:
     - codezero-staging
+---
+apiVersion: resources.teleport.dev/v1
+kind: TeleportAppV3
+metadata:
+  name: libredesk
+  labels:
+    application: libredesk
+    environment: production
+    server: administration
+spec:
+  uri: http://127.0.0.1:15244
+  public_addr: support.codezero.build

@@ -32,6 +32,7 @@ module "proxy" {
     "outline.code0.tech",
     "codezero.build",
     "playground.codezero.build",
+    "support-widget.codezero.build",
   ]
 
   hostname_config_overrides = [
@@ -80,6 +81,19 @@ module "pyxis" {
   source = "../../modules/docker/pyxis"
 }
 
+module "libredesk" {
+  source = "../../modules/docker/libredesk"
+
+  bind_ip = "127.0.0.1"
+  http_port = 15244
+
+  docker_additional_network_id = module.proxy.docker_proxy_network_id
+  additional_envs = [
+    "VIRTUAL_HOST=support-widget.codezero.build",
+    "VIRTUAL_PATH=~^/(api/v1/widget|widget/ws)"
+  ]
+}
+
 resource "cloudflare_dns_record" "server_ip" {
   name    = "server_administration.code0.tech"
   type    = "A"
@@ -111,6 +125,7 @@ resource "cloudflare_dns_record" "server_cname_codezero_build" {
   for_each = toset([
     "codezero.build",
     "playground.codezero.build",
+    "support-widget.codezero.build",
   ])
 
   name    = each.value
