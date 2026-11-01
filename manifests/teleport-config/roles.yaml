@@ -6,11 +6,21 @@ spec:
   options:
     require_session_mfa: 1 # SESSION
   allow:
-    logins:
-      - teleport-user
     app_labels:
       "application": ["codezero", "cygnus"]
       "environment": "staging"
+---
+apiVersion: resources.teleport.dev/v1
+kind: TeleportRoleV8
+metadata:
+  name: app-libredesk
+spec:
+  options:
+    require_session_mfa: 1 # SESSION
+  allow:
+    app_labels:
+      "application": "libredesk"
+      "environment": "production"
 ---
 apiVersion: resources.teleport.dev/v1
 kind: TeleportRoleV8

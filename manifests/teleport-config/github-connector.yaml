@@ -13,6 +13,10 @@ spec:
       roles:
         - app-codezero-staging
     - organization: code0-tech
+      team: tp-app-libredesk
+      roles:
+        - app-libredesk
+    - organization: code0-tech
       team: tp-auditor
       roles:
         - auditor
