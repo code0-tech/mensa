@@ -35,3 +35,7 @@ metadata:
 spec:
   uri: http://127.0.0.1:15244
   public_addr: support.codezero.build
+  rewrite:
+    headers:
+      - name: Host
+        value: support.codezero.build
