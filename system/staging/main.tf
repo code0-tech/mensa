@@ -157,6 +157,11 @@ data "gitlab_project_variable" "staging_smtp_password" {
   key     = "STAGING_SMTP_PASSWORD"
 }
 
+data "gitlab_project_variable" "libredesk_inbox_secret_staging" {
+  project = "code0-tech/secret-manager"
+  key     = "LIBREDESK_INBOX_SECRET_STAGING"
+}
+
 module "codezero" {
   source = "github.com/code0-tech/reticulum//terraform/docker?ref=11ff43eb871a23ec3ddeed0b207dffe9f414384e"
 
@@ -211,6 +216,10 @@ module "codezero" {
   sculptor_env = [
     "SUBSCRIPTION_URL=https://staging-cygnus.codezero.build/licenses",
     "CHECKOUT_URL=https://staging-cygnus.codezero.build/subscription",
+    "LIBREDESK_URL=https://support-widget.codezero.build",
+    "LIBREDESK_INBOX_ID=1",
+    "LIBREDESK_SECRET=${sensitive(data.gitlab_project_variable.libredesk_inbox_secret_staging.value)}",
+    "LIBREDESK_TOKEN_TTL_MINUTES=720",
   ]
 }
 

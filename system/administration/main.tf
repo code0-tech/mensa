@@ -84,7 +84,7 @@ module "pyxis" {
 module "libredesk" {
   source = "../../modules/docker/libredesk"
 
-  bind_ip = "127.0.0.1"
+  bind_ip   = "127.0.0.1"
   http_port = 15244
 
   docker_additional_network_id = module.proxy.docker_proxy_network_id
