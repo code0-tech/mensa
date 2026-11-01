@@ -14,7 +14,6 @@ resource "random_password" "encryption_key" {
 
 resource "random_password" "system_user_password" {
   length  = 32
-  special = false
 }
 
 locals {
