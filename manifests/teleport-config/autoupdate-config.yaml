@@ -1,0 +1,21 @@
+apiVersion: resources.teleport.dev/v1
+kind: TeleportAutoupdateConfigV1
+metadata:
+  name: autoupdate
+spec:
+  agents:
+    mode: enabled
+    strategy: halt-on-error
+    schedules:
+      regular:
+        - name: non-prod
+          days: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+          start_hour: 18
+#        - name: prod
+#          days: ["Sat", "Sun"]
+#          start_hour: 18
+#          wait_hours: 24
+        - name: default
+          days: ["Sat", "Sun"]
+          start_hour: 18
+          wait_hours: 24
