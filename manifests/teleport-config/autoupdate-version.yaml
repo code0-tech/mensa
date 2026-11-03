@@ -1,0 +1,10 @@
+apiVersion: resources.teleport.dev/v1
+kind: TeleportAutoupdateVersionV1
+metadata:
+  name: autoupdate
+spec:
+  agents:
+    mode: enabled
+    schedule: regular
+    start_version: 18.11.7
+    target_version: 18.11.7
