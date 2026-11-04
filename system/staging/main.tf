@@ -100,7 +100,7 @@ resource "docker_network" "codezero_staging" {
 }
 
 data "docker_registry_image" "codezero_rest_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/rest-action:0.0.0-experimental-2857072085-c3191ef79a875c3330e67f2bb21f9691671cba65"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/rest-action:0.0.0-experimental-3028768426-71ac23091efd1ca7268de29f7507f99bea193420"
 }
 
 module "codezero_rest_action" {
@@ -124,7 +124,7 @@ module "codezero_rest_action" {
 }
 
 data "docker_registry_image" "codezero_cron_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/cron-action:0.0.0-experimental-2857072085-c3191ef79a875c3330e67f2bb21f9691671cba65"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/cron-action:0.0.0-experimental-3028768426-71ac23091efd1ca7268de29f7507f99bea193420"
 }
 
 module "codezero_cron_action" {
