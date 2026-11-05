@@ -92,6 +92,19 @@
       "matchStrings": [
         "# renovate: (?:datasource=(?<datasource>[a-zA-Z0-9-._]+)) (?:depName=(?<depName>[^\\s]+))(?: versioning=(?<versioning>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\s+[A-Za-z0-9_]+?_version\\s+=\\s+\"(?<currentValue>.+?)\""
       ]
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "manifests/teleport-config/autoupdate-version.yaml"
+      ],
+      "matchStrings": [
+        "start_version: \\S+\\s*\\n\\s*target_version: (?<currentValue>\\S+)"
+      ],
+      "depNameTemplate": "teleport-cluster",
+      "datasourceTemplate": "helm",
+      "registryUrlTemplate": "https://charts.releases.teleport.dev",
+      "autoReplaceStringTemplate": "start_version: {{{currentValue}}}\n    target_version: {{{newValue}}}"
     }
   ]
 }
