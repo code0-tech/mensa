@@ -163,12 +163,12 @@ data "gitlab_project_variable" "libredesk_inbox_secret_staging" {
 }
 
 module "codezero" {
-  source = "github.com/code0-tech/reticulum//terraform/docker?ref=11ff43eb871a23ec3ddeed0b207dffe9f414384e"
+  source = "github.com/code0-tech/reticulum//terraform/docker?ref=7f0bdf65950c044316a4b8f117647c48bb8c6211"
 
   hostname              = "staging.codezero.build"
   initial_root_mail     = "root@code0.tech"
   initial_root_password = random_password.codezero_initial_root_password.result
-  image_tag             = "0.0.0-experimental-3015200664-b6ac2a44afa57c9f5bac8c546d3b17bf48a16452"
+  image_tag             = "0.0.0-experimental-3030112534-7f0bdf65950c044316a4b8f117647c48bb8c6211"
   image_edition         = "cloud"
   image_registry        = "ghcr.io/code0-tech/reticulum/ci-builds"
 
@@ -253,7 +253,7 @@ data "gitlab_project_variable" "stripe_webhook_secret" {
 }
 
 data "docker_registry_image" "crater" {
-  name = "registry.gitlab.com/code0-tech/development/crater:2996180181"
+  name = "registry.gitlab.com/code0-tech/development/crater:3032724298"
 }
 
 data "gitlab_project_secure_file" "license_encryption_key" {
@@ -311,7 +311,7 @@ module "crater" {
 }
 
 data "docker_registry_image" "cygnus" {
-  name = "ghcr.io/code0-tech/cygnus:2336-crater-test"
+  name = "ghcr.io/code0-tech/cygnus:2363-crater-test"
 }
 
 data "gitlab_project_variable" "stripe_public_key" {
