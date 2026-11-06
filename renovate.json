@@ -24,7 +24,8 @@
       "matchDatasources": [
         "docker"
       ],
-      "additionalBranchPrefix": "{{parentDir}}-"
+      "additionalBranchPrefix": "{{parentDir}}-",
+      "commitMessageSuffix": "[{{parentDir}}]"
     },
     {
       "matchDepNames": [
