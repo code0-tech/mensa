@@ -30,9 +30,11 @@
     {
       "matchDepNames": [
         "ghcr.io/code0-tech/cygnus",
-        "ghcr.io/code0-tech/pyxis"
+        "ghcr.io/code0-tech/pyxis",
+        "registry.gitlab.com/code0-tech/development/crater"
       ],
-      "versioning": "regex:^(?<minor>\\d+)$"
+      "versioning": "regex:^(?<minor>\\d+)$",
+      "maxMajorIncrement": 0
     },
     {
       "matchDepNames": [
