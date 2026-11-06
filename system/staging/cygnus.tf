@@ -1,5 +1,5 @@
 data "docker_registry_image" "cygnus" {
-  name = "ghcr.io/code0-tech/cygnus:2363-crater-test"
+  name = "ghcr.io/code0-tech/cygnus:2395"
 }
 
 data "gitlab_project_variable" "stripe_public_key" {
