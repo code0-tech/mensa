@@ -25,7 +25,7 @@ data "gitlab_project_variable" "stripe_webhook_secret" {
 }
 
 data "docker_registry_image" "crater" {
-  name = "registry.gitlab.com/code0-tech/development/crater:3032724298"
+  name = "registry.gitlab.com/code0-tech/development/crater:3040233713"
 }
 
 data "gitlab_project_secure_file" "license_encryption_key" {
