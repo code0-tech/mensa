@@ -17,6 +17,10 @@ spec:
       roles:
         - app-libredesk
     - organization: code0-tech
+      team: tp-app-signoz
+      roles:
+        - app-signoz
+    - organization: code0-tech
       team: tp-auditor
       roles:
         - auditor

@@ -19,6 +19,8 @@ locals {
       config_oci_url         = var.config_oci_url
       config_oci_tag         = var.config_oci_tag
       teleport_cluster_label = var.teleport_cluster_label
+      tls_checksum           = nonsensitive(sha256(yamlencode(kubernetes_secret_v1.tls.data)))
+      tls_ca_checksum        = nonsensitive(sha256(yamlencode(kubernetes_secret_v1.tls_ca.data)))
     })) : yamldecode(trimspace(doc)) if trimspace(doc) != ""
   ]
 }

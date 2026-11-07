@@ -39,3 +39,15 @@ spec:
     headers:
       - name: Host
         value: support.codezero.build
+---
+apiVersion: resources.teleport.dev/v1
+kind: TeleportAppV3
+metadata:
+  name: signoz
+  labels:
+    application: signoz
+    environment: production
+    cluster: administration
+spec:
+  uri: http://signoz-signoz.signoz.svc.cluster.local:8080
+  public_addr: signoz.code0.tech

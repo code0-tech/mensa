@@ -25,6 +25,18 @@ spec:
 apiVersion: resources.teleport.dev/v1
 kind: TeleportRoleV8
 metadata:
+  name: app-signoz
+spec:
+  options:
+    require_session_mfa: 1 # SESSION
+  allow:
+    app_labels:
+      "application": "signoz"
+      "environment": "production"
+---
+apiVersion: resources.teleport.dev/v1
+kind: TeleportRoleV8
+metadata:
   name: k8s-administration-admin
 spec:
   options:
