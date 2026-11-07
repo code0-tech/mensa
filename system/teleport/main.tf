@@ -19,6 +19,7 @@ locals {
     "staging.codezero.build",
     "staging-cygnus.codezero.build",
     "support.codezero.build",
+    "signoz.code0.tech",
   ]
 
   teleport_hostnames = concat([var.hostname], local.application_hostnames)
@@ -89,6 +90,21 @@ resource "cloudflare_dns_record" "teleport" {
   ttl     = 1
   zone_id = data.cloudflare_zones.code0_tech.result[0].id
   content = var.server_ip
+  proxied = true
+
+  comment = "Managed by Terraform"
+}
+
+resource "cloudflare_dns_record" "teleport_cname_code0_tech" {
+  for_each = toset([
+    "signoz.code0.tech",
+  ])
+
+  name    = each.value
+  type    = "CNAME"
+  ttl     = 1
+  zone_id = data.cloudflare_zones.code0_tech.result[0].id
+  content = cloudflare_dns_record.teleport.name
   proxied = true
 
   comment = "Managed by Terraform"

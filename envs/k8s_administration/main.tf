@@ -44,9 +44,9 @@ data "gitlab_project_variable" "teleport_github_client_secret" {
 module "teleport" {
   source = "../../system/teleport"
 
-  cloudflare_account_id  = var.cloudflare_account_id
-  server_ip              = var.server_administration_ip
-  hostname               = "tp.code0.tech"
+  cloudflare_account_id = var.cloudflare_account_id
+  server_ip             = var.server_administration_ip
+  hostname              = "tp.code0.tech"
   # renovate: datasource=helm depName=teleport-cluster registryUrl=https://charts.releases.teleport.dev
   chart_version          = "18.11.8"
   config_oci_url         = "oci://registry.gitlab.com/code0-tech/infrastructure/mensa/teleport-config"
@@ -54,7 +54,15 @@ module "teleport" {
   teleport_cluster_label = "administration"
 
   config_substitution_vars = {
-    GITHUB_CLIENT_ID      = data.gitlab_project_variable.teleport_github_client_id.value
-    GITHUB_CLIENT_SECRET  = data.gitlab_project_variable.teleport_github_client_secret.value
+    GITHUB_CLIENT_ID     = data.gitlab_project_variable.teleport_github_client_id.value
+    GITHUB_CLIENT_SECRET = data.gitlab_project_variable.teleport_github_client_secret.value
   }
+}
+
+module "signoz" {
+  source = "../../modules/k8s/signoz"
+
+  # renovate: datasource=helm depName=signoz registryUrl=https://charts.signoz.io
+  chart_version = "0.149.0"
+  cluster_name  = "administration"
 }
