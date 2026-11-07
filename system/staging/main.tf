@@ -44,21 +44,6 @@ resource "cloudflare_dns_record" "server_ip" {
   comment = "Managed by Terraform"
 }
 
-resource "cloudflare_dns_record" "server_cname_code0_tech" {
-  for_each = toset([
-    "signoz.code0.tech",
-  ])
-
-  name    = each.value
-  type    = "CNAME"
-  ttl     = 1
-  zone_id = data.cloudflare_zones.code0_tech_domain.result[0].id
-  content = cloudflare_dns_record.server_ip.name
-  proxied = true
-
-  comment = "Managed by Terraform"
-}
-
 resource "cloudflare_dns_record" "server_cname_codezero_build" {
   for_each = toset([
     "crater-staging.codezero.build",
@@ -79,15 +64,7 @@ module "proxy" {
   source = "../../modules/docker/proxy"
 
   certificate_hostnames = [
-    "signoz.code0.tech",
     "crater-staging.codezero.build",
     "rest-staging.codezero.build",
   ]
-}
-
-module "signoz" {
-  source = "../../modules/docker/signoz"
-
-  proxy_network = module.proxy.docker_proxy_network_name
-  hostname      = "signoz.code0.tech"
 }
