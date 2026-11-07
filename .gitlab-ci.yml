@@ -72,16 +72,6 @@ default:
       when: delayed
       start_in: 2 min
 
-regeneration-check:signoz:
-  stage: preflight
-  image: ghcr.io/code0-tech/build-images/mise:619.1
-  script:
-    - cd modules/docker/signoz
-    - mise install
-    - mise x -- signoz-foundry forge
-    - git add .
-    - git diff --exit-code --staged
-
 push-artifact:teleport-config:
   stage: preflight
   image:
@@ -159,7 +149,6 @@ tf-plan:server_staging:
   extends:
     - .tf-plan
   before_script:
-    - echo > modules/docker/signoz/override.env # ensure this file exists for docker_compose resource
     - !reference [.ssh, before_script]
     - !reference [.tf, before_script]
   variables:
