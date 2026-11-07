@@ -1,3 +1,0 @@
-[tools."github:SigNoz/foundry"]
-version = "0.2.11"
-rename_exe = "signoz-foundry"

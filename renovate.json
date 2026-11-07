@@ -46,26 +46,12 @@
     },
     {
       "matchFileNames": [
-        "modules/docker/signoz/pours/deployment/compose.yaml"
-      ],
-      "enabled": false
-    },
-    {
-      "matchFileNames": [
         ".tool-versions"
       ],
       "matchDepNames": [
         "terraform"
       ],
       "enabled": false
-    },
-    {
-      "matchDepNames": [
-        "signoz/**",
-        "github:SigNoz/**"
-      ],
-      "groupName": "signoz",
-      "additionalBranchPrefix": ""
     },
     {
       "matchDepNames": [
@@ -76,17 +62,6 @@
     }
   ],
   "customManagers": [
-    {
-      "customType": "regex",
-      "managerFilePatterns": [
-        "modules/docker/signoz/casting.yaml"
-      ],
-      "matchStrings": [
-        "image: (?<depName>.*?):(?<currentValue>\\S+)"
-      ],
-      "versioningTemplate": "docker",
-      "datasourceTemplate": "docker"
-    },
     {
       "customType": "regex",
       "managerFilePatterns": [
