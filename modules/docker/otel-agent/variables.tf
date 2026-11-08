@@ -46,6 +46,11 @@ variable "otel_collector_image" {
   })
 }
 
+variable "otel_collector_network_aliases" {
+  description = "Network aliases to apply to the OpenTelemetry collector container on the additional networks"
+  default     = ["opentelemetry-collector"]
+}
+
 variable "hostmetrics_scrape_interval" {
   description = "How often the hostmetrics receiver scrapes the host."
   type        = string

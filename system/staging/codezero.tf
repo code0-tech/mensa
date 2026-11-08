@@ -28,7 +28,7 @@ data "gitlab_project_variable" "libredesk_inbox_secret_staging" {
 }
 
 module "codezero" {
-  source = "github.com/code0-tech/reticulum//terraform/docker?ref=7f0bdf65950c044316a4b8f117647c48bb8c6211"
+  source = "github.com/code0-tech/reticulum//terraform/docker?ref=db966a938a6764c5891eaba85ffc2ff8266a1e4e"
 
   hostname              = "staging.codezero.build"
   initial_root_mail     = "root@code0.tech"
@@ -51,6 +51,14 @@ module "codezero" {
       identifier = "cron"
       token      = module.codezero_cron_action.action_token
     }
+  }
+
+  opentelemetry = {
+    enabled               = true
+    grpc_host             = "http://${local.otel_collector_alias}:4317"
+    logs_http_endpoint    = "http://${local.otel_collector_alias}:4318/v1/logs"
+    metrics_http_endpoint = "http://${local.otel_collector_alias}:4318/v1/metrics"
+    traces_http_endpoint  = "http://${local.otel_collector_alias}:4318/v1/traces"
   }
 
   additional_sagittarius_config = yamlencode({

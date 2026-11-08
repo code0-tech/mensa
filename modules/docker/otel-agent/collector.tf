@@ -42,7 +42,8 @@ resource "docker_container" "otel_collector" {
     for_each = toset(var.docker_additional_network_ids)
 
     content {
-      name = networks_advanced.value
+      name    = networks_advanced.value
+      aliases = var.otel_collector_network_aliases
     }
   }
 
