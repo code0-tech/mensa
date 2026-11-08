@@ -8,7 +8,7 @@ data "docker_registry_image" "otel_collector" {
 
 data "gitlab_project_variable" "teleport_signoz_join_token" {
   project = "code0-tech/secret-manager"
-  key     = "TELEPORT_OTEL_JOIN_TOKEN"
+  key     = "TELEPORT_ADMINISTRATION_OTEL_JOIN_TOKEN"
 }
 
 module "otel_agent" {
