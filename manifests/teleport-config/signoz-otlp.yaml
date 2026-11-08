@@ -1,0 +1,31 @@
+apiVersion: resources.teleport.dev/v1
+kind: TeleportAppV3
+metadata:
+  name: signoz-otlp
+  labels:
+    application: signoz-otlp
+    environment: production
+    cluster: administration
+spec:
+  uri: http://signoz-signoz-otel-collector.signoz.svc.cluster.local:4318
+---
+apiVersion: resources.teleport.dev/v1
+kind: TeleportRoleV8
+metadata:
+  name: mwi-app-signoz-otlp
+spec:
+  allow:
+    app_labels:
+      "application": "signoz-otlp"
+      "environment": "production"
+---
+apiVersion: resources.teleport.dev/v1
+kind: TeleportBotV1
+metadata:
+  name: signoz-otlp
+spec:
+  roles:
+    - mwi-app-signoz-otlp
+---
+# Join token is created manually with "tctl bots instances add signoz-otlp"
+# Store the printed token value in the GitLab secret TELEPORT_OTEL_JOIN_TOKEN
