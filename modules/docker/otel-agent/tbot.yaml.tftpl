@@ -1,0 +1,16 @@
+version: v2
+
+proxy_server: ${proxy_server}
+
+onboarding:
+  join_method: token
+  token: ${join_token}
+
+storage:
+  type: directory
+  path: /var/lib/tbot
+
+services:
+  - type: application-tunnel
+    app_name: ${signoz_app_name}
+    listen: ${tunnel_listen_uri}

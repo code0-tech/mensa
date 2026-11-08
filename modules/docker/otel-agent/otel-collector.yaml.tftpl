@@ -1,0 +1,81 @@
+receivers:
+  hostmetrics:
+    collection_interval: ${hostmetrics_scrape_interval}
+    root_path: /hostfs
+    scrapers:
+      cpu:
+      memory:
+      load:
+      disk:
+      filesystem:
+      network:
+      paging:
+      processes:
+
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  resourcedetection:
+    detectors: [system]
+    system:
+      hostname_sources: ["os"]
+      resource_attributes:
+        host.name:
+          enabled: false # provided via the resource processor below
+        os.type:
+          enabled: true
+        os.description:
+          enabled: true
+
+  resource:
+    attributes:
+      # hostname set this way because the collector is running as container
+      - key: host.name
+        value: "$${file:/hostfs/etc/hostname}"
+        action: upsert
+%{ if environment != null ~}
+      - key: deployment.environment
+        value: "${environment}"
+        action: upsert
+%{ endif ~}
+%{ for key, value in resource_attributes ~}
+      - key: ${key}
+        value: "${value}"
+        action: upsert
+%{ endfor ~}
+
+  batch:
+    timeout: 5s
+    send_batch_size: 1024
+
+exporters:
+  otlphttp:
+    endpoint: ${otlp_export_endpoint}
+    tls:
+      # only reaches the tbot container
+      # cross-host TLS is handled by tbot and teleport
+      insecure: true
+    retry_on_failure:
+      enabled: true
+    sending_queue:
+      enabled: true
+
+service:
+  pipelines:
+    metrics:
+      receivers: [hostmetrics, otlp]
+      processors: [resourcedetection, resource, batch]
+      exporters: [otlphttp]
+    traces:
+      receivers: [otlp]
+      processors: [resourcedetection, resource, batch]
+      exporters: [otlphttp]
+    logs:
+      receivers: [otlp]
+      processors: [resourcedetection, resource, batch]
+      exporters: [otlphttp]
