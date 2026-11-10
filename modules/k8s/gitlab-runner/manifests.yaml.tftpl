@@ -1,0 +1,32 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: OCIRepository
+metadata:
+  name: gitlab-runner
+  namespace: flux-system
+spec:
+  interval: 1h
+  url: oci://registry.gitlab.com/charts/charts.gitlab.io/release/gitlab-runner
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: gitlab-runner
+  namespace: flux-system
+spec:
+  interval: 10m
+  targetNamespace: ${namespace}
+  driftDetection:
+    mode: enabled
+  install:
+    createNamespace: false
+  chart:
+    spec:
+      chart: gitlab-runner
+      version: ${chart_version}
+      sourceRef:
+        kind: OCIRepository
+        name: gitlab-runner
+  values:
+    gitlabUrl: https://gitlab.com
+    runners:
+      secret: gitlab-runner-token
