@@ -10,8 +10,9 @@ terraform {
 locals {
   manifests = [
     for doc in split("---", templatefile("${path.module}/manifests.yaml.tftpl", {
-      namespace           = var.namespace
-      chart_version       = var.chart_version
+      namespace     = var.namespace
+      chart_version = var.chart_version
+      concurrent    = var.concurrent
     })) : yamldecode(trimspace(doc)) if trimspace(doc) != ""
   ]
 }

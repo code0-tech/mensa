@@ -12,5 +12,11 @@ variable "namespace" {
 variable "runner_token" {
   type        = string
   description = "Authentication token for the gitlab-runner"
-  sensitive  = true
+  sensitive   = true
+}
+
+variable "concurrent" {
+  type        = number
+  description = "Number of jobs this runner should execute concurrently"
+  default     = 10
 }
