@@ -75,7 +75,7 @@ data "gitlab_project_variable" "gitlab_runner_token_infra_release_tools" {
 module "gitlab_runner" {
   source = "../../modules/k8s/gitlab-runner"
 
-  # renovate: datasource=docker depName=gitlab-runner registryUrl=registry.gitlab.com/charts/charts.gitlab.io/release
+  # renovate: datasource=docker depName=gitlab-runner registryUrl=https://registry.gitlab.com/charts/charts.gitlab.io/release
   chart_version = "0.94.3"
   runner_token  = data.gitlab_project_variable.gitlab_runner_token_infra_release_tools.value
   concurrent    = 1
