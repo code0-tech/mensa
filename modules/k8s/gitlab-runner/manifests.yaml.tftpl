@@ -22,3 +22,27 @@ spec:
     runners:
       secret: gitlab-runner-token
     concurrent: ${concurrent}
+    rbac:
+      create: true
+      rules:
+        - apiGroups: [""]
+          resources: ["events"]
+          verbs: ["list"]
+        - apiGroups: [""]
+          resources: ["pods"]
+          verbs: ["create", "delete", "get", "list", "watch"]
+        - apiGroups: [""]
+          resources: ["pods/attach", "pods/exec"]
+          verbs: ["create", "delete", "get", "patch"]
+        - apiGroups: [""]
+          resources: ["pods/log"]
+          verbs: ["get", "list"]
+        - apiGroups: [""]
+          resources: ["secrets"]
+          verbs: ["create", "delete", "get", "update"]
+        - apiGroups: [""]
+          resources: ["serviceaccounts"]
+          verbs: ["get"]
+        - apiGroups: [""]
+          resources: ["services"]
+          verbs: ["create", "get"]
