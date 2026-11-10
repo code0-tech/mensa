@@ -21,13 +21,21 @@ spec:
     gitlabUrl: https://gitlab.com
     runners:
       secret: gitlab-runner-token
+      config: |
+        [[runners]]
+          [runners.kubernetes]
+            privileged = true
+          [[runners.kubernetes.volumes.empty_dir]]
+            name = "docker-certs"
+            mount_path = "/certs/client"
+            medium = "Memory"
     concurrent: ${concurrent}
     rbac:
       create: true
       rules:
         - apiGroups: [""]
           resources: ["events"]
-          verbs: ["list"]
+          verbs: ["list", "watch"]
         - apiGroups: [""]
           resources: ["pods"]
           verbs: ["create", "delete", "get", "list", "watch"]
