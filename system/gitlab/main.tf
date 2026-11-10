@@ -25,7 +25,6 @@ module "runner_support_infra" {
   source = "../../modules/gitlab/runner_support_webhook"
 
   for_each = toset([
-    "code0-tech/infrastructure/pyxis"
   ])
 
   project = each.value
