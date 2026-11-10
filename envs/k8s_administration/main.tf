@@ -66,3 +66,16 @@ module "signoz" {
   chart_version = "0.149.0"
   cluster_name  = "administration"
 }
+
+data "gitlab_project_variable" "gitlab_runner_token_infra_release_tools" {
+  project = "code0-tech/secret-manager"
+  key     = "GITLAB_RUNNER_TOKEN_INFRA_RELEASE_TOOLS"
+}
+
+module "gitlab_runner" {
+  source = "../../modules/k8s/gitlab-runner"
+
+  # renovate: datasource=docker depName=gitlab-runner registryUrl=registry.gitlab.com/charts/charts.gitlab.io/release/gitlab-runner
+  chart_version = "0.94.3"
+  runner_token = data.gitlab_project_variable.gitlab_runner_token_infra_release_tools.value
+}
