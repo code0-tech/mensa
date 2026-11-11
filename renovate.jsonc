@@ -59,6 +59,13 @@
         "https://github.com/k3s-io/k3s"
       ],
       "groupName": "k3s"
+    },
+    {
+      "matchDepNames": [
+        "public.ecr.aws/gravitational/tbot-distroless"
+      ],
+      // renovate: tbot
+      "allowedVersions": "<=18.11.8"
     }
   ],
   "customManagers": [
