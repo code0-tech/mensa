@@ -90,6 +90,18 @@
       "datasourceTemplate": "helm",
       "registryUrlTemplate": "https://charts.releases.teleport.dev",
       "autoReplaceStringTemplate": "start_version: {{{currentValue}}}\n    target_version: {{{newValue}}}"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "renovate.jsonc"
+      ],
+      "matchStrings": [
+        "// renovate: tbot\\n\\s*\"allowedVersions\": \"<=(?<currentValue>\\S+)\""
+      ],
+      "depNameTemplate": "teleport-cluster",
+      "datasourceTemplate": "helm",
+      "registryUrlTemplate": "https://charts.releases.teleport.dev"
     }
   ]
 }
