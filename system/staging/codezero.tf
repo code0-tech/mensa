@@ -28,12 +28,12 @@ data "gitlab_project_variable" "libredesk_inbox_secret_staging" {
 }
 
 module "codezero" {
-  source = "github.com/code0-tech/reticulum//terraform/docker?ref=db966a938a6764c5891eaba85ffc2ff8266a1e4e"
+  source = "github.com/code0-tech/reticulum//terraform/docker?ref=ab28d4bb65d27ca3c857e9f6395e4f701d832aa9"
 
   hostname              = "staging.codezero.build"
   initial_root_mail     = "root@code0.tech"
   initial_root_password = random_password.codezero_initial_root_password.result
-  image_tag             = "0.0.0-experimental-3030112534-7f0bdf65950c044316a4b8f117647c48bb8c6211"
+  image_tag             = "0.0.0-experimental-3055782041-ab28d4bb65d27ca3c857e9f6395e4f701d832aa9"
   image_edition         = "cloud"
   image_registry        = "ghcr.io/code0-tech/reticulum/ci-builds"
 
