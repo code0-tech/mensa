@@ -57,3 +57,8 @@ variable "teleport_cluster_label" {
   type        = string
   description = "Label value for the cluster label that Teleport registers its host Kubernetes cluster with"
 }
+
+variable "kube_agent_chart_version" {
+  type = string
+  description = "teleport-kube-agent Helm chart version"
+}
