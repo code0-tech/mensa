@@ -11,10 +11,10 @@ spec:
         - name: non-prod
           days: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
           start_hour: 18
-#        - name: prod
-#          days: ["Sat", "Sun"]
-#          start_hour: 18
-#          wait_hours: 24
+        - name: prod
+          days: ["Sat", "Sun"]
+          start_hour: 18
+          wait_hours: 24
         - name: default
           days: ["Sat", "Sun"]
           start_hour: 18
