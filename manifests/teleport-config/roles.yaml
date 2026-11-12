@@ -97,3 +97,16 @@ spec:
       - teleport-user
     node_labels:
       "server": "staging"
+---
+apiVersion: resources.teleport.dev/v1
+kind: TeleportRoleV8
+metadata:
+  name: ssh-production
+spec:
+  options:
+    require_session_mfa: 1 # SESSION
+  allow:
+    logins:
+      - teleport-user
+    node_labels:
+      "server": "production"

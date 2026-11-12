@@ -41,6 +41,10 @@ spec:
       roles:
         - ssh-administration
     - organization: code0-tech
+      team: tp-ssh-production
+      roles:
+        - ssh-production
+    - organization: code0-tech
       team: tp-ssh-staging
       roles:
         - ssh-staging
