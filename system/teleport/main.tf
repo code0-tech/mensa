@@ -82,6 +82,7 @@ module "teleport" {
   config_oci_tag           = var.config_oci_tag
   config_substitution_vars = var.config_substitution_vars
   teleport_cluster_label   = var.teleport_cluster_label
+  kube_agent_chart_version = var.kube_agent_chart_version
 }
 
 resource "cloudflare_dns_record" "teleport" {

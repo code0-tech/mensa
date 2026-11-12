@@ -10,17 +10,18 @@ terraform {
 locals {
   manifests = [
     for doc in split("---", templatefile("${path.module}/manifests.yaml.tftpl", {
-      namespace              = var.namespace
-      chart_version          = var.chart_version
-      cluster_name           = var.cluster_name
-      service_port           = var.service_port
-      tls_secret_name        = kubernetes_secret_v1.tls.metadata[0].name
-      tls_ca_secret_name     = kubernetes_secret_v1.tls_ca.metadata[0].name
-      config_oci_url         = var.config_oci_url
-      config_oci_tag         = var.config_oci_tag
-      teleport_cluster_label = var.teleport_cluster_label
-      tls_checksum           = nonsensitive(sha256(yamlencode(kubernetes_secret_v1.tls.data)))
-      tls_ca_checksum        = nonsensitive(sha256(yamlencode(kubernetes_secret_v1.tls_ca.data)))
+      namespace                = var.namespace
+      chart_version            = var.chart_version
+      cluster_name             = var.cluster_name
+      service_port             = var.service_port
+      tls_secret_name          = kubernetes_secret_v1.tls.metadata[0].name
+      tls_ca_secret_name       = kubernetes_secret_v1.tls_ca.metadata[0].name
+      config_oci_url           = var.config_oci_url
+      config_oci_tag           = var.config_oci_tag
+      teleport_cluster_label   = var.teleport_cluster_label
+      tls_checksum             = nonsensitive(sha256(yamlencode(kubernetes_secret_v1.tls.data)))
+      tls_ca_checksum          = nonsensitive(sha256(yamlencode(kubernetes_secret_v1.tls_ca.data)))
+      kube_agent_chart_version = var.kube_agent_chart_version
     })) : yamldecode(trimspace(doc)) if trimspace(doc) != ""
   ]
 }

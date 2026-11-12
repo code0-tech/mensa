@@ -47,8 +47,12 @@ module "teleport" {
   cloudflare_account_id = var.cloudflare_account_id
   server_ip             = var.server_administration_ip
   hostname              = "tp.code0.tech"
+
   # renovate: datasource=helm depName=teleport-cluster registryUrl=https://charts.releases.teleport.dev
-  chart_version          = "18.11.8"
+  chart_version = "18.11.8"
+  # renovate: datasource=helm depName=teleport-kube-agent registryUrl=https://charts.releases.teleport.dev
+  kube_agent_chart_version = "18.11.8"
+
   config_oci_url         = "oci://registry.gitlab.com/code0-tech/infrastructure/mensa/teleport-config"
   config_oci_tag         = var.teleport_config_tag
   teleport_cluster_label = "administration"

@@ -62,9 +62,10 @@
     },
     {
       "matchDepNames": [
-        "public.ecr.aws/gravitational/tbot-distroless"
+        "public.ecr.aws/gravitational/tbot-distroless",
+        "teleport-kube-agent"
       ],
-      // renovate: tbot
+      // renovate: teleport-cluster-dependent
       "allowedVersions": "<=18.11.8"
     }
   ],
@@ -97,7 +98,7 @@
         "renovate.jsonc"
       ],
       "matchStrings": [
-        "// renovate: tbot\\n\\s*\"allowedVersions\": \"<=(?<currentValue>\\S+)\""
+        "// renovate: teleport-cluster-dependent\\n\\s*\"allowedVersions\": \"<=(?<currentValue>\\S+)\""
       ],
       "depNameTemplate": "teleport-cluster",
       "datasourceTemplate": "helm",
