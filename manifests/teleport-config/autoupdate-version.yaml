@@ -6,5 +6,5 @@ spec:
   agents:
     mode: enabled
     schedule: regular
-    start_version: 18.11.7
-    target_version: 18.11.8
+    start_version: 18.11.8
+    target_version: 18.11.10

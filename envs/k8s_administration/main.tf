@@ -49,7 +49,7 @@ module "teleport" {
   hostname              = "tp.code0.tech"
 
   # renovate: datasource=helm depName=teleport-cluster registryUrl=https://charts.releases.teleport.dev
-  chart_version = "18.11.8"
+  chart_version = "18.11.10"
   # renovate: datasource=helm depName=teleport-kube-agent registryUrl=https://charts.releases.teleport.dev
   kube_agent_chart_version = "18.11.8"
 
