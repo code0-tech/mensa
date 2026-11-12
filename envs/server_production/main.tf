@@ -1,0 +1,46 @@
+terraform {
+  backend "http" {}
+
+  required_providers {
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = "5.28.1"
+    }
+    gitlab = {
+      source  = "gitlabhq/gitlab"
+      version = "19.5.0"
+    }
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "4.6.0"
+    }
+  }
+}
+
+provider "cloudflare" {
+  api_token = var.cloudflare_api_token
+}
+
+provider "gitlab" {
+  token    = var.gitlab_api_token
+  base_url = "https://gitlab.com/api/v4/"
+}
+
+provider "docker" {
+  host = "ssh://pipeline@${var.server_production_ip}:${var.server_production_ssh_port}"
+
+  cert_path = ""
+
+  registry_auth {
+    address  = "registry.gitlab.com"
+    username = "gitlab-ci-token"
+    password = var.gitlab_api_token
+  }
+}
+
+module "production" {
+  source = "../../system/production"
+
+  cloudflare_account_id = var.cloudflare_account_id
+  server_production_ip  = var.server_production_ip
+}

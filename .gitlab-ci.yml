@@ -164,6 +164,25 @@ tf-apply:server_staging:
     - tf-plan:server_staging
   variables: !reference [tf-plan:server_staging, variables]
 
+tf-plan:server_production:
+  extends:
+    - .tf-plan
+  before_script:
+    - !reference [.ssh, before_script]
+    - !reference [.tf, before_script]
+  variables:
+    TF_STATE_NAME: server_production
+    TF_ROOT: 'envs/server_production'
+    TF_ARGS: '-parallelism=1'
+
+tf-apply:server_production:
+  extends:
+    - .tf-apply
+  before_script: !reference [tf-plan:server_production, before_script]
+  needs:
+    - tf-plan:server_production
+  variables: !reference [tf-plan:server_production, variables]
+
 tf-plan:k3s_administration:
   extends:
     - .tf-plan
