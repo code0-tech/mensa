@@ -30,6 +30,78 @@ spec:
     global:
       clusterName: ${cluster_name}
 
+    clickhouse:
+      resources:
+        requests:
+          cpu: 200m
+          memory: 1536Mi
+        limits:
+          memory: 2560Mi # a bit over max_server_memory_usage so clickhouse can honor the limit without being at risk of OOMKills
+      settings:
+        max_server_memory_usage: "2147483648"
+        mark_cache_size: "268435456"
+        uncompressed_cache_size: "0"
+        background_pool_size: "4"
+        background_merges_mutations_concurrency_ratio: "1"
+      profiles:
+        default/max_memory_usage: "1073741824"
+        admin/max_memory_usage: "1073741824"
+      files:
+        # number_of_free_entries_... must be lower than background_pool_size
+        config.d/zz-merge-tree-memory.xml: |
+          <clickhouse>
+            <merge_tree>
+              <merge_max_block_size>2048</merge_max_block_size>
+              <number_of_free_entries_in_pool_to_execute_mutation>2</number_of_free_entries_in_pool_to_execute_mutation>
+              <number_of_free_entries_in_pool_to_lower_max_size_of_merge>2</number_of_free_entries_in_pool_to_lower_max_size_of_merge>
+              <number_of_free_entries_in_pool_to_execute_optimize_entire_partition>2</number_of_free_entries_in_pool_to_execute_optimize_entire_partition>
+            </merge_tree>
+          </clickhouse>
+      clickhouseOperator:
+        # reduce ttl of internal tables we don't use anyway
+        metricLog:
+          ttl: 1
+          flushInterval: 7500
+        asynchronousMetricLog:
+          ttl: 1
+          flushInterval: 7500
+        queryLog:
+          ttl: 3
+          flushInterval: 7500
+        queryThreadLog:
+          ttl: 1
+          flushInterval: 7500
+        queryViewsLog:
+          ttl: 1
+          flushInterval: 7500
+        partLog:
+          ttl: 3
+          flushInterval: 7500
+        traceLog:
+          ttl: 1
+          flushInterval: 7500
+        sessionLog:
+          ttl: 1
+          flushInterval: 7500
+        zookeeperLog:
+          ttl: 1
+          flushInterval: 7500
+        processorsProfileLog:
+          ttl: 1
+          flushInterval: 7500
+        asynchronousInsertLog:
+          ttl: 1
+          flushInterval: 7500
+        backupLog:
+          ttl: 3
+          flushInterval: 7500
+        blobStorageLog:
+          ttl: 3
+          flushInterval: 7500
+        crashLog:
+          ttl: 7
+          flushInterval: 7500
+
   valuesFrom:
     - kind: Secret
       name: sensitive-signoz-chart-values
