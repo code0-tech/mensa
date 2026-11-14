@@ -38,7 +38,8 @@ spec:
         limits:
           memory: 2560Mi # a bit over max_server_memory_usage so clickhouse can honor the limit without being at risk of OOMKills
       settings:
-        max_server_memory_usage: "2147483648"
+        max_server_memory_usage: "2415919104"
+        merges_mutations_memory_usage_soft_limit: "1073741824"
         mark_cache_size: "268435456"
         uncompressed_cache_size: "0"
         background_pool_size: "4"
