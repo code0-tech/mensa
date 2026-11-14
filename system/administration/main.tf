@@ -59,7 +59,7 @@ module "outline" {
 }
 
 data "docker_registry_image" "cygnus" {
-  name = "ghcr.io/code0-tech/cygnus:2353"
+  name = "ghcr.io/code0-tech/cygnus:2458"
 }
 
 module "cygnus" {
