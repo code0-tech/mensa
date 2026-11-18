@@ -82,4 +82,17 @@ resource "docker_container" "proxy" {
       content = upload.value["config"]
     }
   }
+
+  # CVE-2026-123633 & CVE-2026-123007
+  upload {
+    file = "/etc/nginx/conf.d/00-catchall.conf"
+    content = <<-EOF
+      server {
+          listen 443 ssl default_server;
+          server_name _;
+          http2 off;
+          ssl_reject_handshake on;
+      }
+    EOF
+  }
 }
