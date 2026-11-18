@@ -37,6 +37,11 @@ resource "docker_container" "proxy" {
   name    = "proxy"
   restart = "always"
 
+  env = [
+    # CVE-2026-123633 & CVE-2026-123007
+    "ENABLE_HTTP2=false"
+  ]
+
   ports {
     internal = 443
     external = 443
