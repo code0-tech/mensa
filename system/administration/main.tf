@@ -65,8 +65,8 @@ data "docker_registry_image" "cygnus" {
 module "cygnus" {
   source = "../../modules/docker/cygnus"
 
-  web_urls                     = ["codezero.build"]
-  docker_additional_network_id = module.proxy.docker_proxy_network_id
+  web_urls                      = ["codezero.build"]
+  docker_additional_network_ids = [module.proxy.docker_proxy_network_id]
   cygnus_image = {
     name          = data.docker_registry_image.cygnus.name
     sha256_digest = data.docker_registry_image.cygnus.sha256_digest

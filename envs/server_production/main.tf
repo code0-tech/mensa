@@ -14,6 +14,10 @@ terraform {
       source  = "kreuzwerker/docker"
       version = "4.7.0"
     }
+    stripe = {
+      source  = "stripe/stripe"
+      version = "0.3.0"
+    }
   }
 }
 
@@ -38,9 +42,14 @@ provider "docker" {
   }
 }
 
+provider "stripe" {
+  api_key = var.stripe_production_api_key
+}
+
 module "production" {
   source = "../../system/production"
 
-  cloudflare_account_id = var.cloudflare_account_id
-  server_production_ip  = var.server_production_ip
+  cloudflare_account_id     = var.cloudflare_account_id
+  server_production_ip      = var.server_production_ip
+  stripe_production_api_key = var.stripe_production_api_key
 }

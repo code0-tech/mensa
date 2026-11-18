@@ -10,11 +10,11 @@ data "gitlab_project_variable" "stripe_public_key" {
 module "cygnus" {
   source = "../../modules/docker/cygnus"
 
-  web_urls                     = ["staging-cygnus.codezero.build"]
-  docker_additional_network_id = docker_network.codezero_staging.name
-  docker_name_prefix           = "staging_"
-  bind_ip                      = "127.0.0.1"
-  http_port                    = 15243
+  web_urls                      = ["staging-cygnus.codezero.build"]
+  docker_additional_network_ids = [docker_network.codezero_staging.name]
+  docker_name_prefix            = "staging_"
+  bind_ip                       = "127.0.0.1"
+  http_port                     = 15243
   cygnus_image = {
     name          = data.docker_registry_image.cygnus.name
     sha256_digest = data.docker_registry_image.cygnus.sha256_digest
