@@ -1,5 +1,5 @@
 data "docker_registry_image" "tbot" {
-  name = "public.ecr.aws/gravitational/tbot-distroless:18.11.8"
+  name = "public.ecr.aws/gravitational/tbot-distroless:18.11.10"
 }
 
 data "docker_registry_image" "otel_collector" {
