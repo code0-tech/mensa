@@ -40,6 +40,7 @@ jobs:
           GLPA_TF_VAR_server_production_ip: ${{ secrets.SERVER_PRODUCTION_IP }}
           GLPA_TF_VAR_server_production_ssh_port: ${{ secrets.SERVER_PRODUCTION_SSH_PORT }}
           GLPA_TF_VAR_stripe_staging_api_key: ${{ secrets.STRIPE_STAGING_API_KEY }}
+          GLPA_TF_VAR_stripe_production_api_key: ${{ secrets.STRIPE_PRODUCTION_API_KEY }}
 
       - name: Find existing comment
         uses: peter-evans/find-comment@v4
