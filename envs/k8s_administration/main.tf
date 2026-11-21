@@ -51,7 +51,7 @@ module "teleport" {
   # renovate: datasource=helm depName=teleport-cluster registryUrl=https://charts.releases.teleport.dev
   chart_version = "18.11.10"
   # renovate: datasource=helm depName=teleport-kube-agent registryUrl=https://charts.releases.teleport.dev
-  kube_agent_chart_version = "18.11.8"
+  kube_agent_chart_version = "18.11.10"
 
   config_oci_url         = "oci://registry.gitlab.com/code0-tech/infrastructure/mensa/teleport-config"
   config_oci_tag         = var.teleport_config_tag
