@@ -1,5 +1,5 @@
 data "docker_registry_image" "codezero_rest_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/rest-action:0.0.0-experimental-3028768426-71ac23091efd1ca7268de29f7507f99bea193420"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/rest-action:0.0.0-experimental-3084013929-31b283ce5b4488c0d58c82b7f0ad259d2ed0918a"
 }
 
 module "codezero_rest_action" {
@@ -23,7 +23,7 @@ module "codezero_rest_action" {
 }
 
 data "docker_registry_image" "codezero_cron_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/cron-action:0.0.0-experimental-3028768426-71ac23091efd1ca7268de29f7507f99bea193420"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/cron-action:0.0.0-experimental-3084013929-31b283ce5b4488c0d58c82b7f0ad259d2ed0918a"
 }
 
 module "codezero_cron_action" {
