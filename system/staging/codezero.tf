@@ -28,19 +28,19 @@ data "gitlab_project_variable" "libredesk_inbox_secret_staging" {
 }
 
 module "codezero" {
-  source = "github.com/code0-tech/reticulum//terraform/docker?ref=ab28d4bb65d27ca3c857e9f6395e4f701d832aa9"
+  source = "github.com/code0-tech/reticulum//terraform/docker?ref=076111d8f1b85e57bc3438c93836db28df2d67ec"
 
   hostname              = "staging.codezero.build"
   initial_root_mail     = "root@code0.tech"
   initial_root_password = random_password.codezero_initial_root_password.result
-  image_tag             = "0.0.0-experimental-3055782041-ab28d4bb65d27ca3c857e9f6395e4f701d832aa9"
+  image_tag             = "0.0.0-experimental-3098101993-076111d8f1b85e57bc3438c93836db28df2d67ec"
   image_edition         = "cloud"
   image_registry        = "ghcr.io/code0-tech/reticulum/ci-builds"
 
-  http_port                = 15242
-  https_port               = null
-  nginx_bind_ip            = "127.0.0.1"
-  nginx_additional_network = docker_network.codezero_staging.name
+  http_port                 = 15242
+  https_port                = null
+  nginx_bind_ip             = "127.0.0.1"
+  nginx_additional_networks = [docker_network.codezero_staging.name]
 
   aquila_actions = {
     rest = {
