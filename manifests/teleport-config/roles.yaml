@@ -110,3 +110,19 @@ spec:
       - teleport-user
     node_labels:
       "server": "production"
+---
+apiVersion: resources.teleport.dev/v1
+kind: TeleportRoleV8
+metadata:
+  name: tp-user-editor
+spec:
+  allow:
+    rules:
+      - resources:
+          - user
+        verbs:
+          - read
+          - list
+          - create
+          - update
+          - delete
