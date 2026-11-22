@@ -48,3 +48,7 @@ spec:
       team: tp-ssh-staging
       roles:
         - ssh-staging
+    - organization: code0-tech
+      team: tp-tp-user-editor
+      roles:
+        - tp-user-editor
