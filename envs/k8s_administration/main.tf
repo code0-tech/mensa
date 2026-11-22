@@ -80,7 +80,7 @@ module "gitlab_runner" {
   source = "../../modules/k8s/gitlab-runner"
 
   # renovate: datasource=docker depName=gitlab-runner registryUrl=https://registry.gitlab.com/charts/charts.gitlab.io/release
-  chart_version = "0.94.3"
+  chart_version = "0.95.0"
   runner_token  = data.gitlab_project_variable.gitlab_runner_token_infra_release_tools.value
   concurrent    = 1
 }
