@@ -1,5 +1,5 @@
 data "docker_registry_image" "codezero_rest_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/rest-action:0.0.0-experimental-3084013929-31b283ce5b4488c0d58c82b7f0ad259d2ed0918a"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/rest-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
 }
 
 module "codezero_rest_action" {
@@ -23,7 +23,7 @@ module "codezero_rest_action" {
 }
 
 data "docker_registry_image" "codezero_cron_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/cron-action:0.0.0-experimental-3084013929-31b283ce5b4488c0d58c82b7f0ad259d2ed0918a"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/cron-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
 }
 
 module "codezero_cron_action" {
@@ -34,6 +34,120 @@ module "codezero_cron_action" {
   image = {
     name          = data.docker_registry_image.codezero_cron_action.name
     sha256_digest = data.docker_registry_image.codezero_cron_action.sha256_digest
+  }
+
+  docker_networks = [
+    module.codezero.aquila_network.name,
+  ]
+}
+
+data "docker_registry_image" "codezero_smtp_action" {
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/smtp-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+}
+
+module "codezero_smtp_action" {
+  source = "../../modules/docker/codezero-action"
+
+  identifier = "smtp"
+  aquila_url = "codezero-aquila:8081"
+  image = {
+    name          = data.docker_registry_image.codezero_smtp_action.name
+    sha256_digest = data.docker_registry_image.codezero_smtp_action.sha256_digest
+  }
+
+  docker_networks = [
+    module.codezero.aquila_network.name,
+  ]
+}
+
+data "docker_registry_image" "codezero_discord_action" {
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/discord-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+}
+
+module "codezero_discord_action" {
+  source = "../../modules/docker/codezero-action"
+
+  identifier = "discord"
+  aquila_url = "codezero-aquila:8081"
+  image = {
+    name          = data.docker_registry_image.codezero_discord_action.name
+    sha256_digest = data.docker_registry_image.codezero_discord_action.sha256_digest
+  }
+
+  docker_networks = [
+    module.codezero.aquila_network.name,
+  ]
+}
+
+data "docker_registry_image" "codezero_github_action" {
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/github-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+}
+
+module "codezero_github_action" {
+  source = "../../modules/docker/codezero-action"
+
+  identifier = "github"
+  aquila_url = "codezero-aquila:8081"
+  image = {
+    name          = data.docker_registry_image.codezero_github_action.name
+    sha256_digest = data.docker_registry_image.codezero_github_action.sha256_digest
+  }
+
+  docker_networks = [
+    module.codezero.aquila_network.name,
+  ]
+}
+
+data "docker_registry_image" "codezero_mcp_action" {
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/mcp-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+}
+
+module "codezero_mcp_action" {
+  source = "../../modules/docker/codezero-action"
+
+  identifier = "mcp"
+  aquila_url = "codezero-aquila:8081"
+  image = {
+    name          = data.docker_registry_image.codezero_mcp_action.name
+    sha256_digest = data.docker_registry_image.codezero_mcp_action.sha256_digest
+  }
+
+  docker_networks = [
+    module.codezero.aquila_network.name,
+  ]
+}
+
+data "docker_registry_image" "codezero_ai_action" {
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/ai-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+}
+
+module "codezero_ai_action" {
+  source = "../../modules/docker/codezero-action"
+
+  identifier = "ai"
+  aquila_url = "codezero-aquila:8081"
+  image = {
+    name          = data.docker_registry_image.codezero_ai_action.name
+    sha256_digest = data.docker_registry_image.codezero_ai_action.sha256_digest
+  }
+
+  docker_networks = [
+    module.codezero.aquila_network.name,
+  ]
+}
+
+data "docker_registry_image" "codezero_twilio_action" {
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/twilio-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+}
+
+module "codezero_twilio_action" {
+  source = "../../modules/docker/codezero-action"
+
+  identifier = "twilio"
+  aquila_url = "codezero-aquila:8081"
+  image = {
+    name          = data.docker_registry_image.codezero_twilio_action.name
+    sha256_digest = data.docker_registry_image.codezero_twilio_action.sha256_digest
   }
 
   docker_networks = [
