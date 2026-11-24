@@ -51,6 +51,30 @@ module "codezero" {
       identifier = "cron"
       token      = module.codezero_cron_action.action_token
     }
+    smtp = {
+      identifier = "smtp"
+      token = module.codezero_smtp_action.action_token
+    }
+    discord = {
+      identifier = "discord"
+      token = module.codezero_discord_action.action_token
+    }
+    github = {
+      identifier = "github"
+      token = module.codezero_github_action.action_token
+    }
+    mcp = {
+      identifier = "mcp"
+      token = module.codezero_mcp_action.action_token
+    }
+    ai = {
+      identifier = "ai"
+      token = module.codezero_ai_action.action_token
+    }
+    twilio = {
+      identifier = "twilio"
+      token = module.codezero_twilio_action.action_token
+    }
   }
 
   opentelemetry = {
