@@ -24,9 +24,14 @@ resource "docker_container" "container" {
   restart = "unless-stopped"
 
   env = concat([
+    # Rust actions
     "HERCULES_AQUILA_URL=${var.aquila_url}",
     "HERCULES_AUTH_TOKEN=${random_password.action_token.result}",
     "HERCULES_ACTION_ID=${var.identifier}",
+    # Node actions
+    "AQUILA_URL=${var.aquila_url}",
+    "AUTH_TOKEN=${random_password.action_token.result}",
+    "ACTION_ID=${var.identifier}",
   ], var.additional_envs)
 
   dynamic "networks_advanced" {
