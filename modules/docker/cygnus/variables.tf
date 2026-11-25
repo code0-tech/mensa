@@ -3,8 +3,8 @@ variable "docker_name_prefix" {
   default = ""
 }
 
-variable "docker_additional_network_id" {
-  type    = string
+variable "docker_additional_network_ids" {
+  type    = list(string)
   default = null
 }
 

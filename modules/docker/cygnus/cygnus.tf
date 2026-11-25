@@ -87,7 +87,7 @@ resource "docker_container" "cygnus" {
   }
 
   dynamic "networks_advanced" {
-    for_each = compact([var.docker_additional_network_id])
+    for_each = var.docker_additional_network_ids
 
     content {
       name = networks_advanced.value
