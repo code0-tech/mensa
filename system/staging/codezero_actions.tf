@@ -1,5 +1,9 @@
+locals {
+  action_version = "0.0.0-experimental-3110890925-74bc6b9fd657508ded2f333c19efac4ceed83cf4"
+}
+
 data "docker_registry_image" "codezero_rest_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/rest-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/rest-action:${local.action_version}"
 }
 
 module "codezero_rest_action" {
@@ -23,7 +27,7 @@ module "codezero_rest_action" {
 }
 
 data "docker_registry_image" "codezero_cron_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/cron-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/cron-action:${local.action_version}"
 }
 
 module "codezero_cron_action" {
@@ -42,7 +46,7 @@ module "codezero_cron_action" {
 }
 
 data "docker_registry_image" "codezero_smtp_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/smtp-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/smtp-action:${local.action_version}"
 }
 
 module "codezero_smtp_action" {
@@ -61,7 +65,7 @@ module "codezero_smtp_action" {
 }
 
 data "docker_registry_image" "codezero_discord_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/discord-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/discord-action:${local.action_version}"
 }
 
 module "codezero_discord_action" {
@@ -80,7 +84,7 @@ module "codezero_discord_action" {
 }
 
 data "docker_registry_image" "codezero_github_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/github-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/github-action:${local.action_version}"
 }
 
 module "codezero_github_action" {
@@ -99,7 +103,7 @@ module "codezero_github_action" {
 }
 
 data "docker_registry_image" "codezero_mcp_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/mcp-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/mcp-action:${local.action_version}"
 }
 
 module "codezero_mcp_action" {
@@ -118,7 +122,7 @@ module "codezero_mcp_action" {
 }
 
 data "docker_registry_image" "codezero_ai_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/ai-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/ai-action:${local.action_version}"
 }
 
 module "codezero_ai_action" {
@@ -137,7 +141,7 @@ module "codezero_ai_action" {
 }
 
 data "docker_registry_image" "codezero_twilio_action" {
-  name = "ghcr.io/code0-tech/centaurus/ci-builds/twilio-action:0.0.0-experimental-3109375593-c96fc31d938c47d2d809ac25e965cfe4237768de"
+  name = "ghcr.io/code0-tech/centaurus/ci-builds/twilio-action:${local.action_version}"
 }
 
 module "codezero_twilio_action" {
