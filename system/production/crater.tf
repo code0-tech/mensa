@@ -52,7 +52,7 @@ module "crater" {
       web = {
         force_ssl = false
         external = {
-          host     = "prod.codezero.build"
+          host     = "codezero.build"
           port     = 443
           protocol = "https"
         }
@@ -74,7 +74,7 @@ module "crater" {
     }
     checkout = {
       allowed_return_origins = [
-        "https://prod.codezero.build"
+        "https://codezero.build"
       ]
       prices = module.stripe_config.price_ids
     }
