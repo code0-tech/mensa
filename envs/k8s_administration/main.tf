@@ -67,7 +67,7 @@ module "signoz" {
   source = "../../modules/k8s/signoz"
 
   # renovate: datasource=helm depName=signoz registryUrl=https://charts.signoz.io
-  chart_version = "0.149.0"
+  chart_version = "0.151.0"
   cluster_name  = "administration"
 }
 
