@@ -126,3 +126,8 @@ spec:
           - create
           - update
           - delete
+      - resources:
+          - role
+        verbs:
+          - read
+          - list
