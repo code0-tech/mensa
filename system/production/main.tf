@@ -46,7 +46,7 @@ resource "cloudflare_dns_record" "server_ip" {
 
 resource "cloudflare_dns_record" "server_cname_codezero_build" {
   for_each = toset([
-    "prod.codezero.build",
+    "codezero.build",
     "cloud.codezero.build",
     "rest-cloud.codezero.build",
     "crater.codezero.build",

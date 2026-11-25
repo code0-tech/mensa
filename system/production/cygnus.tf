@@ -10,7 +10,7 @@ data "gitlab_project_variable" "stripe_public_key" {
 module "cygnus" {
   source = "../../modules/docker/cygnus"
 
-  web_urls                      = ["prod.codezero.build"]
+  web_urls                      = ["codezero.build"]
   docker_additional_network_ids = [docker_network.codezero_production.name, module.proxy.docker_proxy_network_name]
   docker_name_prefix            = "production_"
   cygnus_image = {

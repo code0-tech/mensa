@@ -34,16 +34,11 @@ module "proxy" {
 
   certificate_hostnames = [
     "outline.code0.tech",
-    "codezero.build",
     "playground.codezero.build",
     "support-widget.codezero.build",
   ]
 
   hostname_config_overrides = [
-    {
-      hostname = "codezero.build"
-      config   = "client_max_body_size 20m;"
-    },
     {
       hostname = "outline.code0.tech"
       config   = "client_max_body_size 20m;"
@@ -56,21 +51,6 @@ module "outline" {
 
   web_url                 = "outline.code0.tech"
   docker_proxy_network_id = module.proxy.docker_proxy_network_id
-}
-
-data "docker_registry_image" "cygnus" {
-  name = "ghcr.io/code0-tech/cygnus:2353"
-}
-
-module "cygnus" {
-  source = "../../modules/docker/cygnus"
-
-  web_urls                      = ["codezero.build"]
-  docker_additional_network_ids = [module.proxy.docker_proxy_network_id]
-  cygnus_image = {
-    name          = data.docker_registry_image.cygnus.name
-    sha256_digest = data.docker_registry_image.cygnus.sha256_digest
-  }
 }
 
 module "sculptor_playground" {
@@ -127,7 +107,6 @@ resource "cloudflare_dns_record" "server_cname_code0_tech" {
 
 resource "cloudflare_dns_record" "server_cname_codezero_build" {
   for_each = toset([
-    "codezero.build",
     "playground.codezero.build",
     "support-widget.codezero.build",
   ])

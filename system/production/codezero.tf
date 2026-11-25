@@ -113,8 +113,8 @@ module "codezero" {
   })
 
   sculptor_env = [
-    "SUBSCRIPTION_URL=https://prod.codezero.build/licenses",
-    "CHECKOUT_URL=https://prod.codezero.build/subscription",
+    "SUBSCRIPTION_URL=https://codezero.build/licenses",
+    "CHECKOUT_URL=https://codezero.build/subscription",
     "SAGITTARIUS_GRAPHQL_URL=http://codezero-nginx/graphql",
     "LIBREDESK_URL=https://support-widget.codezero.build",
     "LIBREDESK_INBOX_ID=5addb522-8f2c-495b-aade-241f884759eb",

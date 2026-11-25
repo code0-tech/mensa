@@ -5,7 +5,7 @@ variable "docker_name_prefix" {
 
 variable "docker_additional_network_ids" {
   type    = list(string)
-  default = null
+  default = []
 }
 
 variable "web_urls" {
