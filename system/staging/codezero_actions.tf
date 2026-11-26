@@ -19,6 +19,9 @@ module "codezero_rest_action" {
   additional_envs = [
     "VIRTUAL_HOST=rest-staging.codezero.build",
     "VIRTUAL_PORT=8080",
+    "EXTERNAL_HTTP_SERVER_HOST=rest-staging.codezero.build",
+    "EXTERNAL_HTTP_SERVER_PORT=443",
+    "HTTPS_CONFIGURED=true",
   ]
   docker_networks = [
     module.proxy.docker_proxy_network_name,
