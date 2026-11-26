@@ -21,6 +21,8 @@ module "otel_agent" {
   docker_name_prefix = "production_"
   environment        = "production"
 
+  docker_additional_network_ids = [module.codezero.default_network.id]
+
   tbot_image = {
     name          = data.docker_registry_image.tbot.name
     sha256_digest = data.docker_registry_image.tbot.sha256_digest
