@@ -37,11 +37,6 @@ resource "docker_container" "proxy" {
   name    = "proxy"
   restart = "always"
 
-  env = [
-    # CVE-2026-123633 & CVE-2026-123007
-    "ENABLE_HTTP2=false"
-  ]
-
   ports {
     internal = 443
     external = 443
@@ -81,18 +76,5 @@ resource "docker_container" "proxy" {
       file    = "/etc/nginx/vhost.d/${upload.value["hostname"]}"
       content = upload.value["config"]
     }
-  }
-
-  # CVE-2026-123633 & CVE-2026-123007
-  upload {
-    file = "/etc/nginx/conf.d/00-catchall.conf"
-    content = <<-EOF
-      server {
-          listen 443 ssl default_server;
-          server_name _;
-          http2 off;
-          ssl_reject_handshake on;
-      }
-    EOF
   }
 }
