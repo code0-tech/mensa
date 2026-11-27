@@ -75,7 +75,7 @@ default:
 push-artifact:teleport-config:
   stage: preflight
   image:
-    name: ghcr.io/code0-tech/build-images/mise:619.1
+    name: ghcr.io/code0-tech/build-images/mise:680.1
     entrypoint: [""]
   script:
     - mise install
