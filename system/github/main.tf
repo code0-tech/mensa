@@ -15,6 +15,10 @@ data "github_repositories" "repositories" {
   query = "org:code0-tech"
 }
 
+data "github_repositories" "active_repositories" {
+  query = "org:code0-tech archived:false"
+}
+
 data "github_repositories" "public_repositories" {
   query = "org:code0-tech visibility:public"
 }
