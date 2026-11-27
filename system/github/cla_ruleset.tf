@@ -1,5 +1,5 @@
 resource "github_repository_ruleset" "cla_rule" {
-  for_each = toset(data.github_repositories.active_repositories.names)
+  for_each = toset(data.github_repositories.active_public_repositories.names)
   name = "CLA"
   repository = each.value
   target = "branch"
